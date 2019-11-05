@@ -17,7 +17,7 @@ python3 -m django --version
 ```
 ## Start server
 
-Now with our current working directory as grand-nutrition, to start the server
+Now with our current working directory as sustainable-city-management, to start the server
 ```
 cd backend
 python3 manage.py runserver
@@ -44,13 +44,16 @@ It should be >=5.6
 
 After that run
 ```
-cd grand-ui
+cd frontend
 ```
 run
-### `yarn install`
+```
+yarn install
+```
 
 run
-
-### `yarn start`
+```
+yarn start
+```
 
 Then navigate to http://localhost:3000/ and you should see that your app is running
