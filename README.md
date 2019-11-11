@@ -59,4 +59,6 @@ yarn start
 Then navigate to http://localhost:3000/ and you should see that your app is running
 
 ## Setting up the Database
+We are using PostgreSQL version 12 as our DBMS
+
 
