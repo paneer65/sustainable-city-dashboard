@@ -61,4 +61,13 @@ Then navigate to http://localhost:3000/ and you should see that your app is runn
 ## Setting up the Database
 We are using PostgreSQL version 12 as our DBMS
 
+Download and install [PostgreSQL](https://www.postgresql.org/download/)
+
+Install [psycopg2](http://initd.org/psycopg/docs/install.html) >=2.8 using,
+
+```
+pip install psycopg2-binary
+```
+
+
 
