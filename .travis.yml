@@ -1,19 +1,14 @@
 services:
   - postgresql
-
-before_script:
-  - psql -c "create database Test"
-  - psql -c "create user admin with PASSWORD 'admin'"
-
+  
 language: python
 python:
   - "3.6"
 install:
   - cd backend
   - pip install -r requirements.txt
-  # - django-admin.py startproject --template=./edge --extension=py,md,html,env my_proj
-  # - cd my_proj/src
-  # - cp my_proj/settings/local.sample.env my_proj/settings/local.env
+  - psql -c "create database Test"
+  - psql -c "create user admin with PASSWORD 'admin'"
   - python manage.py migrate
 script:
   - python manage.py test dashboard
