@@ -3,14 +3,14 @@ services:
 
 before_script:
   - psql -c "CREATE USER admin with PASSWORD 'admin';" - U postgres
-  - psql -c "CREATE DATABASE Test;" - U admin
-  
+  - psql -c "CREATE DATABASE Test;" - U postgres
+
 language: python
 python:
   - "3.6"
 install:
   - cd backend
   - pip install -r requirements.txt
-  - python manage.py migrate
+  # - python manage.py migrate
 script:
   - python manage.py test dashboard
