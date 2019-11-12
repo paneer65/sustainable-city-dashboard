@@ -5,8 +5,7 @@ python:
   - "3.6"
 install:
   - psql -U postgres -c "CREATE USER admin with PASSWORD 'admin';"
-  - psql -U postgres -c "CREATE DATABASE Test;"
-  - psql -U postgres -c "grant all privileges on database Test to admin;"
+  - psql -U admin -c "CREATE DATABASE Test;"
   - cd backend
   - pip install -r requirements.txt
   - python manage.py migrate
