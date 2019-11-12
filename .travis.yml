@@ -1,15 +1,15 @@
+# Run order install -> before_script -> script
+
 services:
   - postgresql
-before_script:
-  - psql -c "CREATE DATABASE sustainable_city_ci;"
-  # - psql -c "CREATE USER admin with PASSWORD 'admin';"
-  # - psql -c "GRANT ALL PRIVILEGES ON DATABASE Test TO admin;"
 language: python
 python:
   - "3.6"
 install:
   - cd backend
   - pip install -r requirements.txt
+before_script:
+  - psql -c "CREATE DATABASE sustainable_city_ci;"
 script:
   - python manage.py migrate
   - python manage.py test dashboard
