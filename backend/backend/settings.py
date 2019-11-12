@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "UserAttributeSimilarityValidator",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
+        "NAME": "Test",
+        "USER": "admin",
+        "PASSWORD": "admin",
         "HOST": "localhost",
         "PORT": "5432",
     }
