@@ -1,11 +1,15 @@
 services:
   - postgresql
+
+before_script:
+  - psql -U postgres -c "CREATE DATABASE Test;"
+
 language: python
 python:
   - "3.6"
 install:
-  - psql -U postgres -c "CREATE USER admin with PASSWORD 'admin';"
-  - psql -U admin -c "CREATE DATABASE Test;"
+  # - psql -U postgres -c "CREATE USER admin with PASSWORD 'admin';"
+  # - psql -U postgres -c "grant all privileges on database Test to admin;"
   - cd backend
   - pip install -r requirements.txt
   - python manage.py migrate
