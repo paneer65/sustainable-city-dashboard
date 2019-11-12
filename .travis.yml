@@ -1,3 +1,10 @@
+services:
+  - postgresql
+
+before_script:
+  - psql -c "create database Test"
+  - psql -c "create user admin with PASSWORD 'admin'"
+
 language: python
 python:
   - "3.6"
