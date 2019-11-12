@@ -1,7 +1,7 @@
 services:
   - postgresql
 before_script:
-  - psql -c "CREATE DATABASE sustainable-city-ci;"
+  - psql -c "CREATE DATABASE sustainable_city_ci;"
   # - psql -c "CREATE USER admin with PASSWORD 'admin';"
   # - psql -c "GRANT ALL PRIVILEGES ON DATABASE Test TO admin;"
 language: python

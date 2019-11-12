@@ -77,7 +77,7 @@ if 'TRAVIS' in os.environ:
     DATABASES = {
         'default': {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": "sustainable-city-ci",
+            "NAME": "sustainable_city_ci",
             "USER": "postgres",
             "PASSWORD": "",
             "HOST": "localhost",
