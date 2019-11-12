@@ -79,8 +79,9 @@ if 'TRAVIS' in os.environ:
             "ENGINE": "django.db.backends.postgresql_psycopg2",
             "NAME": "sustainable-city-ci",
             "USER": "postgres",
+            "PASSWORD": "",
             "HOST": "localhost",
-            "PORT": "5432",
+            "PORT": "",
         }
     }
 else:
