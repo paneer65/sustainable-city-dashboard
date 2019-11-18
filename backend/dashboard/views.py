@@ -7,7 +7,6 @@ from dashboard.serializers import UserSerializer
 
 @api_view(['POST'])
 def user_login(request):
-    # var csrftoken = Cookies.get('csrftoken')
     username = request.data["username"]
     password = request.data["password"]
     user = authenticate(username = username, password = password)
