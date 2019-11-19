@@ -8,11 +8,11 @@ function Map(){
 	return (
 		<GoogleMap defaultZoom = {zoomLevel} defaultCenter = { tcdLocation } />
 	);
-}         
+}
 
 export default function Dashboard() {
 	const WrappedMap = withScriptjs(withGoogleMap(Map));
-	
+
 	return (
 		<div>
 			<center>

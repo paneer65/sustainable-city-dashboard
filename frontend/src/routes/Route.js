@@ -1,26 +1,27 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useAuth } from "../context/auth";
 
 export default function RouteWrapper({
 	component: Component,
 	isPrivate,
 	...rest
 }){
-	const signed = false;    
+	const { isAuthenticated } = useAuth();
 
   /**
   * Redirect user to SignIn page if he tries to access a private      route
   * without authentication.
   */
-  if (isPrivate && !signed) {
+  if (isPrivate && !isAuthenticated) {
     return <Redirect to="/login" />;
   }
   /**
   * Redirect user to Main page if he tries to access a non private route
   * (SignIn or SignUp) after being authenticated.
   */
-  if (!isPrivate && signed) {
+  if (!isPrivate && isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
 

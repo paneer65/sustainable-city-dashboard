@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import Form from 'react-bootstrap/Form'
-import Button from "react-bootstrap/button";
-import { Redirect } from 'react-router-dom';
+import Button from "react-bootstrap/Button";
+import { useAuth } from "../../context/auth";
+
 import "./style.css";
 
 export default function Login(props) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const { history } = props;
+  const { setIsAuthenticated } = useAuth();
 
   function validateForm() {
-    return email.length > 0 && password.length > 0;
+    return username.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
+    event.preventDefault();
+
     let data = {
-      'username': email,
+      'username': username,
       'password': password
     }
+
     fetch('http://localhost:8000/user/login', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -24,22 +31,27 @@ export default function Login(props) {
         'Content-Type': 'application/json'
       }
     }).then(response => {
-      debugger
-      return <Redirect to="/dashboard" />;
+      if (response.status === 200) {
+        setIsAuthenticated(true)
+        history.push('/dashboard');
+      } else if (response.status === 403) {
+        setErrorMessage('Username or password is invalid')
+      } else {
+        setErrorMessage('Unknown error')
+      }
     })
-    event.preventDefault();
   }
 
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="email" bsSize="large">
-          <Form.Label>Email</Form.Label>
+        <Form.Group controlId="username" bsSize="large">
+          <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
+            type="text"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
           />
         </Form.Group>
         <Form.Group controlId="password" bsSize="large">
@@ -50,11 +62,12 @@ export default function Login(props) {
             type="password"
           />
         </Form.Group>
+        {errorMessage}
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>
       </Form>
     </div>
   );
-  
+
 }
