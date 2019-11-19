@@ -6,9 +6,9 @@ TCD Group 10 for Advanced Software Engineering
 
 We are using django for our backend
 
-First setup a python3 virtualenv and activate it. After that install using pip
+First setup a python3 virtualenv and activate it. After that install the required packages using pip,
 ```
-pip install django==2.2.6
+pip install -r requirements.txt
 ```
 
 Check your django version
@@ -46,9 +46,12 @@ After that run
 ```
 cd frontend
 ```
-run
+run the below two code snipppets, which would install all the required packages for frontend,
 ```
 yarn install
+```
+```
+npm install
 ```
 
 run
