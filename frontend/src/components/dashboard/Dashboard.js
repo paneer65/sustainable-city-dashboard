@@ -1,7 +1,7 @@
 import React from 'react';
 import Traffic from '../traffic/Traffic';
 import './Dashboard.css';
-import Button from "react-bootstrap/button";
+import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card'
 import {GoogleMap, withScriptjs, withGoogleMap} from "react-google-maps";
 const tcdLocation = { lat: 53.343786, lng: -6.255828 };
@@ -13,9 +13,9 @@ class View extends React.Component {
 			<Card className="bootstrap-card">
 				<Button variant="primary"> {this.props.name}</Button>
 				<Card.Body>
-					<Traffic/>	
+					<Traffic/>
 				</Card.Body>
-			</Card>	
+			</Card>
 			);
 		}
   }
@@ -25,7 +25,7 @@ function Map(){
 	return (
 		<GoogleMap defaultZoom = {zoomLevel} defaultCenter = { tcdLocation } />
 	);
-}         
+}
 
 function Dashboard() {
 	const WrappedMap = withScriptjs(withGoogleMap(Map));
@@ -33,7 +33,7 @@ function Dashboard() {
   return (
 		<div className = "Dashboard">
 			<div  className = "home">
-				<div className="header">  
+				<div className="header">
 					Sustainable City Management
 				</div>
 					<div className="nav">
@@ -44,7 +44,7 @@ function Dashboard() {
 					</div>
 			</div>
 			<div  className = "traffic">
-				<View name="Traffic Management" />;			
+				<View name="Traffic Management" />;
 			</div>
 
 			<div  className = "pollution">
@@ -58,17 +58,16 @@ function Dashboard() {
 			</div>
 
 			<div className="maps">
-			<center>
-				<div style = {{ width: "25vw", height: "32vh"}}>
-					<WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc`}
-						loadingElement = {<div style = {{ height: "100%"}} />}
-						containerElement = {<div style = {{ height: "100%"}} />}
-						mapElement = {<div style = {{ height: "100%"}} />}
-					/>
-				</div>
-			</center>
-		</div>
-			
+				<center>
+					<div style = {{ width: "25vw", height: "32vh"}}>
+						<WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc`}
+							loadingElement = {<div style = {{ height: "100%"}} />}
+							containerElement = {<div style = {{ height: "100%"}} />}
+							mapElement = {<div style = {{ height: "100%"}} />}
+						/>
+					</div>
+				</center>
+			</div>
 		</div>
   );
 }
