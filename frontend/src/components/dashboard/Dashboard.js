@@ -11,7 +11,11 @@ const zoomLevel = 18;
 class View extends React.Component {
 	constructor(props) {
 		super(props);
-		let connector = new PeerConnector()
+	}
+
+	componentDidMount() {
+		const connector = new PeerConnector();
+		connector.connect('Snitch30')
 	}
 
 	render() {
@@ -44,8 +48,8 @@ function Dashboard() {
 				</div>
 					<div className="nav">
 						<div class="btn-container" role="group" aria-label="Basic example">
-							<button type="button" style={{margin:"30px"}} class="btn btn-outline-info">Home</button>
-							<button type="button" class="btn btn-outline-info">Logout</button>
+							<button type="button" style={{margin:"30px"}} className="btn btn-outline-info">Home</button>
+							<button type="button" className="btn btn-outline-info">Logout</button>
 						</div>
 					</div>
 			</div>
@@ -54,13 +58,10 @@ function Dashboard() {
 			</div>
 
 			<div  className = "pollution">
-				<View name="Pollution Control" />;
 			</div>
 			<div  className = "environment">
-				<View name="Environment Control" />;
 			</div>
 			<div  className = "speed">
-				<View name="Speed Management" />;
 			</div>
 
 			<div className="maps">

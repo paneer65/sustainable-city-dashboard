@@ -4,8 +4,8 @@ import React from 'react';
 export default class PeerConnector extends React.Component {
   constructor(props) {
     super(props)
-    let peer = new Peer();
-    console.info("Peer id : " +  peer.id);
+    let peer = new Peer('thededlier-17');
+    console.info('Peer id : ' + peer.id);
     this.state = { peer: peer, conn: null };
   }
 
@@ -13,6 +13,17 @@ export default class PeerConnector extends React.Component {
     let connection = this.state.peer.connect(connectId);
     connection.on('open', function(data) {
       connection.send('Connected');
+      console.log('Connected');
+      this.state.peer.on('call', (call) => {
+        navigator.mediaDevices.getUserMedia({ video: false, audio: true }, (stream) => {
+          call.answer(stream);
+          call.on('stream', (remoteStream) => {
+            console.log(remoteStream)
+          });
+        }, (err) => {
+          console.error('Failed to get peer stream', err);
+        });
+      })
       this.setState({ conn: connection });
     });
   }
@@ -21,7 +32,7 @@ export default class PeerConnector extends React.Component {
     navigator.mediaDevices.getUserMedia({ video: false, audio: true }, (stream) => {
       const call = this.state.peer.call(peerId, stream);
       call.on('stream', (remoteStream) => {
-
+        console.log(remoteStream);
       });
     }, (err) => {
       console.error('Failed to get peer stream', err);
@@ -32,9 +43,9 @@ export default class PeerConnector extends React.Component {
     this.state.peer.on('call', (call) => {
       navigator.mediaDevices.getUserMedia({ video: false, audio: true }, (stream) => {
         call.answer(stream);
-        // call.on('stream', (remoteStream) => {
-        //
-        // });
+        call.on('stream', (remoteStream) => {
+          console.log(remoteStream);
+        });
       }, (err) => {
         console.error('Failed to get peer stream', err);
       });
