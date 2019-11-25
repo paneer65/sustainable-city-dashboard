@@ -4,18 +4,23 @@ import './Dashboard.css';
 import Button from "react-bootstrap/button";
 import Card from 'react-bootstrap/Card'
 import {GoogleMap, withScriptjs, withGoogleMap} from "react-google-maps";
+import PeerConnector from '../PeerConnector/PeerConnector'
 const tcdLocation = { lat: 53.343786, lng: -6.255828 };
 const zoomLevel = 18;
 
 class View extends React.Component {
+	constructor(props) {
+		let connector = PeerConnector()
+	}
+
 	render() {
 	  return (
 			<Card className="bootstrap-card">
 				<Button variant="primary"> {this.props.name}</Button>
 				<Card.Body>
-					<Traffic/>	
+					<Traffic/>
 				</Card.Body>
-			</Card>	
+			</Card>
 			);
 		}
   }
@@ -25,7 +30,7 @@ function Map(){
 	return (
 		<GoogleMap defaultZoom = {zoomLevel} defaultCenter = { tcdLocation } />
 	);
-}         
+}
 
 function Dashboard() {
 	const WrappedMap = withScriptjs(withGoogleMap(Map));
@@ -33,7 +38,7 @@ function Dashboard() {
   return (
 		<div className = "Dashboard">
 			<div  className = "home">
-				<div className="header">  
+				<div className="header">
 					Sustainable City Management
 				</div>
 					<div className="nav">
@@ -44,7 +49,7 @@ function Dashboard() {
 					</div>
 			</div>
 			<div  className = "traffic">
-				<View name="Traffic Management" />;			
+				<View name="Traffic Management" />;
 			</div>
 
 			<div  className = "pollution">
@@ -68,7 +73,7 @@ function Dashboard() {
 				</div>
 			</center>
 		</div>
-			
+
 		</div>
   );
 }
