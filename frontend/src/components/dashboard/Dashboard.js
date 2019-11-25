@@ -1,7 +1,7 @@
 import React from 'react';
 import Traffic from '../traffic/Traffic';
 import './Dashboard.css';
-import Button from "react-bootstrap/button";
+import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card'
 import {GoogleMap, withScriptjs, withGoogleMap} from "react-google-maps";
 import PeerConnector from '../PeerConnector/PeerConnector'
@@ -63,17 +63,16 @@ function Dashboard() {
 			</div>
 
 			<div className="maps">
-			<center>
-				<div style = {{ width: "25vw", height: "32vh"}}>
-					<WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc`}
-						loadingElement = {<div style = {{ height: "100%"}} />}
-						containerElement = {<div style = {{ height: "100%"}} />}
-						mapElement = {<div style = {{ height: "100%"}} />}
-					/>
-				</div>
-			</center>
-		</div>
-
+				<center>
+					<div style = {{ width: "25vw", height: "32vh"}}>
+						<WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc`}
+							loadingElement = {<div style = {{ height: "100%"}} />}
+							containerElement = {<div style = {{ height: "100%"}} />}
+							mapElement = {<div style = {{ height: "100%"}} />}
+						/>
+					</div>
+				</center>
+			</div>
 		</div>
   );
 }
