@@ -10,7 +10,8 @@ const zoomLevel = 18;
 
 class View extends React.Component {
 	constructor(props) {
-		let connector = PeerConnector()
+		super(props);
+		let connector = new PeerConnector()
 	}
 
 	render() {

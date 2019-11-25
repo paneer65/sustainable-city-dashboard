@@ -5,7 +5,7 @@ export default class PeerConnector extends React.Component {
   constructor(props) {
     super(props)
     let peer = new Peer();
-    console.log(peer);
+    console.info("Peer id : " +  peer.id);
     this.state = { peer: peer, conn: null };
   }
 
