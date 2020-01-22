@@ -17,3 +17,6 @@ class Dub_bikes(models.Model):
     available_bikes = models.CharField(max_length=200)
     status =  models.CharField(max_length=200)
     last_update = models.CharField(max_length=200)
+
+# class poll_data(models.Model):
+#     aqi = models.CharField(max_length=200)

@@ -20,3 +20,13 @@ def get_real_time_bikes_data():
     if responsedata:
         dub_bikes = Dub_bikes(number = str(responsedata[0]['number']),name = str(responsedata[0]['name']),latitude = str(responsedata[0]['position']['lat']),longitude = str(responsedata[0]['position']['lng']),bike_stands = str(responsedata[0]['bike_stands']), available_bike_stands = str(responsedata[0]['available_bike_stands']), available_bikes = str(responsedata[0]['available_bikes']), status = str(responsedata[0]['status']) , last_update = str(responsedata[0]['last_update']))
         dub_bikes.save()
+
+# def get_real_time_pollution_data():
+#     external_api_url = 'https://api.openaq.org/v1/locations?'
+#     params = {'coordinates' : '', 'radius' : '200000', 'order_by' : 'distance'}
+#     responsedata_json = requests.get(external_api_url, params=params)
+#     responsedata = responsedata_json.json()
+#     if responsedata:
+#         dub_bikes = Dub_bikes(number = str(responsedata[0]['number']),name = str(responsedata[0]['name']),latitude = str(responsedata[0]['position']['lat']),longitude = str(responsedata[0]['position']['lng']),bike_stands = str(responsedata[0]['bike_stands']), available_bike_stands = str(responsedata[0]['available_bike_stands']), available_bikes = str(responsedata[0]['available_bikes']), status = str(responsedata[0]['status']) , last_update = str(responsedata[0]['last_update']))
+#         dub_bikes.save()
+
