@@ -18,5 +18,8 @@ class Dub_bikes(models.Model):
     status =  models.CharField(max_length=200)
     last_update = models.CharField(max_length=200)
 
-# class poll_data(models.Model):
-#     aqi = models.CharField(max_length=200)
+class Poll_data(models.Model):
+    latitude = models.CharField(max_length=200)
+    longitude = models.CharField(max_length=200) 
+    parameters = models.TextField()
+    countsByMeasurement = models.TextField()
