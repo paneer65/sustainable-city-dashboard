@@ -19,6 +19,7 @@ class Dub_bikes(models.Model):
     last_update = models.CharField(max_length=200)
 
 class Poll_data(models.Model):
+    created_at= models.DateTimeField(auto_now_add=True)
     latitude = models.CharField(max_length=200)
     longitude = models.CharField(max_length=200) 
     parameters = models.TextField()
