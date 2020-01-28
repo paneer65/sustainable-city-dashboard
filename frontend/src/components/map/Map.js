@@ -23,10 +23,10 @@ class Map extends React.Component {
     }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
 		// Need to check state selectedFilter otherwise this will be an infinite loop
-		if (this.props.selectedFilter === 'Pollution' && this.state.selectedFilter !== 'Pollution') {
-	    this.fetchPollutionMapData();
+		if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
+	    	this.fetchPollutionMapData();
 		}
   }
 
@@ -34,7 +34,7 @@ class Map extends React.Component {
 		fetch(pollutionURL)
 			.then(r => r.json())
 			.then(data => {
-				this.setState({ pollutionData: data.results, selectedFilter: 'Pollution' })
+				this.setState({ pollutionData: data.results })
 			})
 	}
 
@@ -64,8 +64,9 @@ class Map extends React.Component {
 			          	{
 										props.selectedMarker === marker &&
 			              <InfoWindow>
-			                <div>
-			                  {marker.locations}
+			              	<div>
+			              		<h4>{marker.locations}</h4>
+			                  {marker.parameters}
 			                </div>
 			              </InfoWindow>
 									}
