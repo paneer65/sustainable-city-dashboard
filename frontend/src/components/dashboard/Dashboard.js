@@ -3,9 +3,6 @@ import Map from '../map/Map';
 import NavigationBar from '../navigationbar/NavigationBar';
 import Filters from '../filters/Filters';
 import FilterActions from '../filter-actions/FilterActions';
-
-import './Dashboard.css';
-
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'

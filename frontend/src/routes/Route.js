@@ -11,7 +11,7 @@ export default function RouteWrapper({
 	const { isAuthenticated } = useAuth();
 
   /**
-  * Redirect user to SignIn page if he tries to access a private      route
+  * Redirect user to SignIn page if he tries to access a private route
   * without authentication.
   */
   if (isPrivate && !isAuthenticated) {

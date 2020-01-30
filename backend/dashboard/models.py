@@ -1,4 +1,5 @@
 from django.db import models
+
 class Dub_bus_time(models.Model):
     stopid = models.CharField(max_length=200)
     displaystopid = models.CharField(max_length=200)
@@ -20,6 +21,6 @@ class Dub_bikes(models.Model):
 
 class Poll_data(models.Model):
     latitude = models.CharField(max_length=200)
-    longitude = models.CharField(max_length=200) 
+    longitude = models.CharField(max_length=200)
     parameters = models.TextField()
     countsByMeasurement = models.TextField()
