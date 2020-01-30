@@ -11,5 +11,6 @@ install:
 before_script:
   - psql -c "CREATE DATABASE sustainable_city_ci;"
 script:
+  - pylint --load-plugins pylint_django ./dashboard
   - python manage.py migrate
   - python manage.py test dashboard
