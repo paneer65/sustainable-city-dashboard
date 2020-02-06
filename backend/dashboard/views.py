@@ -1,4 +1,5 @@
 """ Views """
+import json
 
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -12,20 +13,24 @@ from dashboard.services import get_real_time_bus_stop_data
 from dashboard.services import get_real_time_bikes_data
 from dashboard.services import get_real_time_pollution_data
 
+from dashboard.jwtoken import JwToken
+
 @api_view(['POST'])
 def user_login(request):
     """ User Login """
+    jw_token = JwToken()
     username = request.data["username"]
     password = request.data["password"]
+    payload = {'username' : username, 'password' : password}
+    encrypted_token = jw_token.encode_text(payload)
     user = authenticate(username=username, password=password)
     if user is not None:
         # Authentication success
         login(request, user)
-        serializer = UserSerializer(user)
         get_real_time_bus_stop_data(342)
         get_real_time_bikes_data()
         get_real_time_pollution_data()
-        response = Response({'user': serializer.data}, status=200)
+        response = Response({'Token': json.dumps(str(encrypted_token))}, status=200)
     else:
         # Authentication failed
         response = Response(
@@ -44,6 +49,7 @@ def create_user(request):
     password = request.data['password']
 
     try:
+
         new_user = User.objects.create_user(username, email, password)
         new_user.save()
         response = Response({}, status=200)
