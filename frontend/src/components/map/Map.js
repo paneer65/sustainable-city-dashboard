@@ -41,64 +41,68 @@ class Map extends React.Component {
 
 					case "o3":
 						if ( pollutantValue >= 101 && pollutantValue <= 187 ) {
-							if ( pollutionLevel != 'High')
+							if ( pollutionLevel !== 'High')
 								pollutionLevel = 'Medium';
 						}
 						else if ( pollutantValue >= 188 ) {
 							pollutionLevel = 'High';
 							hazardousPollutant = parameter ;
 						}
-						else 
+						else
 							continue;
+          break
 
 					case "so2":
 						if ( pollutantValue >= 267 && pollutantValue <= 710 ) {
-							if ( pollutionLevel != 'High')
+							if ( pollutionLevel !== 'High')
 								pollutionLevel = 'Medium';
 						}
 						else if ( pollutantValue >= 711 ) {
 							pollutionLevel = 'High';
 							hazardousPollutant = parameter ;
 						}
-						else 
+						else
 							continue;
+          break
 
 					case "no2":
 						if ( pollutantValue >= 201 && pollutantValue <= 467 ) {
-							if ( pollutionLevel != 'High')
+							if ( pollutionLevel !== 'High')
 								pollutionLevel = 'Medium';
 						}
 						else if ( pollutantValue >= 468 ) {
 							pollutionLevel = 'High';
 							hazardousPollutant = parameter ;
 						}
-						else 
+						else
 							continue;
+          break
 
 					case "pm25":
 						if ( pollutantValue >= 36 && pollutantValue <= 58 ) {
-							if ( pollutionLevel != 'High')
+							if ( pollutionLevel !== 'High')
 								pollutionLevel = 'Medium';
 						}
 						else if ( pollutantValue >= 59 ) {
 							pollutionLevel = 'High';
 							hazardousPollutant = parameter ;
 						}
-						else 
+						else
 							continue;
-		
+          break
+
 					case "pm10":
 						if ( pollutantValue >= 51 && pollutantValue <= 83 ) {
-							if ( pollutionLevel != 'High')
+							if ( pollutionLevel !== 'High')
 								pollutionLevel = 'Medium';
 						}
 						else if ( pollutantValue >= 84 ) {
 							pollutionLevel = 'High';
 							hazardousPollutant = parameter ;
 						}
-						else 
+						else
 							continue;
-				
+          break
 
 					default: continue;
 				}
