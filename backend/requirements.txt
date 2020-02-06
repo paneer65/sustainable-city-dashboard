@@ -3,3 +3,4 @@ psycopg2-binary==2.8.4
 djangorestframework==3.10.3
 requests==2.22.0
 pylint-django==2.0.13
+PyJWT==1.7.1
