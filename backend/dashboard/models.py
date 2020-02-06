@@ -26,5 +26,4 @@ class PollData(models.Model):
     """ Model for Pollution Data """
     latitude = models.CharField(max_length=200)
     longitude = models.CharField(max_length=200)
-    parameters = models.TextField()
-    counts_by_measurement = models.TextField()
+    measurements = models.TextField()

@@ -41,7 +41,7 @@ def get_real_time_bikes_data():
 
 def get_real_time_pollution_data():
     """ Fetch realtime pollution data """
-    external_api_url = 'https://api.openaq.org/v1/locations?'
+    external_api_url = 'https://api.openaq.org/v1/latest?'
     params = {'coordinates' : '53.34399,-6.26719', 'radius' : '100000', 'order_by' : 'distance'}
     response_data = requests.get(external_api_url, params=params).json()
     if response_data['results']:
@@ -49,6 +49,7 @@ def get_real_time_pollution_data():
             poll_data = PollData(
                 latitude=str(response_data['results'][i]['coordinates']['latitude']),
                 longitude=str(response_data['results'][i]['coordinates']['longitude']),
-                parameters=response_data['results'][i]['parameters'],
-                counts_by_measurement=response_data['results'][i]['countsByMeasurement'])
+                measurements=response_data['results'][i]['measurements']
+                )
             poll_data.save()
+            
