@@ -9,9 +9,9 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from dashboard.serializers import UserSerializer
-from dashboard.services import get_real_time_bus_stop_data
-from dashboard.services import get_real_time_bikes_data
-from dashboard.services import get_real_time_pollution_data
+# from dashboard.services import get_real_time_bus_stop_data
+# from dashboard.services import get_real_time_bikes_data
+# from dashboard.services import get_real_time_pollution_data
 
 from dashboard.jwtoken import JwToken
 
@@ -27,9 +27,9 @@ def user_login(request):
     if user is not None:
         # Authentication success
         login(request, user)
-        get_real_time_bus_stop_data(342)
-        get_real_time_bikes_data()
-        get_real_time_pollution_data()
+        # get_real_time_bus_stop_data(342)
+        # get_real_time_bikes_data()
+        # get_real_time_pollution_data()
         response = Response({'Token': json.dumps(str(encrypted_token))}, status=200)
     else:
         # Authentication failed

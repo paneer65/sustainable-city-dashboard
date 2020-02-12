@@ -2,6 +2,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from dashboard.test_cases.api_configs.api_translator_test import APITranslatorTest
 from dashboard.jwtoken import JwToken
 
 class SanityTest(TestCase):
