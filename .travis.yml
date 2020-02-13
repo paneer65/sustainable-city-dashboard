@@ -14,5 +14,5 @@ script:
   - pylint --load-plugins pylint_django ./dashboard
   - pylint --load-plugins pylint_django ./api
   - python manage.py migrate
-  - python manage.py test dashboard
-  - python manage.py test api
+  - coverage run --source='.' manage.py test dashboard api
+  - coverage report
