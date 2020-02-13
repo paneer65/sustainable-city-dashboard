@@ -1,13 +1,17 @@
 """
 APITranslator
 """
+# Disable unused variable as eval is using the variable
+# pylint: disable=unused-variable,eval-used
+
 import requests
 
 from dashboard.api_configs.constants import API_TYPE_CLASS_MAP
 from dashboard.tables.pollution_api_data import PollutionAPIData
+from dashboard.tables.bikes_api_data import BikesAPIData
 from dashboard.api_configs.pollution_api_mapping import POLLUTION_API_MAPPING
 
-class APITranslator(object):
+class APITranslator():
     """
     APITranslator class that handles API mappings and calls
     """
@@ -19,7 +23,7 @@ class APITranslator(object):
         self._api_type = api_type
         self._api_id = api_id
 
-    def _response_to_pollution_model(self, response_body_type, response_body, translation_body):
+    def response_to_pollution_model(self, response_body_type, response_body, translation_body):
         """
         Process response of pollution data and created
         models based on it
@@ -54,27 +58,55 @@ class APITranslator(object):
 
         return result
 
-    def _response_to_bikes_model(self, response):
+    def response_to_bikes_model(self, response_body_type, response_body, translation_body):
         """
         Convert bikes api response to models
         """
+        result = []
 
-        models = []
+        if response_body_type == 'array':
+            for res in response_body:
+                model = BikesAPIData(
+                    latitude=eval('res' + translation_body['latitude']),
+                    longitude=eval('res' + translation_body['longitude']),
+                    number_of_bikes=eval('res' + translation_body['number_of_bikes']),
+                    number_of_stands=eval('res' + translation_body['number_of_stands']),
+                    total_capacity=eval('res' + translation_body['total_capacity']),
+                    created_at=eval('res' + translation_body['created_at']),
+                    updated_at=eval('res' + translation_body['updated_at'])
+                )
 
-        return models, response
+                result.append(model)
+        else:
+            model = BikesAPIData(
+                latitude=eval('response_body' + translation_body['latitude']),
+                longitude=eval('response_body' + translation_body['longitude']),
+                number_of_bikes=eval('response_body' + translation_body['location_name']),
+                number_of_stands=eval('response_body' + translation_body['number_of_stands']),
+                total_capacity=eval('response_body' + translation_body['total_capacity']),
+                created_at=eval('response_body' + translation_body['created_at']),
+                updated_at=eval('response_body' + translation_body['lattitude'])
+            )
+
+            result.append(model)
+
+        return result
 
     def response_to_model(self, response):
+        """
+        Convert the response from API into a model
+        """
         translation_map = API_TYPE_CLASS_MAP[self._api_type]['traslation']
         # Fetch translation for specific api
         translation = next(item for item in translation_map if item["id"] == self._api_id)
         if self._api_type == 'pollution':
-            models = self._response_to_pollution_model(
+            models = self.response_to_pollution_model(
                 translation['body_type'],
                 response[translation['body_key']],
                 translation['mapping']
             )
         elif self._api_type == 'bikes':
-            models = self._response_to_bikes_model(
+            models = self.response_to_bikes_model(
                 translation['body_type'],
                 response[translation['body_key']],
                 translation['mapping']

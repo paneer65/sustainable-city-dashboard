@@ -1,11 +1,12 @@
-from django.db import models
+"""
+Models for APIs
+"""
 
-# Create your models here.
+from django.db import models
 
 class APIs(models.Model):
     """API name"""
     name = models.CharField(max_length=200)
-    """URL"""
     url = models.CharField(max_length=200)
 
     def __str__(self):
