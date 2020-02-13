@@ -1,9 +1,11 @@
 """
 APITranslator
 """
+import requests
 
 from dashboard.api_configs.constants import API_TYPE_CLASS_MAP
 from dashboard.tables.pollution_api_data import PollutionAPIData
+from dashboard.api_configs.pollution_api_mapping import POLLUTION_API_MAPPING
 
 class APITranslator(object):
     """
@@ -84,5 +86,9 @@ class APITranslator(object):
         """
         Build and call the API
         """
+        response = requests.get(
+            url=POLLUTION_API_MAPPING[0]["url"],
+            params=POLLUTION_API_MAPPING[0]["parameters"][0]
+            ).json()
 
-        return
+        return response
