@@ -2,7 +2,7 @@
 APITranslator
 """
 # Disable unused variable as eval is using the variable
-# pylint: disable=unused-variable,eval-used
+# pylint: disable=unused-variable,eval-used,unused-argument,too-many-branches
 
 import requests
 
@@ -32,18 +32,67 @@ class APITranslator():
 
         if response_body_type == 'array':
             for res in response_body:
-                model = PollutionAPIData(
-                    latitude=eval('res' + translation_body['latitude']),
-                    longitude=eval('res' + translation_body['longitude']),
-                    location_name=eval('res' + translation_body['location_name']),
-                    parameter=eval('res' + translation_body['parameter']),
-                    value=eval('res' + translation_body['value']),
-                    created_at=eval('res' + translation_body['created_at']),
-                    updated_at=eval('res' + translation_body['updated_at'])
-                )
+                if translation_body['measurement_type'] == 'array':
+                    latitude = eval('res' + translation_body['latitude'])
+                    longitude = eval('res' + translation_body['longitude'])
+                    location_name = eval('res' + translation_body['location_name'])
+                    for measurement in eval('res' + translation_body['measurements_key']):
+                        if translation_body['created_at']:
+                            created_at = eval('measurement' + translation_body['created_at'])
+                        else:
+                            created_at = None
 
-                result.append(model)
+                        if translation_body['updated_at']:
+                            updated_at = eval('measurement' + translation_body['updated_at'])
+                        else:
+                            updated_at = None
+
+                        model = PollutionAPIData(
+                            latitude=latitude,
+                            longitude=longitude,
+                            location_name=location_name,
+                            parameter=eval('measurement' + translation_body['parameter']),
+                            value=eval('measurement' + translation_body['value']),
+                            created_at=created_at,
+                            updated_at=updated_at
+                        )
+
+                        result.append(model)
+                else:
+
+                    if translation_body['created_at']:
+                        created_at = eval('res' + translation_body['created_at'])
+                    else:
+                        created_at = None
+
+                    if translation_body['updated_at']:
+                        updated_at = eval('res' + translation_body['updated_at'])
+                    else:
+                        updated_at = None
+
+                    model = PollutionAPIData(
+                        latitude=eval('res' + translation_body['latitude']),
+                        longitude=eval('res' + translation_body['longitude']),
+                        location_name=eval('res' + translation_body['location_name']),
+                        parameter=eval('res' + translation_body['parameter']),
+                        value=eval('res' + translation_body['value']),
+                        created_at=created_at,
+                        updated_at=updated_at
+                    )
+
+                    result.append(model)
         else:
+
+            if translation_body['created_at']:
+                created_at = eval('response_body' + translation_body['created_at'])
+            else:
+                created_at = None
+
+            if translation_body['updated_at']:
+                updated_at = eval('response_body' + translation_body['updated_at'])
+            else:
+                updated_at = None
+
             model = PollutionAPIData(
                 latitude=eval('response_body' + translation_body['latitude']),
                 longitude=eval('response_body' + translation_body['longitude']),
@@ -51,7 +100,7 @@ class APITranslator():
                 parameter=eval('response_body' + translation_body['parameter']),
                 value=eval('response_body' + translation_body['value']),
                 created_at=eval('response_body' + translation_body['created_at']),
-                updated_at=eval('response_body' + translation_body['lattitude'])
+                updated_at=eval('response_body' + translation_body['latitude'])
             )
 
             result.append(model)
@@ -102,13 +151,13 @@ class APITranslator():
         if self._api_type == 'pollution':
             models = self.response_to_pollution_model(
                 translation['body_type'],
-                response[translation['body_key']],
+                eval('response'  + translation['body_key']),
                 translation['mapping']
             )
         elif self._api_type == 'bikes':
             models = self.response_to_bikes_model(
                 translation['body_type'],
-                response[translation['body_key']],
+                eval('response' + translation['body_key']),
                 translation['mapping']
             )
 

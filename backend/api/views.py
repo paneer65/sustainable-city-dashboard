@@ -5,6 +5,7 @@ Views for API layer
 from rest_framework import generics
 from rest_framework.response import Response
 from dashboard.api_configs.api_translator import APITranslator
+from dashboard.serializers import PollutionAPIDataSerializer
 from .models import APIs
 from .serializers import APISerializer
 
@@ -27,3 +28,22 @@ class ListAPIsView(generics.ListAPIView):
             model.save()
 
         return Response(status=200)
+
+class ReturnPollutionDetails(generics.ListAPIView):
+    """
+    Returns pollution API details
+    """
+    queryset = APIs.objects.all()
+    serializer_class = PollutionAPIDataSerializer
+
+    def list(self, request):
+        """
+        Method to provide API details
+        """
+        api_translator = APITranslator("pollution", 1)
+        response = api_translator.build_api_request()
+        models = api_translator.response_to_model(response)
+
+        json_content = self.serializer_class(models, many=True)
+
+        return Response(json_content.data, status=200)
