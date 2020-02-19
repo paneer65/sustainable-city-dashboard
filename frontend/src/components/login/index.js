@@ -10,7 +10,7 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const { history } = props;
-  const { setIsAuthenticated } = useAuth();
+  const { setIsAuthenticated, setJWTToken } = useAuth();
 
   function validateForm() {
     return username.length > 0 && password.length > 0;
@@ -30,16 +30,25 @@ export default function Login(props) {
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(response => {
+    })
+    .then(response => {
       if (response.status === 200) {
-        setIsAuthenticated(true)
-        history.push('/dashboard');
+        return response.json();
       } else if (response.status === 403) {
-        setErrorMessage('Username or password is invalid')
+        setErrorMessage('Username or password is invalid');
+        return false;
       } else {
         setErrorMessage('Unknown error')
+        return false;
       }
     })
+    .then(response => {
+      if (response) {
+        setIsAuthenticated(true)
+        setJWTToken(response['Token'])
+        history.push('/dashboard');
+      }
+    });
   }
 
   return (

@@ -2,15 +2,13 @@
 APITranslator
 """
 # Disable unused variable as eval is using the variable
-# pylint: disable=unused-variable,eval-used,unused-argument,too-many-branches
+# pylint: disable=unused-variable,eval-used,unused-argument,too-many-branches,no-self-use,too-many-nested-blocks
 
 import requests
 
 from dashboard.api_configs.constants import API_TYPE_CLASS_MAP
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
-from dashboard.api_configs.pollution_api_mapping import POLLUTION_API_MAPPING
-from dashboard.api_configs.bikes_api_mapping import BIKES_API_MAPPING
 
 class APITranslator():
     """

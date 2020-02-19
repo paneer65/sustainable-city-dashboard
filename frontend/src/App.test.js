@@ -63,12 +63,12 @@ it('check state after button click on dashboard', () => {
   let classInstance = shallow(<Dashboard />);
   let initialState = classInstance.state().selectedFilter;
   console.log(initialState);
-  
+
   const onButtonClick = sinon.spy();
   const wrapper = shallow(<Filters onButtonClick={onButtonClick} />);
   wrapper.find('button').simulate('click');
   expect(onButtonClick).to.have.property('callCount', 1);
-  
+
   /*
   let childInstance = shallow(<Filters />);
   console.log(childInstance.find('.filterButton2'));

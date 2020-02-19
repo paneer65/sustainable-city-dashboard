@@ -1,9 +1,12 @@
 """
 Views for API layer
 """
+# pylint: disable=arguments-differ
+# @Kavith please check this out if you get some time
 
 from rest_framework import generics
 from rest_framework.response import Response
+# from rest_framework.permissions import IsAuthenticated
 from dashboard.api_configs.api_translator import APITranslator
 from dashboard.serializers import PollutionAPIDataSerializer
 from .models import APIs
@@ -13,6 +16,7 @@ class ListAPIsView(generics.ListAPIView):
     """
     Provides a GET method handler.
     """
+    # permission_classes = (IsAuthenticated,)
     queryset = APIs.objects.all()
     serializer_class = APISerializer
 

@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from dashboard.serializers import UserSerializer
+from dashboard.tables.user_profile import Profile
 # from dashboard.services import get_real_time_bus_stop_data
 # from dashboard.services import get_real_time_bikes_data
 # from dashboard.services import get_real_time_pollution_data
@@ -26,6 +27,8 @@ def user_login(request):
     user = authenticate(username=username, password=password)
     if user is not None:
         # Authentication success
+        user.profile.token = encrypted_token
+        user.save()
         login(request, user)
         # get_real_time_bus_stop_data(342)
         # get_real_time_bikes_data()
@@ -47,9 +50,7 @@ def create_user(request):
     email = request.data['email']
     username = request.data['username']
     password = request.data['password']
-
     try:
-
         new_user = User.objects.create_user(username, email, password)
         new_user.save()
         response = Response({}, status=200)
@@ -82,4 +83,16 @@ def view_users(request):
             status=500
         )
 
+    return response
+
+@api_view(['POST'])
+def del_token(request):
+    """ Deleting Token after Logout """
+    tkn = request.headers['Auth-Token'].strip('\"')
+    usr_profile = Profile.objects.get(token=tkn)
+    usr_profile.token = ""
+    usr_profile.save()
+    response = Response(
+        status=200
+        )
     return response

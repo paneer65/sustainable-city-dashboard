@@ -35,8 +35,8 @@ class GetAllAPIsTest(BaseViewTest):
     """
     def test_get_all_apis(self):
         """
-            This test ensures that all APIs added in the setUp method
-            exist when we make a GET request to the api/ endpoint
+        This test ensures that all APIs added in the setUp method
+        exist when we make a GET request to the api/ endpoint
         """
 
         response = self.client.get(

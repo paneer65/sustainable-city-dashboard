@@ -12,9 +12,20 @@ function App(props) {
       localStorage.setItem("isAuthenticated", data);
       setIsAuthenticated(data);
     }
+  const setJWTToken = (token) => {
+    localStorage.setItem("token", token);
+  }
+  const getJWTToken = () => {
+    return localStorage.getItem('token');
+  }
+ const deleteJWTToken = () => {
+   localStorage.removeItem('token');
+ }
   return (
     <div className="App">
-      <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated: setAuthenticated }}>
+      <AuthContext.Provider value={{
+          isAuthenticated, setIsAuthenticated: setAuthenticated, setJWTToken, getJWTToken, deleteJWTToken
+        }}>
         <Router history={history}>
           <Routes />
         </Router>
