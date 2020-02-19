@@ -10,14 +10,14 @@ class Filters extends React.Component {
       {
         if (this.props.selectedFilter === element) {
           return (
-            <ListGroup.Item as="li" active>
-              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) }>{ element }</Button>
+            <ListGroup.Item as="li" active >
+              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) } className="filterButton1">{ element }</Button>
             </ListGroup.Item>
           )
         } else {
           return (
-            <ListGroup.Item as="li">
-              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) }>{ element }</Button>
+            <ListGroup.Item as="li" >
+              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) } className="filterButton2">{ element }</Button>
             </ListGroup.Item>
           )
         }
