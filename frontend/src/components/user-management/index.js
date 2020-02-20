@@ -2,6 +2,7 @@ import React from "react";
 import NavigationBar from '../navigationbar/NavigationBar';
 import UserActions from './UserActions';
 import UserList from './UserList';
+import axios from 'axios';
 
 class UserManagementIndex extends React.Component {
   constructor(props) {
@@ -17,11 +18,12 @@ class UserManagementIndex extends React.Component {
   }
 
   fetchUsersList() {
-    fetch('http://localhost:8000/user/view_users')
-			.then(r => r.json())
-			.then(data => {
-				this.setState({ users: data.users, usersLoaded: true })
-			})
+    axios({
+      url: '/user/view_users',
+      method: 'GET'
+    }).then(response => {
+			this.setState({ users: response.data.users, usersLoaded: true })
+		})
   }
 
 	render() {

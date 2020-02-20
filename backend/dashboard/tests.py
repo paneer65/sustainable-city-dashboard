@@ -1,10 +1,11 @@
 """ Test Cases """
 # Disable unused imports
-# pylint: disable=unused-import
+# pylint: disable=unused-import, unused-variable
 
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from rest_framework.authtoken.models import Token
 from dashboard.test_cases.api_configs.api_translator_test import APITranslatorTest
 from dashboard.jwtoken import JwToken
 
@@ -23,10 +24,12 @@ class UserViewsTest(TestCase):
         self.user = get_user_model().objects.create_user(
             username='test_user', password='test_pass'
         )
-
+        token, created = Token.objects.get_or_create(user=self.user)
+        self.headers = {'HTTP_AUTHORIZATION': 'Token ' + str(token)}
     def test_login_view_for_valid_user(self):
         """ Test for Valid User Login """
         print('Method: Test for Valid User Login')
+
         response = self.client.post(reverse('user_login'), {
             'username': 'test_user',
             'password': 'test_pass'
@@ -49,29 +52,33 @@ class UserViewsTest(TestCase):
     def test_create_user_valid(self):
         """ Test for Valid User Creation """
         print('Method: Valid User Creation')
+
         response = self.client.post(reverse('create_user'), {
             'username': 'test_user2',
             'password': 'password2',
             'email': 'test_user2@gmail.com'
-        }, format='json')
+        }, format='json', **self.headers)
         self.assertEqual(response.status_code, 200)
 
     def test_create_user_invalid(self):
         """ Test for Invalid User Creation """
         print('Method: Invalid User Creation')
+
         response = self.client.post(reverse('create_user'), {
             'username': 'test_user',
             'password': 'password2',
             'email': 'test_user2@gmail.com'
-        }, format='json')
+        }, format='json', **self.headers)
         self.assertEqual(response.status_code, 400)
         self.assertEqual(
             response.data['error'],
             'Username or email already exists'
         )
+
     def test_view_user_valid(self):
         """ Test for Viewing Users """
-        response = self.client.get(reverse('view_users'), format='json')
+
+        response = self.client.get(reverse('view_users'), format='json', **self.headers)
         self.assertEqual(response.status_code, 200)
 
 class GenericTest(TestCase):

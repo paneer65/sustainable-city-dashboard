@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react';
 import { Router } from 'react-router-dom';
 import history from './services/history';
@@ -18,9 +19,21 @@ function App(props) {
   const getJWTToken = () => {
     return localStorage.getItem('token');
   }
- const deleteJWTToken = () => {
-   localStorage.removeItem('token');
- }
+  const deleteJWTToken = () => {
+    localStorage.removeItem('token');
+  }
+
+  axios.defaults.baseURL = 'http://localhost:8000/';
+  axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+  // Add a request interceptor
+  axios.interceptors.request.use(function (config) {
+    const token = getJWTToken();
+    config.headers.common.Authorization = 'Token ' + token;
+
+    return config;
+  });
+
   return (
     <div className="App">
       <AuthContext.Provider value={{

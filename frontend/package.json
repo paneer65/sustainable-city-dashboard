@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/react": "^9.3.2",
+    "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",

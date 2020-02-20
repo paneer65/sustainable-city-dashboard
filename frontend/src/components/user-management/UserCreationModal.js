@@ -2,6 +2,7 @@ import React from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
+import axios from 'axios'
 
 class UserCreationModal extends React.Component {
   constructor(props) {
@@ -21,19 +22,17 @@ class UserCreationModal extends React.Component {
       email: this.state.email
     }
 
-    fetch('http://localhost:8000/user/create_user', {
+    axios({
+      url: '/user/create_user',
       method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(response => {
+      data: JSON.stringify(data)
+    }).then((response) => {
       if (response.status === 200) {
         this.closeModal();
       } else if (response.status === 404) {
         this.closeModal();
       }
-    })
+    });
   }
 
   handleUsernameChange(event) {

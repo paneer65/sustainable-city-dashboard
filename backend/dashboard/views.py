@@ -1,39 +1,27 @@
 """ Views """
-import json
-
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework.authentication import TokenAuthentication
 
 from dashboard.serializers import UserSerializer
-from dashboard.tables.user_profile import Profile
-# from dashboard.services import get_real_time_bus_stop_data
-# from dashboard.services import get_real_time_bikes_data
-# from dashboard.services import get_real_time_pollution_data
-
-from dashboard.jwtoken import JwToken
 
 @api_view(['POST'])
 def user_login(request):
     """ User Login """
-    jw_token = JwToken()
     username = request.data["username"]
     password = request.data["password"]
-    payload = {'username' : username, 'password' : password}
-    encrypted_token = jw_token.encode_text(payload)
+
     user = authenticate(username=username, password=password)
     if user is not None:
         # Authentication success
-        user.profile.token = encrypted_token
-        user.save()
         login(request, user)
-        # get_real_time_bus_stop_data(342)
-        # get_real_time_bikes_data()
-        # get_real_time_pollution_data()
-        response = Response({'Token': json.dumps(str(encrypted_token))}, status=200)
+        token, created = Token.objects.get_or_create(user=user)
+        response = Response({'Token': str(token), 'created': created}, status=200)
     else:
         # Authentication failed
         response = Response(
@@ -45,8 +33,10 @@ def user_login(request):
     return response
 
 @api_view(['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
 def create_user(request):
-    """ Create User  """
+    """ Create User """
     email = request.data['email']
     username = request.data['username']
     password = request.data['password']
@@ -64,6 +54,8 @@ def create_user(request):
     return response
 
 @api_view(['GET'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
 def view_users(request):
     """ View User """
     users = User.objects.all()
@@ -85,14 +77,13 @@ def view_users(request):
 
     return response
 
-@api_view(['POST'])
-def del_token(request):
-    """ Deleting Token after Logout """
-    tkn = request.headers['Auth-Token'].strip('\"')
-    usr_profile = Profile.objects.get(token=tkn)
-    usr_profile.token = ""
-    usr_profile.save()
+@api_view(['GET'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def logout_user(request):
+    """ Deleting Token before Logout """
+
     response = Response(
         status=200
-        )
+    )
     return response

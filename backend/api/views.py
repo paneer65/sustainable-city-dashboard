@@ -6,7 +6,7 @@ Views for API layer
 
 from rest_framework import generics
 from rest_framework.response import Response
-# from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from dashboard.api_configs.api_translator import APITranslator
 from dashboard.serializers import PollutionAPIDataSerializer
 from .models import APIs
@@ -16,7 +16,7 @@ class ListAPIsView(generics.ListAPIView):
     """
     Provides a GET method handler.
     """
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     queryset = APIs.objects.all()
     serializer_class = APISerializer
 
@@ -37,6 +37,7 @@ class ReturnPollutionDetails(generics.ListAPIView):
     """
     Returns pollution API details
     """
+    permission_classes = (IsAuthenticated,)
     queryset = APIs.objects.all()
     serializer_class = PollutionAPIDataSerializer
 
