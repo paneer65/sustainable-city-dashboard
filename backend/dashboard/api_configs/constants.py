@@ -4,6 +4,7 @@ API Configs constants
 
 from dashboard.api_configs.pollution_api_mapping import POLLUTION_API_MAPPING
 from dashboard.api_configs.bikes_api_mapping import BIKES_API_MAPPING
+from dashboard.api_configs.bus_api_mapping import BUS_API_MAPPING
 
 API_TYPE_CLASS_MAP = {
     'pollution': {
@@ -13,5 +14,9 @@ API_TYPE_CLASS_MAP = {
     'bikes': {
         'model': 'BikesAPIData',
         'translation':BIKES_API_MAPPING
+    },
+    'bus': {
+        'model': 'BusAPIData',
+        'translation':BUS_API_MAPPING
     }
 }
