@@ -56,7 +56,7 @@ npm install
 
 run
 ```
-yarn start
+yarn start or npm start
 ```
 
 Then navigate to http://localhost:3000/ and you should see that your app is running
