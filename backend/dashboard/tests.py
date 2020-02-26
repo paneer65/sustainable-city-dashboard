@@ -7,6 +7,7 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
 from dashboard.test_cases.api_configs.api_translator_test import APITranslatorTest
+from dashboard.test_cases.the_cacher_test import TheCacherTest
 from dashboard.jwtoken import JwToken
 
 class SanityTest(TestCase):

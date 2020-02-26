@@ -2,13 +2,14 @@ import React from "react"
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
+import Alert from 'react-bootstrap/Alert'
 import axios from 'axios'
 
 class UserCreationModal extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { username: '', email: '', password: '' }
+    this.state = { username: '', email: '', password: '', success: '' }
 
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -29,8 +30,10 @@ class UserCreationModal extends React.Component {
     }).then((response) => {
       if (response.status === 200) {
         this.closeModal();
+        this.setState({ success: true });
       } else if (response.status === 404) {
         this.closeModal();
+        this.setState({ success: false });
       }
     });
   }
@@ -51,8 +54,30 @@ class UserCreationModal extends React.Component {
     this.props.toggleUserCreationModal();
   }
 
+  getAlertMessage() {
+    if (this.state.success === true) {
+      return (
+        <Alert variant="success">
+          User created successfully
+        </Alert>
+      )
+    } else if (this.state.success === false) {
+      return (
+        <Alert variant="danger">
+          User was not created successfully
+        </Alert>
+      )
+    } else {
+      return;
+    }
+  }
+
   render(){
+    let alertMessage = this.getAlertMessage();
     return (
+      <div>
+         { alertMessage }
+
       <Modal show={ this.props.showModal }>
         <Modal.Header closeButton>
           <Modal.Title>Create User</Modal.Title>
@@ -85,6 +110,7 @@ class UserCreationModal extends React.Component {
           <Button variant="primary" onClick={ () => this.createNewUser() }>Submit</Button>
         </Modal.Footer>
       </Modal>
+      </div>
     )
   }
 }

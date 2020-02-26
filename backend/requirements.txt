@@ -6,3 +6,4 @@ pylint-django==2.0.13
 PyJWT==1.7.1
 coverage==5.0.3
 django-cors-headers==3.2.1
+python-memcached==1.59

@@ -9,6 +9,7 @@ from rest_framework.decorators import api_view, permission_classes, authenticati
 from rest_framework.authentication import TokenAuthentication
 
 from dashboard.serializers import UserSerializer
+from dashboard.the_cacher import TheCacher
 
 @api_view(['POST'])
 def user_login(request):
@@ -58,7 +59,7 @@ def create_user(request):
 @permission_classes([IsAuthenticated])
 def view_users(request):
     """ View User """
-    users = User.objects.all()
+    users = TheCacher().get_all_cached_users()
     if users is not None:
         serializer = UserSerializer(users, many=True)
         response = Response(

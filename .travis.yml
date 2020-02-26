@@ -2,6 +2,7 @@
 
 services:
   - postgresql
+  - memcached
 language: python
 python:
   - "3.6"
