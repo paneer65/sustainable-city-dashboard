@@ -7,6 +7,7 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps"
+import axios from "axios"
 
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
@@ -22,10 +23,12 @@ const carbonMonoxideWright = 0.5;
 class Map extends React.Component {
 	constructor(props) {
     super(props)
+
     this.state = {
-      	pollutionData: [],
-      	selectedMarker: false,
-		selectedFilter: '',
+    	pollutionData: [],
+      bikesData: [],
+    	selectedMarker: false,
+  		selectedFilter: '',
     }
   }
 
@@ -33,10 +36,12 @@ class Map extends React.Component {
 		// Need to check state selectedFilter otherwise this will be an infinite loop
 		if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
+		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
+			this.fetchBikesMapData();
 		}
 	}
 
-	normalizeMapValues(mapTobeNormalized, listOfValues) { 
+	normalizeMapValues(mapTobeNormalized, listOfValues) {
 		let pollutantMap = new Map(mapTobeNormalized);
 		let mapValues = Object.values(pollutantMap.props);
 		let maxValue = Math.max.apply(null, listOfValues);
@@ -87,7 +92,7 @@ class Map extends React.Component {
 						pollutionLevel = pollutionLevel + carbonMonoxideWright*pollutantValue;
 						break;
 
-					default: 
+					default:
 						continue;
 				}
 			}
@@ -105,7 +110,7 @@ class Map extends React.Component {
 				data.results[key]["pollutionLevel"] = value;
 			}
 		}
-		debugger;
+
 		return data
 	}
 
@@ -116,6 +121,17 @@ class Map extends React.Component {
 				const updatedData = this.airQualityCalculator(data)
 				this.setState({ pollutionData: updatedData.results })
 		})
+	}
+
+  fetchBikesMapData() {
+    axios({
+      url: '/api/bikes/',
+      method: 'GET'
+    }).then((response) => {
+      if(response.status === 200) {
+        this.setState({ bikesData: response.data })
+      }
+    });
 	}
 
 	handleClick(marker, event) {
@@ -158,6 +174,35 @@ class Map extends React.Component {
 		});
 	}
 
+  generateBikesMap() {
+		return compose(withScriptjs, withGoogleMap)(props => {
+		  	return (
+				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
+				{
+						props.markers.map(marker => {
+							const onClick = props.onClick.bind(this, marker)
+							return (
+								<Marker	key={marker.location_name}
+										onClick={onClick}
+										position={{ lat: parseFloat(marker.latitude), lng: parseFloat(marker.longitude) }}>
+								{
+									props.selectedMarker === marker &&
+									<InfoWindow>
+										<div>
+											<h4>{marker.location_name}</h4>
+                      <span> Number of bikes : {marker.number_of_bikes} </span>
+										</div>
+									</InfoWindow>
+								}
+								</Marker>
+							)
+					})
+				}
+				</GoogleMap>
+		  	)
+		});
+	}
+
 	render() {
 		if (this.props.selectedFilter === 'Pollution') {
 			const PollutionMap = this.generatePollutionMap();
@@ -170,9 +215,22 @@ class Map extends React.Component {
 				loadingElement={<div style= {{ height: `100%` }} />}
 				containerElement={<div style= {{ height: `100%` }} />}
 				mapElement={<div style = {{ height: `100%` }} />}
-	      		/>
+    		/>
 			)
-		}
+		} else if (this.props.selectedFilter === 'Bikes') {
+      const BikesMap = this.generateBikesMap();
+			return (
+				<BikesMap
+          selectedMarker={ this.state.selectedMarker }
+		      markers={ this.state.bikesData }
+		      onClick={ this.handleClick }
+		      googleMapURL={ googleMapURL }
+		      loadingElement={<div style= {{ height: `100%` }} />}
+		      containerElement={<div style= {{ height: `100%` }} />}
+		      mapElement={<div style = {{ height: `100%` }} />}
+    		/>
+			)
+    }
 
 		else {
 			const WrappedMap = withScriptjs(withGoogleMap(this.googleMapInit))

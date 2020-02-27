@@ -2,7 +2,7 @@ import React from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 
-const modules_list = ['Traffic', 'Pollution']
+const modules_list = ['Traffic', 'Pollution', 'Bikes']
 
 class Filters extends React.Component {
   render() {
@@ -11,13 +11,13 @@ class Filters extends React.Component {
         if (this.props.selectedFilter === element) {
           return (
             <ListGroup.Item as="li" active >
-              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) } className="filterButton1">{ element }</Button>
+              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) }>{ element }</Button>
             </ListGroup.Item>
           )
         } else {
           return (
             <ListGroup.Item as="li" >
-              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) } className="filterButton2">{ element }</Button>
+              <Button variant="dark" onClick={ () => this.props.updateSelectedFilter(element) }>{ element }</Button>
             </ListGroup.Item>
           )
         }

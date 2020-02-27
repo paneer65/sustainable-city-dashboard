@@ -17,6 +17,7 @@ BIKES_API_MAPPING = [
         "mapping": {
             "latitude": "['position']['lat']",
             "longitude": "['position']['lng']",
+            "location_name": "['name']",
             "number_of_bikes": "['available_bikes']",
             "number_of_stands": "['available_bike_stands']",
             "total_capacity": "['bike_stands']",

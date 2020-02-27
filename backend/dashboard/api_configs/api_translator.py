@@ -4,8 +4,8 @@ APITranslator
 # Disable unused variable as eval is using the variable
 # pylint: disable=unused-variable,eval-used,unused-argument,too-many-branches,no-self-use,too-many-nested-blocks
 
+from datetime import datetime
 import requests
-
 from dashboard.api_configs.constants import API_TYPE_CLASS_MAP
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
@@ -152,12 +152,15 @@ class APITranslator():
 
                 if translation_body['updated_at']:
                     updated_at = eval('res' + translation_body['updated_at'])
+                    if isinstance(updated_at, int):
+                        updated_at = datetime.utcfromtimestamp(int(str(updated_at)[:10]))
                 else:
                     updated_at = None
 
                 model = BikesAPIData(
                     latitude=eval('res' + translation_body['latitude']),
                     longitude=eval('res' + translation_body['longitude']),
+                    location_name=eval('res' + translation_body['location_name']),
                     number_of_bikes=eval('res' + translation_body['number_of_bikes']),
                     number_of_stands=eval('res' + translation_body['number_of_stands']),
                     total_capacity=eval('res' + translation_body['total_capacity']),
@@ -174,13 +177,16 @@ class APITranslator():
 
             if translation_body['updated_at']:
                 updated_at = eval('response_body' + translation_body['updated_at'])
+                if isinstance(updated_at, int):
+                    updated_at = datetime.utcfromtimestamp(int(str(updated_at)[:10]))
             else:
                 updated_at = None
 
             model = BikesAPIData(
                 latitude=eval('response_body' + translation_body['latitude']),
                 longitude=eval('response_body' + translation_body['longitude']),
-                number_of_bikes=eval('response_body' + translation_body['location_name']),
+                location_name=eval('response_body' + translation_body['location_name']),
+                number_of_bikes=eval('response_body' + translation_body['number_of_bikes']),
                 number_of_stands=eval('response_body' + translation_body['number_of_stands']),
                 total_capacity=eval('response_body' + translation_body['total_capacity']),
                 created_at=created_at,

@@ -23,14 +23,14 @@ function App(props) {
     localStorage.removeItem('token');
   }
 
-  axios.defaults.baseURL = 'http://localhost:8000/';
+  axios.defaults.baseURL = 'http://127.0.0.1:8000/';
   axios.defaults.headers.post['Content-Type'] = 'application/json';
+  axios.defaults.headers.get['Content-Type'] = 'application/json';
 
   // Add a request interceptor
   axios.interceptors.request.use(function (config) {
     const token = getJWTToken();
     config.headers.common.Authorization = 'Token ' + token;
-
     return config;
   });
 
