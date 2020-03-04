@@ -7,11 +7,13 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps"
+import MapDirectionsRenderer from '../map/MapDirectionsRenderer';
 
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
 const googleMapURL = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc";
 const pollutionURL = "https://api.openaq.org/v1/latest?coordinates=53.34399,-6.26719&radius=10000&order_by=distance";
+const trafficURL = "https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?point=53.34399%2C-6.26719&unit=KMPH&openLr=true&key=KSmAdYLDIAGrvX18uWxmyhYHx9SKk8Uo";
 const ozoneWeight = 0.3;
 const sulphurDioxideWeight = 0.15;
 const nitrogenDioxideWeight = 0.10;
@@ -23,8 +25,9 @@ class Map extends React.Component {
 	constructor(props) {
     super(props)
     this.state = {
-      	pollutionData: [],
-      	selectedMarker: false,
+		pollutionData: [],
+		trafficData: [],
+		selectedMarker: false,
 		selectedFilter: '',
     }
   }
@@ -33,6 +36,9 @@ class Map extends React.Component {
 		// Need to check state selectedFilter otherwise this will be an infinite loop
 		if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
+		}
+		if (this.props.selectedFilter === 'Traffic' && prevProps.selectedFilter !== 'Traffic') {
+			this.fetchTrafficData();
 		}
 	}
 
@@ -100,8 +106,6 @@ class Map extends React.Component {
 		let normalizedPollutantLevelMap = new Map(this.normalizeMapValues(pollutionLevelMap, pollutionLevelArray));
 		for (const [key, value] of Object.entries(normalizedPollutantLevelMap.props)) {
 			if(typeof value === "number"){
-				console.log(key + " asdasd " +value)
-				console.log(data.results[key])
 				data.results[key]["pollutionLevel"] = value;
 			}
 		}
@@ -115,6 +119,16 @@ class Map extends React.Component {
 			.then(data => {
 				const updatedData = this.airQualityCalculator(data)
 				this.setState({ pollutionData: updatedData.results })
+		})
+	}
+
+	fetchTrafficData() {
+		fetch(trafficURL)
+			.then(r => r.json())
+			.then(data => {
+				//const updatedData = this.airQualityCalculator(data)
+				this.setState({ trafficData: data })
+				console.log(data.flowSegmentData.coordinates.coordinate)
 		})
 	}
 
@@ -133,29 +147,61 @@ class Map extends React.Component {
 		  	return (
 				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
 				{
-						props.markers.map(marker => {
-							const onClick = props.onClick.bind(this, marker)
-							return (
-								<Marker	key={marker.location}
-										onClick={onClick}
-										position={{ lat: marker.coordinates.latitude, lng: marker.coordinates.longitude }}>
-								{
-									props.selectedMarker === marker &&
-									<InfoWindow>
-										<div>
-											<h4>{marker.location}</h4>
-											{marker.pollutionLevel} <br/>
-											{marker.hazardousPollutant}
-										</div>
-									</InfoWindow>
-								}
-								</Marker>
-							)
+					props.markers.map(marker => {
+						const onClick = props.onClick.bind(this, marker)
+						return (
+							<Marker	key={marker.location}
+									onClick={onClick}
+									position={{ lat: marker.coordinates.latitude, lng: marker.coordinates.longitude }}>
+							{
+								props.selectedMarker === marker &&
+								<InfoWindow>
+									<div>
+										<h4>{marker.location}</h4>
+										{marker.pollutionLevel} <br/>
+										{marker.hazardousPollutant}
+									</div>
+								</InfoWindow>
+							}
+							</Marker>
+						)
 					})
 				}
 				</GoogleMap>
 		  	)
 		});
+	}
+
+	generateTrafficMap() {
+		return compose(withScriptjs, withGoogleMap)(props => {
+			return (
+				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
+				{
+					props.markers.map( marker => {
+						const onClick = props.onClick.bind(this, marker)
+						return (
+							<MapDirectionsRenderer places= {marker.flowSegmentData.coordinates.coordinate} travelMode={window.google.maps.TravelMode.DRIVING} />
+							/*<Marker	key={marker.location}
+									onClick={onClick}
+									position={{ lat: marker.coordinates.latitude, lng: marker.coordinates.longitude }}>
+							{
+								props.selectedMarker === marker &&
+								<InfoWindow>
+									<div>
+										<h4>{marker.location}</h4>
+										{marker.pollutionLevel} <br/>
+										{marker.hazardousPollutant}
+									</div>
+								</InfoWindow>
+							}
+							</Marker>*/
+						)
+					})
+				}
+
+				</GoogleMap>
+			)
+	  });
 	}
 
 	render() {
@@ -175,14 +221,17 @@ class Map extends React.Component {
 		}
 
 		else {
-			const WrappedMap = withScriptjs(withGoogleMap(this.googleMapInit))
+			const TrafficMap = this.generateTrafficMap();
 			return (
-				<WrappedMap
-					googleMapURL = { googleMapURL }
-					loadingElement={<div style = {{ height: "100%"}} />}
-					containerElement={<div style = {{ height: "100%"}} />}
-					mapElement={<div style = {{ height: "100%"}} />}
-				/>
+				<TrafficMap
+				selectedMarker={ this.state.selectedMarker }
+				markers={ this.state.trafficData}
+				onClick={ this.handleClick }
+				googleMapURL={ googleMapURL }
+				loadingElement={<div style= {{ height: `100%` }} />}
+				containerElement={<div style= {{ height: `100%` }} />}
+				mapElement={<div style = {{ height: `100%` }} />}
+	      		/>
 			)
 		}
 	}
