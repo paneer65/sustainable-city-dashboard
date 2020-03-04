@@ -14,6 +14,7 @@ before_script:
 script:
   - pylint --load-plugins pylint_django ./dashboard
   - pylint --load-plugins pylint_django ./api
+  - pylint --load-plugins pylint_django ./reports
   - python manage.py migrate
-  - coverage run --source='.' manage.py test dashboard api
+  - coverage run --source='.' manage.py test dashboard api reports
   - coverage report

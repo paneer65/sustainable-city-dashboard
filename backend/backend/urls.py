@@ -21,5 +21,6 @@ urlpatterns = [
     path('', include('dashboard.urls')),
     path('admin/', admin.site.urls),
     #path('api/(?P<version>(v1|v2))/', include('api.urls'))
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    path('reports/', include('reports.urls'))
 ]
