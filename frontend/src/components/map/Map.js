@@ -27,7 +27,6 @@ class Map extends React.Component {
     this.state = {
     	pollutionData: [],
       bikesData: [],
-    	selectedMarker: false,
   		selectedFilter: '',
     }
   }
@@ -136,6 +135,7 @@ class Map extends React.Component {
 
 	handleClick(marker, event) {
 		this.setState({ selectedMarker: marker });
+    this.props.updateSelectedMarker(marker);
 	}
 
 	googleMapInit() {
@@ -208,7 +208,7 @@ class Map extends React.Component {
 			const PollutionMap = this.generatePollutionMap();
 			return (
 				<PollutionMap
-				selectedMarker={ this.state.selectedMarker }
+				selectedMarker={ this.props.selectedMarker }
 				markers={ this.state.pollutionData }
 				onClick={ this.handleClick }
 				googleMapURL={ googleMapURL }
@@ -221,7 +221,7 @@ class Map extends React.Component {
       const BikesMap = this.generateBikesMap();
 			return (
 				<BikesMap
-          selectedMarker={ this.state.selectedMarker }
+          selectedMarker={ this.props.selectedMarker }
 		      markers={ this.state.bikesData }
 		      onClick={ this.handleClick }
 		      googleMapURL={ googleMapURL }

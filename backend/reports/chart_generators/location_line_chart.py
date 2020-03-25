@@ -12,7 +12,13 @@ class LocationLineChart():
     Line charts data specifically for a location
     """
     @staticmethod
-    def build_line_chart_data(model_type, coordinates, parameters, date_filter, predict_trendline=True):
+    def build_line_chart_data(
+                        model_type,
+                        coordinates,
+                        parameters,
+                        date_filter,
+                        predict_trendline=True
+    ):
         """
         Build line chart for any model
         """
@@ -46,16 +52,18 @@ class LocationLineChart():
         )
 
         chart_data = {
-            'x': [],
-            'y': []
+            'chart_data': [],
+            'forecast_data': []
         }
 
         for data in pollution_data:
-            chart_data['x'].append(data.updated_at)
-            chart_data['y'].append(data.value)
+            chart_data['chart_data'].append({
+                'x': data.updated_at,
+                'y': data.value
+            })
 
         if predict_trendline:
-            chart_data['forecast'] = LocationLineChart.build_forecast_data(chart_data)
+            chart_data['forecast_data'] = LocationLineChart.build_forecast_data(chart_data)
 
         return chart_data
 
@@ -72,16 +80,18 @@ class LocationLineChart():
         )
 
         chart_data = {
-            'x': [],
-            'y': []
+            'chart_data': [],
+            'forecast_data': []
         }
 
         for data in bikes_data:
-            chart_data['x'].append(data.updated_at)
-            chart_data['y'].append(getattr(data, parameters['parameter']))
+            chart_data['chart_data'].append({
+                'x': data.updated_at,
+                'y': getattr(data, parameters['parameter'])
+            })
 
         if predict_trendline:
-            chart_data['forecast'] = LocationLineChart.build_forecast_data(chart_data)
+            chart_data['forecast_data'] = LocationLineChart.build_forecast_data(chart_data)
 
         return chart_data
 
@@ -90,7 +100,7 @@ class LocationLineChart():
         """
         Build forecast data using the ARIMA model
         """
-        if len(chart_data['y']) >= 10:
+        if len(chart_data['chart_data']) >= 10:
             chart_data_df = pd.DataFrame.from_dict(chart_data)
             chart_data_df.set_index('x')
             # chart_trend_data = chart_data_df['y'].rolling(

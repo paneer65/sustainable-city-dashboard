@@ -21,7 +21,7 @@ class UserViewsTest(TestCase):
     """ Test for User Views """
     def setUp(self):
         """ Initialise User for Login """
-        print('Method: Set Up User View')
+
         self.user = get_user_model().objects.create_user(
             username='test_user', password='test_pass'
         )
@@ -29,7 +29,6 @@ class UserViewsTest(TestCase):
         self.headers = {'HTTP_AUTHORIZATION': 'Token ' + str(token)}
     def test_login_view_for_valid_user(self):
         """ Test for Valid User Login """
-        print('Method: Test for Valid User Login')
 
         response = self.client.post(reverse('user_login'), {
             'username': 'test_user',
@@ -39,7 +38,7 @@ class UserViewsTest(TestCase):
 
     def test_login_view_for_invalid_user(self):
         """ Test for Invalid User Login """
-        print('Method: Test for Invalid User Login')
+
         response = self.client.post(reverse('user_login'), {
             'username': 'password123',
             'password': 'password123'
