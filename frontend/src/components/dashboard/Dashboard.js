@@ -20,14 +20,6 @@ class Dashboard extends React.Component {
     this.updateSelectedMarker = this.updateSelectedMarker.bind(this);
   }
 
-  componentDidMount() {
-    this._isMounted = true;
-  }
-
-  componentDidUnmount() {
-    this._isMounted = false;
-  }
-
   updateSelectedFilter(newFilter) {
     this.setState({ selectedFilter: newFilter });
   }

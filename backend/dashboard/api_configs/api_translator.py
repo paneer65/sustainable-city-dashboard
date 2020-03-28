@@ -252,7 +252,6 @@ class APITranslator():
         translation_map = API_TYPE_CLASS_MAP[self._api_type]['translation']
 
         translation = next(item for item in translation_map if item["id"] == self._api_id)
-
         response = requests.get(
             url=translation["url"],
             params=translation["parameters"]

@@ -7,12 +7,10 @@ POLLUTION_API_MAPPING = [
         "id": 1,
         "api_name": "OpenAQ Pollution",
         "url": "https://api.openaq.org/v1/latest",
-        "parameters": [
-            {
-                "coordinates" : "53.34399,-6.26719",
-                "radius" : "10000",
-            }
-        ],
+        "parameters": {
+            "coordinates" : "53.34399,-6.26719",
+            "radius" : "500",
+        },
         "body_key": "['results']",
         "body_type": "array",
         "mapping": {

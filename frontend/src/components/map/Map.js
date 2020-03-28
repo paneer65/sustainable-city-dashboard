@@ -1,4 +1,5 @@
 import React from "react"
+import * as _ from 'underscore';
 import { compose } from "recompose"
 import {
   withScriptjs,
@@ -12,7 +13,6 @@ import axios from "axios"
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
 const googleMapURL = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc";
-const pollutionURL = "https://api.openaq.org/v1/latest?coordinates=53.34399,-6.26719&radius=10000&order_by=distance";
 const ozoneWeight = 0.3;
 const sulphurDioxideWeight = 0.15;
 const nitrogenDioxideWeight = 0.10;
@@ -58,68 +58,57 @@ class Map extends React.Component {
 
 	airQualityCalculator(data) {
 		let pollutionLevelMap = new Map();
-		let pollutionLevelArray = new Array();
-		let keys = Object.keys(data.results);
-		for ( var key in keys ) {
-			var pollutionLevel = 0;
-			var hazardousPollutant = "";
-			for ( var pollutantData in data.results[key]["measurements"] ) {
-				var pollutantValue = data.results[key]["measurements"][pollutantData]["value"]
-				var parameter = data.results[key]["measurements"][pollutantData]["parameter"]
-				switch ( parameter ) {
-					case "o3":
-						pollutionLevel = pollutionLevel + ozoneWeight*pollutantValue;
-						break
+	 	let keys = Object.keys(data);
+		let name = data[0]['location_name'];
+		let all = []
+		let arr = {}
+    let count =0;
+    let i =1;
 
-					case "so2":
-						pollutionLevel = pollutionLevel + sulphurDioxideWeight*pollutantValue;
-						break
-
-					case "no2":
-						pollutionLevel = pollutionLevel + nitrogenDioxideWeight*pollutantValue;
-						break
-
-					case "pm25":
-						pollutionLevel = pollutionLevel + particleMatter25Weight*pollutantValue;
-						break
-
-					case "pm10":
-						pollutionLevel = pollutionLevel + particleMatter10Weight*pollutantValue;
-						break
-
-					case "co":
-						pollutionLevel = pollutionLevel + carbonMonoxideWright*pollutantValue;
-						break;
-
-					default:
-						continue;
-				}
+    for(var key in keys)
+		{
+			if(data[key]['location_name']===name)
+			{
+				arr [data[key]['parameter']] = data[key]['value'];
+				count++;
 			}
-			pollutionLevelMap[key] = pollutionLevel;
-			pollutionLevelArray.push(pollutionLevel);
-			data.results[key]["hazardousPollutant"] = hazardousPollutant;
-			data.results[key]["markerKey"] = key;
-			//data.results[key]["pollutionLevel"] = 0;
-		}
-		let normalizedPollutantLevelMap = new Map(this.normalizeMapValues(pollutionLevelMap, pollutionLevelArray));
-		for (const [key, value] of Object.entries(normalizedPollutantLevelMap.props)) {
-			if(typeof value === "number"){
-				console.log(key + " asdasd " +value)
-				console.log(data.results[key])
-				data.results[key]["pollutionLevel"] = value;
+			else
+			{
+				arr['location_name'] = name;
+				arr['id'] = i;
+        arr['latitude'] = parseFloat(data[key-1]['latitude']);
+        arr['longitude'] = parseFloat(data[key-1]['longitude'])
+				//all[name] = arr;
+				all.push(arr);
+				name = data[key]['location_name'];
+				count = 0;
+				arr = {}
+				i++;
 			}
 		}
+		arr['location_name'] = name;
+		arr['id'] = i;
+    arr['latitude'] = parseFloat(data[key-1]['latitude']);
+    arr['longitude'] = parseFloat(data[key-1]['longitude'])
 
-		return data
+		all.push(arr)
+
+    return all;
 	}
 
 	fetchPollutionMapData() {
-		fetch(pollutionURL)
-			.then(r => r.json())
-			.then(data => {
-				const updatedData = this.airQualityCalculator(data)
-				this.setState({ pollutionData: updatedData.results })
-		})
+		axios({
+			url: '/api/pollution/',
+			method: 'GET'
+		}).then((response) => {
+			if(response.status === 200) {
+				//debugger
+				const updatedData = this.airQualityCalculator(response.data)
+				//const newdata = _.uniq(response.data,function(p){return p.location_name});
+				this.setState({ pollutionData: updatedData})
+				console.log(updatedData);
+			}
+		});
 	}
 
   fetchBikesMapData() {
@@ -152,16 +141,16 @@ class Map extends React.Component {
 						props.markers.map(marker => {
 							const onClick = props.onClick.bind(this, marker)
 							return (
-								<Marker	key={marker.location}
+								<Marker	key={marker.id}
 										onClick={onClick}
-										position={{ lat: marker.coordinates.latitude, lng: marker.coordinates.longitude }}>
+										position={{ lat: marker.latitude, lng: marker.longitude }}>
 								{
 									props.selectedMarker === marker &&
 									<InfoWindow>
 										<div>
-											<h4>{marker.location}</h4>
-											{marker.pollutionLevel} <br/>
-											{marker.hazardousPollutant}
+											<h4>{marker.location_name}</h4>
+											{marker.so2} <br/>
+											{marker.co}
 										</div>
 									</InfoWindow>
 								}

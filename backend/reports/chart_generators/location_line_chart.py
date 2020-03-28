@@ -101,16 +101,21 @@ class LocationLineChart():
         Build forecast data using the ARIMA model
         """
         if len(chart_data['chart_data']) >= 10:
-            chart_data_df = pd.DataFrame.from_dict(chart_data)
-            chart_data_df.set_index('x')
-            # chart_trend_data = chart_data_df['y'].rolling(
-            #     window=30,
-            #     center=True,
-            #     min_periods=0
-            # ).mean()
-            model = ARIMA(chart_data_df['y'], order=(1, 0, 0))
-            result_arima = model.fit(disp=0)
-            forecast = result_arima.forecast(steps=5)[0]
+            try:
+                chart_data_df = pd.DataFrame.from_dict(chart_data['chart_data'])
+                chart_data_df.set_index('x')
+                # chart_trend_data = chart_data_df['y'].rolling(
+                #     window=30,
+                #     center=True,
+                #     min_periods=0
+                # ).mean()
+                model = ARIMA(chart_data_df['y'].astype(float), order=(1, 0, 0))
+                result_arima = model.fit(disp=0)
+                forecast = result_arima.forecast(steps=5)[0]
+            except ValueError as err:
+                print("Exception: {0}".format(err))
+                forecast = None
+
         else:
             forecast = None
 
