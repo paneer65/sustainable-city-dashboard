@@ -9,6 +9,7 @@ import {
   InfoWindow
 } from "react-google-maps"
 import axios from "axios"
+import TrafficGoogleMaps from "../traffic/Traffic"
 
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
@@ -192,6 +193,10 @@ class Map extends React.Component {
 		});
 	}
 
+	generateTrafficMap(){
+		return TrafficGoogleMaps
+	}
+
 	render() {
 		if (this.props.selectedFilter === 'Pollution') {
 			const PollutionMap = this.generatePollutionMap();
@@ -219,7 +224,20 @@ class Map extends React.Component {
 		      mapElement={<div style = {{ height: `100%` }} />}
     		/>
 			)
-    }
+    	} else if (this.props.selectedFilter === 'Traffic') {
+			const TrafficMap = this.generateTrafficMap();
+				  return (
+					  <TrafficMap
+				selectedMarker={ this.props.selectedMarker }
+					markers={ this.state.bikesData }
+					onClick={ this.handleClick }
+					googleMapURL={ googleMapURL }
+					loadingElement={<div style= {{ height: `100%` }} />}
+					containerElement={<div style= {{ height: `100%` }} />}
+					mapElement={<div style = {{ height: `100%` }} />}
+				  />
+				  )
+		}
 
 		else {
 			const WrappedMap = withScriptjs(withGoogleMap(this.googleMapInit))
