@@ -1,5 +1,4 @@
 import React from "react"
-import * as _ from 'underscore';
 import { compose } from "recompose"
 import {
   withScriptjs,
@@ -14,12 +13,6 @@ import TrafficGoogleMaps from "../traffic/Traffic"
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
 const googleMapURL = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc";
-const ozoneWeight = 0.3;
-const sulphurDioxideWeight = 0.15;
-const nitrogenDioxideWeight = 0.10;
-const particleMatter25Weight = 0.20;
-const particleMatter10Weight = 0.20;
-const carbonMonoxideWright = 0.5;
 
 class Map extends React.Component {
 	constructor(props) {
@@ -46,31 +39,32 @@ class Map extends React.Component {
 		let mapValues = Object.values(pollutantMap.props);
 		let maxValue = Math.max.apply(null, listOfValues);
 		let minValue = Math.min.apply(null, listOfValues);
-		let normalisedMap = new Map();
-		mapValues.map((value, key) => {
+
+    mapValues.map((value, key) => {
 			if(typeof value === "number"){
 				let normalizedValue = (value - minValue)/ (maxValue - minValue);
-				normalisedMap[key] = normalizedValue;
-			}
+				return normalizedValue;
+			} else {
+        return value;
+      }
 		});
-		return normalisedMap;
+
+		return mapValues;
 	}
 
-
 	airQualityCalculator(data) {
-		let pollutionLevelMap = new Map();
 	 	let keys = Object.keys(data);
 		let name = data[0]['location_name'];
 		let all = []
 		let arr = {}
-    let count =0;
+    let count = 0;
     let i =1;
 
     for(var key in keys)
 		{
-			if(data[key]['location_name']===name)
+			if(data[key]['location_name'] === name)
 			{
-				arr [data[key]['parameter']] = data[key]['value'];
+				arr[data[key]['parameter']] = data[key]['value'];
 				count++;
 			}
 			else

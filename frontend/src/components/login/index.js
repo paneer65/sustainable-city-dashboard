@@ -58,6 +58,7 @@ export default function Login(props) {
           <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus
+            id="username-field"
             type="text"
             value={username}
             onChange={e => setUsername(e.target.value)}
@@ -66,6 +67,7 @@ export default function Login(props) {
         <Form.Group controlId="password" size="lg">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            id="password-field"
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"

@@ -23,7 +23,6 @@ export default class LocationLineChart extends React.Component {
   }
 
   fetchChartData(modelParams) {
-    let selectedMarker = this.props.selectedMarker;
     modelParams.forEach((param) => {
       let postData = {
         coordinates: {
