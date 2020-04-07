@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAuthenticated
 from dashboard.api_configs.api_translator import APITranslator
 from dashboard.serializers import PollutionAPIDataSerializer
 from dashboard.serializers import BikesAPIDataSerializer
+from dashboard.serializers import NewsAPIDataSerializer
 from .models import APIs
 from .serializers import APISerializer
 
@@ -67,6 +68,25 @@ class ReturnBikesDetails(generics.ListAPIView):
         List bikes API data
         """
         api_translator = APITranslator("bikes", 1)
+        response = api_translator.build_api_request()
+        models = api_translator.response_to_model(response)
+
+        json_content = self.serializer_class(models, many=True)
+        return Response(json_content.data, status=200)
+
+class ReturnNewsDetails(generics.ListAPIView):
+    """
+    Returns news API data
+    """
+    permission_classes = (IsAuthenticated,)
+    queryset = APIs.objects.all()
+    serializer_class = NewsAPIDataSerializer
+
+    def list(self, request):
+        """
+        List news API data
+        """
+        api_translator = APITranslator("news", 1)
         response = api_translator.build_api_request()
         models = api_translator.response_to_model(response)
 

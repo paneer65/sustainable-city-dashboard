@@ -56,10 +56,47 @@ class GetAllAPIsTest(BaseViewTest):
         # serialized = APISerializer(expected, many=True)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+class ReturnPollutionDetailsTest(BaseViewTest):
+    """
+    Test return news details view
+    """
+
+    def test_auth(self):
+        """
+        Test that API fails with incorrect auth headers
+        """
+        response = self.client.get(
+            reverse("pollution"),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_return_bikes_view(self):
+        """
+        Test bikes view is returned
+        """
+        response = self.client.get(
+            reverse("pollution"),
+            **self.headers
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
 class ReturnBikesDetailsTest(BaseViewTest):
     """
     Test return bikes details view
     """
+
+    def test_auth(self):
+        """
+        Test that API fails with incorrect auth headers
+        """
+        response = self.client.get(
+            reverse("bikes"),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_return_bikes_view(self):
         """
@@ -67,6 +104,32 @@ class ReturnBikesDetailsTest(BaseViewTest):
         """
         response = self.client.get(
             reverse("bikes"),
+            **self.headers
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+class ReturnNewsDetailsTest(BaseViewTest):
+    """
+    Test return news details view
+    """
+
+    def test_auth(self):
+        """
+        Test that API fails with incorrect auth headers
+        """
+        response = self.client.get(
+            reverse("news"),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_return_bikes_view(self):
+        """
+        Test bikes view is returned
+        """
+        response = self.client.get(
+            reverse("news"),
             **self.headers
         )
 

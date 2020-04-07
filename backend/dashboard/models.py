@@ -10,6 +10,7 @@ from rest_framework.authtoken.models import Token
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
 from dashboard.tables.bus_api_data import BusAPIData
+from dashboard.tables.news_api_data import NewsAPIData
 from dashboard.tables.user_profile import Profile
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)

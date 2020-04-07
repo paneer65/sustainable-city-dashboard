@@ -3,6 +3,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User, Group
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
+from dashboard.tables.news_api_data import NewsAPIData
 
 class UserSerializer(serializers.ModelSerializer):
     """ Serializer for user class """
@@ -32,4 +33,13 @@ class BikesAPIDataSerializer(serializers.ModelSerializer):
         fields = [
             'latitude', 'longitude', 'location_name', 'number_of_bikes',
             'total_capacity', 'created_at', 'updated_at', 'timestamp'
+        ]
+
+class NewsAPIDataSerializer(serializers.ModelSerializer):
+    """ Serializer for NewsAPIData class """
+    class Meta:
+        model = NewsAPIData
+        fields = [
+            'source', 'title', 'description', 'url', 'url_to_image',
+            'published_at', 'sentiment', 'sentiment_value', 'timestamp'
         ]

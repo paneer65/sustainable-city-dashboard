@@ -14,9 +14,7 @@ matrix:
       before_script:
         - psql -c "CREATE DATABASE sustainable_city_ci;"
       script:
-        - pylint --load-plugins pylint_django ./dashboard
-        - pylint --load-plugins pylint_django ./api
-        - pylint --load-plugins pylint_django ./reports
+        - pylint --load-plugins pylint_django ./dashboard ./api ./reports
         - python manage.py migrate
         - coverage run --source='.' manage.py test dashboard api reports
         - coverage report

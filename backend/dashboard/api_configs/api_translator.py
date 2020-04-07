@@ -9,7 +9,7 @@ import requests
 from dashboard.api_configs.constants import API_TYPE_CLASS_MAP
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
-from dashboard.tables.bus_api_data import BusAPIData
+from dashboard.api_configs.response_to_model import ResponseToModel
 
 class APITranslator():
     """
@@ -110,33 +110,6 @@ class APITranslator():
 
         return result
 
-    def response_to_bus_model(self, response_body_type, response_body, translation_body):
-        """
-        Convert Bus api response to models
-        """
-
-        result = []
-        if response_body_type == 'array':
-            for res in response_body:
-                model = BusAPIData(
-                    stopid=eval('res' + translation_body['stopid']),
-                    latitude=eval('res' + translation_body['latitude']),
-                    shortname=eval('res' + translation_body['shortname']),
-                    longitude=eval('res' + translation_body['longitude'])
-                )
-                result.append(model)
-        else:
-            model = BusAPIData(
-                stopid=eval('response_body' + translation_body['stopid']),
-                latitude=eval('response_body' + translation_body['latitude']),
-                shortname=eval('response_body' + translation_body['shortname']),
-                longitude=eval('response_body' + translation_body['longitude'])
-            )
-            result.append(model)
-
-        return result
-
-
     def response_to_bikes_model(self, response_body_type, response_body, translation_body):
         """
         Convert bikes api response to models
@@ -204,21 +177,11 @@ class APITranslator():
         translation_map = API_TYPE_CLASS_MAP[self._api_type]['translation']
         # Fetch translation for specific api
         translation = next(item for item in translation_map if item["id"] == self._api_id)
-        # import pdb; pdb.set_trace()
-        # try:
-        #     if translation['body_key']:
-        #         response_body = eval('response' + translation['body_key'])
-        #     else:
-        #         response_body = response
-        # except Exception as e:
-        #     response_body = response
 
         if translation['body_key']:
-            # import pdb; pdb.set_trace()
             response_body = eval('response' + translation['body_key'])
         else:
             response_body = response
-        # import pdb; pdb.set_trace()
 
         if self._api_type == 'pollution':
             models = self.response_to_pollution_model(
@@ -236,8 +199,14 @@ class APITranslator():
 
         elif self._api_type == 'bus':
 
+            models = ResponseToModel.response_to_bus_model(
+                translation['body_type'],
+                response_body,
+                translation['mapping']
+            )
 
-            models = self.response_to_bus_model(
+        elif self._api_type == 'news':
+            models = ResponseToModel.response_to_news_model(
                 translation['body_type'],
                 response_body,
                 translation['mapping']
