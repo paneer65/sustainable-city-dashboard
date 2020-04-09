@@ -11,6 +11,7 @@ from dashboard.api_configs.api_translator import APITranslator
 from dashboard.serializers import PollutionAPIDataSerializer
 from dashboard.serializers import BikesAPIDataSerializer
 from dashboard.serializers import NewsAPIDataSerializer
+from dashboard.the_cacher import TheCacher
 from .models import APIs
 from .serializers import APISerializer
 
@@ -86,9 +87,12 @@ class ReturnNewsDetails(generics.ListAPIView):
         """
         List news API data
         """
-        api_translator = APITranslator("news", 1)
-        response = api_translator.build_api_request()
-        models = api_translator.response_to_model(response)
+        models = TheCacher.get_latest_news()
+
+        if not models:
+            api_translator = APITranslator("news", 1)
+            response = api_translator.build_api_request()
+            models = api_translator.response_to_model(response)
 
         json_content = self.serializer_class(models, many=True)
         return Response(json_content.data, status=200)

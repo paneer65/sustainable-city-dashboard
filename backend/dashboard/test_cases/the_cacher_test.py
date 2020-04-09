@@ -13,13 +13,13 @@ class TheCacherTest(TestCase):
         """Method to test reset_all_cached_users"""
         cache.set(CACHE_KEYS['all_users'], True)
         self.assertEqual(cache.get(CACHE_KEYS['all_users']), True)
-        TheCacher().reset_all_cached_users()
+        TheCacher.reset_all_cached_users()
         self.assertEqual(cache.get(CACHE_KEYS['all_users']), None)
 
     def test_get_all_cached_users_when_cache_is_present(self):
         """Method to test get_all_cached_users when data is present in the cache"""
         cache.set(CACHE_KEYS['all_users'], True)
-        test_cache = TheCacher().get_all_cached_users()
+        test_cache = TheCacher.get_all_cached_users()
         self.assertEqual(test_cache, True)
         cache.clear()
 
@@ -30,7 +30,7 @@ class TheCacherTest(TestCase):
         )
         cache.clear()
         self.assertEqual(cache.get(CACHE_KEYS['all_users']), None)
-        test_cache = TheCacher().get_all_cached_users()
+        test_cache = TheCacher.get_all_cached_users()
         self.assertEqual(test_cache.__class__.__name__, 'QuerySet')
 
     def test_user_creation_clears_cache(self):
@@ -42,3 +42,13 @@ class TheCacherTest(TestCase):
             username='test_user', password='test_pass'
         )
         self.assertEqual(cache.get(CACHE_KEYS['all_users']), None)
+
+    def test_get_latest_news(self):
+        """
+        Test getting the latest news when cache is empty
+        """
+        cache.set(CACHE_KEYS['latest_news'], None)
+        news = TheCacher.get_latest_news()
+
+        self.assertTrue(news)
+        self.assertTrue(cache.get(CACHE_KEYS['latest_news']))

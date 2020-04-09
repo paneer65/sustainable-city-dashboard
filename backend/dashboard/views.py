@@ -59,7 +59,7 @@ def create_user(request):
 @permission_classes([IsAuthenticated])
 def view_users(request):
     """ View User """
-    users = TheCacher().get_all_cached_users()
+    users = TheCacher.get_all_cached_users()
     if users is not None:
         serializer = UserSerializer(users, many=True)
         response = Response(

@@ -6,6 +6,8 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
+from rest_framework.views import status
+
 from dashboard.test_cases.api_configs.api_translator_test import APITranslatorTest
 from dashboard.test_cases.the_cacher_test import TheCacherTest
 from dashboard.jwtoken import JwToken
@@ -14,7 +16,6 @@ class SanityTest(TestCase):
     """ Sanity Test """
     def test_addition_sanity(self):
         """ Basic Sanity Test """
-        print('Method: Sanity Test')
         self.assertEqual(1 + 1, 2)
 
 class UserViewsTest(TestCase):
@@ -49,9 +50,20 @@ class UserViewsTest(TestCase):
             'Username or password is invalid'
         )
 
+    def test_create_user_auth(self):
+        """
+        Test if authentication works for user creation view
+        """
+        response = self.client.post(reverse('create_user'), {
+            'username': 'test_user2',
+            'password': 'password2',
+            'email': 'test_user2@gmail.com'
+        }, format='json')
+
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
     def test_create_user_valid(self):
         """ Test for Valid User Creation """
-        print('Method: Valid User Creation')
 
         response = self.client.post(reverse('create_user'), {
             'username': 'test_user2',
@@ -62,7 +74,6 @@ class UserViewsTest(TestCase):
 
     def test_create_user_invalid(self):
         """ Test for Invalid User Creation """
-        print('Method: Invalid User Creation')
 
         response = self.client.post(reverse('create_user'), {
             'username': 'test_user',
@@ -75,6 +86,14 @@ class UserViewsTest(TestCase):
             'Username or email already exists'
         )
 
+    def test_view_user_auth(self):
+        """
+        Test if authentication works for view user
+        """
+
+        response = self.client.get(reverse('view_users'), format='json')
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
     def test_view_user_valid(self):
         """ Test for Viewing Users """
 
@@ -83,9 +102,9 @@ class UserViewsTest(TestCase):
 
 class GenericTest(TestCase):
     """ Here we test Generic Test Cases """
+
     def test_encryption(self):
         """ Test for Encryption """
-        print('Method: Test for Encryption')
         test1 = JwToken()
         payload = {'id':'test_admin', 'password':'test_password'}
         encrypted_test1 = test1.encode_text(payload)
@@ -96,7 +115,6 @@ class GenericTest(TestCase):
 
     def test_decryption(self):
         """ Test for Decryption """
-        print('Method: Test for Decryption')
         test2 = JwToken()
         payload = {'id2':'test_admin2', 'password2':'test_password2'}
         decrypted_test = test2.decode_text(test2.encode_text(payload))
