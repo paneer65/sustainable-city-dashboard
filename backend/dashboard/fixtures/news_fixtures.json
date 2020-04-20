@@ -1,0 +1,902 @@
+[
+{
+    "model": "dashboard.newsapidata",
+    "pk": 1,
+    "fields": {
+        "source": "Hitc.com",
+        "title": "How to preload Final Fantasy VII Remake on PS4 now \u2013 download size and pre-order bonuses! - HITC - Football, Gaming, Movies, TV, Music",
+        "description": "Everything you must know about its download size, pre-order bonuses, and how to preload the Final Fantasy VII Remake on PS4 right now.",
+        "url": "https://www.hitc.com/en-gb/2020/04/07/how-to-preload-final-fantasy-vii-remake-on-ps4-download-size/",
+        "url_to_image": "https://cdn.hitc-s.com/i/1806/how_to_preload_final_fantasy_vii_remake_on_ps4_now_download_size_1536192.jpg",
+        "published_at": "2020-04-07T10:35:13Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.576Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 2,
+    "fields": {
+        "source": "Www.joe.ie",
+        "title": "There's a \"Super Pink Moon\" tonight, the biggest and brightest moon of 2020 - JOE",
+        "description": "There's a \"Super Pink Moon\" tonight, the biggest and brightest moon of 2020",
+        "url": "https://www.joe.ie/news/theres-super-pink-moon-tonight-biggest-brightest-moon-2020-696007",
+        "url_to_image": "https://img.maximummedia.ie/joe_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDIwXFxcLzA0XFxcLzA3MTEyMzIwXFxcL0dldHR5SW1hZ2VzLTYyMzM5NDM2NC5qcGdcIixcIndpZHRoXCI6NjQ3LFwiaGVpZ2h0XCI6MzQwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuam9lLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvam9lXFxcL25vLWltYWdlLnBuZz9pZD0yZjNjN2ViZjI1NGU5NmYxZDBlN1wiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJiMTg4YTM4NDMyN2E2MDVmNGJjMTMzNzhhNGNmNTgxOGE2NjBmMWM5In0=/gettyimages-623394364.jpg",
+        "published_at": "2020-04-07T10:33:43Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.586Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 3,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "WhatsApp limits message forwarding to slow the spread of coronavirus misinformation - Irish Examiner",
+        "description": "A WhatsApp spokesman said the new limit was in place indefinitely.",
+        "url": "https://www.irishexaminer.com/breakingnews/business/whatsapp-limits-message-forwarding-to-slow-the-spread-of-coronavirus-misinformation-992632.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/w/WhatsAppGeneric_large.jpg?width=648&s=ie-992632",
+        "published_at": "2020-04-07T10:22:05Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.589Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 4,
+    "fields": {
+        "source": "The42.ie",
+        "title": "'There are times you're going to lose motivation. It's normal to have those bad days' - The42",
+        "description": "James McCarthy discusses life under lockdown and how he\u2019s balancing trying to get fitter and stronger, while also staying fresh.",
+        "url": "https://www.the42.ie/james-mccarthy-dublin-football-2-5067920-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5067920/river/?height=400&version=5068191",
+        "published_at": "2020-04-07T09:59:33Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.591Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 5,
+    "fields": {
+        "source": "Lawsociety.ie",
+        "title": "Data watchdog's concern over cookie findings DPC sweep of websites uncovers - Law Society of Ireland Gazette",
+        "description": null,
+        "url": "https://www.lawsociety.ie/gazette/top-stories/data-watchdogs-concern-over-cookie-findings/",
+        "url_to_image": null,
+        "published_at": "2020-04-07T09:35:30Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.593Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 6,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "'I was very, very fortunate': Ryan Tubridy returns to air after recovering from Covid-19 - TheJournal.ie",
+        "description": "Tubridy, who is 46 years old, confirmed last week that he had tested positive for the virus.",
+        "url": "https://www.thejournal.ie/ryan-tubridy-coronavirus-2-5068591-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5068591/river/?height=400&version=5068644",
+        "published_at": "2020-04-07T09:21:44Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.596Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 7,
+    "fields": {
+        "source": "Thesun.ie",
+        "title": "Coronavirus in Ireland \u2013 Tony Holohan says public will know before Friday if Covid-19 restrictions will r - The Irish Sun",
+        "description": "",
+        "url": "http://www.thesun.ie/news/5292658/coronavirus-in-ireland-tony-holohon-covid-19-restrictions-friday/",
+        "url_to_image": "https://www.thesun.ie/wp-content/uploads/sites/3/2020/04/CoronavirusWilliams_Comp-10.png?strip=all&quality=100&w=1200&h=800&crop=1",
+        "published_at": "2020-04-07T08:49:51Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.599Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 8,
+    "fields": {
+        "source": "RTE",
+        "title": "Benhaffafs celebrate anniversary despite restrictions - RTE.ie",
+        "description": "The mother of twins, Hassan and Hussein Benhaffaf,\u00a0who were born conjoined has said\u00a0the family is\u00a0going to make the most of the 10th anniversary of surgery to separate the boys\u00a0despite Covid-19 restrictions in place.",
+        "url": "https://www.rte.ie/news/munster/2020/0407/1128994-benhaffaf-twins/",
+        "url_to_image": "https://img.rasset.ie/0014123b-1600.jpg",
+        "published_at": "2020-04-07T08:28:13Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.601Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 9,
+    "fields": {
+        "source": "Breakingnews.ie",
+        "title": "Man, 30s, arrested in connection with string of burglaries in Limerick - BreakingNews.ie",
+        "description": "Garda\u00ed have arrested a man in relation to 10 incidents of burglary, attempted burglary, criminal damage and theft in Co Limerick over the past two months.",
+        "url": "https://www.breakingnews.ie/ireland/man-30s-arrested-in-connection-with-string-of-burglaries-in-limerick-992611.html",
+        "url_to_image": "https://www.breakingnews.ie/remote/media.central.ie/media/images/l/limerickDistrictCourtGoogleMaps_large.jpg?width=600&s=bn-992611",
+        "published_at": "2020-04-07T08:28:03Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.604Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 10,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "Simon Harris has revealed that the Easter Bunny is allowed to work this weekend - Irish Examiner",
+        "description": "Eggscellent news!",
+        "url": "https://www.irishexaminer.com/breakingnews/discover/simon-harris-has-announced-that-the-easter-bunny-is-allowed-to-work-this-weekend-992610.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/c/CoronavirusSimonHarrisPresser27Mar2020_large.jpg?width=648&s=ie-992610",
+        "published_at": "2020-04-07T08:20:05Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.606Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 11,
+    "fields": {
+        "source": "Republicworld.com",
+        "title": "New York cathedral to be used as field hospital to help battle COVID-19 crisis - Republic World - Republic World",
+        "description": "Cathedral Church of St. John the Divine in Manhattan will not be used as a field hospital amid coronavirus outbreak in the US which has led to shortage of beds.",
+        "url": "https://www.republicworld.com/world-news/us-news/new-york-church-converts-into-field-hospital-amid-covid-19-crisis.html",
+        "url_to_image": "https://img.republicworld.com/republic-prod/stories/promolarge/xxhdpi/hz7k0pacasbfogqh_1586245120.jpeg?tr=f-jpeg",
+        "published_at": "2020-04-07T08:17:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.609Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 12,
+    "fields": {
+        "source": "RTE",
+        "title": "Son set to earn his spurs with testing military service - RTE.ie",
+        "description": "Tottenham Hotspur striker Son Heung-min will be exposed to tear gas, undertake live-fire drills and go on a 30km loaded march during three weeks of intense military training in South Korea this month, a Marine Corps official has revealed.",
+        "url": "https://www.rte.ie/sport/soccer/2020/0407/1128984-son-set-to-earn-his-spurs-with-testing-military-service/",
+        "url_to_image": "https://img.rasset.ie/0012e5b7-1600.jpg",
+        "published_at": "2020-04-07T07:40:49Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.611Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 13,
+    "fields": {
+        "source": "RTE",
+        "title": "Premier League stars will 'play their part' - Taylor - RTE.ie",
+        "description": "Professional Footballers' Association chief executive Gordon Taylor says Premier League players have \"agreed to play their part\" in helping clubs manage the financial fall-out from the coronavirus pandemic.",
+        "url": "https://www.rte.ie/sport/soccer/2020/0407/1128982-spurs-fans-call-on-club-to-follow-liverpools-lead/",
+        "url_to_image": "https://img.rasset.ie/00132651-1600.jpg",
+        "published_at": "2020-04-07T07:26:04Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.614Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 14,
+    "fields": {
+        "source": "Breakingnews.ie",
+        "title": "Boeing to repeat test of astronaut capsule following botched debut - BreakingNews.ie",
+        "description": "It comes as rival SpaceX prepares for what will be the first astronaut launch from Cape Canaveral since 2011.",
+        "url": "https://www.breakingnews.ie/world/boeing-to-repeat-test-of-astronaut-capsule-following-botched-debut-992597.html",
+        "url_to_image": "https://www.breakingnews.ie/remote/image.assets.pressassociation.io/v2/image/production/95741b708eec5d6e4c62c084a7210e0aY29udGVudHNlYXJjaCwxNTg2MzI3Njgx/2.53324065.jpg?crop=0,140,2800,1715&ext=.jpg&width=600&s=bn-992597",
+        "published_at": "2020-04-07T06:38:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.616Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 15,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "99 Covid-19 clusters reported in nursing homes - BreakingNews.ie",
+        "description": "The figure has increased sharply in recent days.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/99-covid-19-clusters-reported-in-nursing-homes-992596.html",
+        "url_to_image": "https://www.breakingnews.ie/remote/media.central.ie/media/images/e/ElderlyWomansHands_large.jpg?width=600&s=bn-992596",
+        "published_at": "2020-04-07T06:34:44Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.618Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 16,
+    "fields": {
+        "source": "Dublinlive.ie",
+        "title": "Family of ruthless hitman Robbie Lawlor 'distraught' as they identify his body - Dublin Live",
+        "description": "Det Supt Murphy said on Sunday he does not think Lawlor had been in Ardoyne by accident",
+        "url": "https://www.dublinlive.ie/news/dublin-news/family-ruthless-hitman-robbie-lawlor-18054028",
+        "url_to_image": "https://i2-prod.dublinlive.ie/news/dublin-news/article17466072.ece/ALTERNATES/s1200/0_Robbie-Lawlor-clip4.jpg",
+        "published_at": "2020-04-07T06:25:34Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.619Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 17,
+    "fields": {
+        "source": "RTE",
+        "title": "Beaumont Hospital treating most Covid-19 patients - RTE.ie",
+        "description": "New figures seen by RT\u00c9 News have revealed that Beaumont Hospital in Dublin has the largest number of confirmed cases of Covid-19, with 133 patients in the hospital.",
+        "url": "https://www.rte.ie/news/coronavirus/2020/0407/1128957-covid-hospital-cases/",
+        "url_to_image": "https://img.rasset.ie/0007a219-1600.jpg",
+        "published_at": "2020-04-07T05:39:29Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.622Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 18,
+    "fields": {
+        "source": "RTE",
+        "title": "Messages of support as Johnson in intensive care - RTE.ie",
+        "description": "British\u00a0Prime Minister Boris Johnson remains in intensive care after his coronavirus symptoms worsened, prompting messages of support from political friends and foes in Britain and abroad.",
+        "url": "https://www.rte.ie/news/coronavirus/2020/0407/1128955-covid19-coronavirus-boris-johnson/",
+        "url_to_image": "https://img.rasset.ie/00141211-1600.jpg",
+        "published_at": "2020-04-07T05:13:52Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.626Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 19,
+    "fields": {
+        "source": "Irishmirror.ie",
+        "title": "Coronavirus Ireland updates LIVE as 16 more die and 370 new cases confirmed in the Republic - Irish Mirror",
+        "description": "There are now 5,364 confirmed cases of Covid-19 in Ireland with 174 people having died from the virus",
+        "url": "https://www.irishmirror.ie/news/irish-news/coronavirus-ireland-updates-live-today-21805430",
+        "url_to_image": "https://i2-prod.irishmirror.ie/news/irish-news/article21755265.ece/ALTERNATES/s1200/0_CC-COVID-19-BOOKLET-_990454554.jpg",
+        "published_at": "2020-04-07T05:04:29Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.628Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 20,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Staff in Dublin and Cork airports receive profit share and bonuses for last year - The Irish Times",
+        "description": "Staff at State-owned DAA will have no bonuses or pay increases this year, and recruitment has been frozen",
+        "url": "https://www.irishtimes.com/business/transport-and-tourism/staff-in-dublin-and-cork-airports-receive-profit-share-and-bonuses-for-last-year-1.4222434",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4222429&origw=1440",
+        "published_at": "2020-04-07T04:09:19Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-07T12:54:52.631Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 21,
+    "fields": {
+        "source": "Irishmirror.ie",
+        "title": "Coronavirus Ireland: Dublin hospital chief confirms intensive care unit is now full - Irish Mirror",
+        "description": "However Dr Colman O'Loughlin claimed that an extra 18 beds can be added in the nearby high dependency unit",
+        "url": "https://www.irishmirror.ie/news/irish-news/coronavirus-ireland-update-covid-dublin-21832237",
+        "url_to_image": "https://i2-prod.irishmirror.ie/incoming/article11626449.ece/ALTERNATES/s1200/1_irish-breaking-news-logo-stock-generic-irish-mirror.png",
+        "published_at": "2020-04-08T08:32:13Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.677Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 22,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "Taoiseach to discuss funeral guidelines on conference call with religious leaders today - TheJournal.ie",
+        "description": "Topics such as the current public health guidelines on funerals will be up for discussion.",
+        "url": "https://www.thejournal.ie/taoiseach-faith-leaders-5069562-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5069562/river/?height=400&version=5069576",
+        "published_at": "2020-04-08T08:31:05Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.685Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 23,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Coronavirus restrictions set to be extended as citizens warned against \u2018social sabotage\u2019 at Easter - The Irish Times",
+        "description": "Public should not expect restrictions to lift after weekend, Minister for Health says",
+        "url": "https://www.irishtimes.com/news/health/coronavirus-restrictions-set-to-be-extended-as-citizens-warned-against-social-sabotage-at-easter-1.4223853",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4223852&origw=619",
+        "published_at": "2020-04-08T08:04:46Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.686Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 24,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "Man in hospital after stabbing in Cork city - BreakingNews.ie",
+        "description": "A garda investigation is underway after a man was stabbed in Cork city last night.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/man-in-hospital-after-brawl-involving-knives-and-bats-in-cork-992832.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/b/BallyphehaneStabbingApr2020_large.jpeg?width=648&s=ie-992832",
+        "published_at": "2020-04-08T07:46:05Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.687Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 25,
+    "fields": {
+        "source": "RTE",
+        "title": "Semple Stadium to get multi-million euro facelift - RTE.ie",
+        "description": "Semple Stadium in Thurles has been given the go-ahead for a multi-million euro face lift.",
+        "url": "https://www.rte.ie/sport/gaa/2020/0408/1129247-semple-stadium-to-get-multi-million-euro-facelift/",
+        "url_to_image": "https://img.rasset.ie/0011c425-1600.jpg",
+        "published_at": "2020-04-08T07:22:53Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.688Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 26,
+    "fields": {
+        "source": "Kitguru.net",
+        "title": "PlayStation 5's new \"DualSense\" controller has been revealed - KitGuru",
+        "description": "When Sony first revealed details on its upcoming PlayStation 5 console, one of the areas the console manufacturer chose to focus on was its new controller. With a new form of haptic feedback and adapt",
+        "url": "https://www.kitguru.net/gaming/mustafa-mahmoud/playstation-5s-new-dualsense-controller-has-been-revealed/",
+        "url_to_image": "https://www.kitguru.net/wp-content/uploads/2020/04/EDB08B40-036C-464B-AD79-BA3139AFD1F1-732x330.jpeg",
+        "published_at": "2020-04-08T07:01:03Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.689Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 27,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Tesco says coronavirus costs could reach \u20ac1bn - The Irish Times",
+        "description": "But extra expenses on staff and operations could be offset by higher sales, relief from business tax",
+        "url": "https://www.irishtimes.com/business/retail-and-services/tesco-says-coronavirus-costs-could-reach-1bn-1.4223832",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4223831&origw=1440",
+        "published_at": "2020-04-08T07:00:47Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.690Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 28,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "Emergency powers for garda\u00ed, some third-level exams cancelled: Today's Covid-19 main points - TheJournal.ie",
+        "description": "There are now a total of 5,709 confirmed cases in Ireland.",
+        "url": "https://www.thejournal.ie/covid-19-main-points-3-5069569-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5069569/river/?height=400&version=5069575",
+        "published_at": "2020-04-08T06:53:11Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.690Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 29,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "Wuhan residents savour light at the end of the tunnel as Covid-19 lockdown ends - BreakingNews.ie",
+        "description": "The city where the pandemic started is returning to normal with no new cases reported.",
+        "url": "https://www.irishexaminer.com/breakingnews/world/wuhan-residents-savour-light-at-the-end-of-the-tunnel-as-covid-19-lockdown-ends-992843.html",
+        "url_to_image": "https://www.breakingnews.ie/remote/image.assets.pressassociation.io/v2/image/production/317276eed1775d07a314811f5aeab9aaY29udGVudHNlYXJjaCwxNTg2NDEzOTkz/2.53337078.jpg?crop=0,0,3500,1969&ext=.jpg&width=600&s=bn-992843",
+        "published_at": "2020-04-08T06:42:36Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.691Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 30,
+    "fields": {
+        "source": "RTE",
+        "title": "Spurs remind players to follow social distancing rules - RTE.ie",
+        "description": "Tottenham Hotspur have told their players to respect the government's social distancing guidelines after several squad members were pictured training in a London park, the Premier League club have said.",
+        "url": "https://www.rte.ie/sport/soccer/2020/0408/1129230-spurs-remind-players-to-follow-social-distancing-rules/",
+        "url_to_image": "https://img.rasset.ie/00141424-1600.jpg",
+        "published_at": "2020-04-08T06:31:35Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.691Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 31,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "Trump threatens to withdraw funding from the World Health Organization - TheJournal.ie",
+        "description": "New York City\u2019s pandemic death toll has reached at least 4,000 people.",
+        "url": "https://www.thejournal.ie/trump-threatens-world-health-organisation-funding-5069546-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5069546/river/?height=400&version=5069558",
+        "published_at": "2020-04-08T06:26:10Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.692Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 32,
+    "fields": {
+        "source": "RTE",
+        "title": "Peter Crouch: One look from Keane made me sell my car - RTE.ie",
+        "description": "Peter Crouch spoke to RT\u00c9 2fm's Game On about how the game has changed, camaraderie in the dressing room, and Roy Keane not approving of his new Aston Martin.",
+        "url": "https://www.rte.ie/sport/soccer/2020/0407/1129157-peter-crouch-one-look-from-keane-made-me-sell-my-car/",
+        "url_to_image": "https://img.rasset.ie/001413a2-1600.jpg",
+        "published_at": "2020-04-08T06:07:36Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.693Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 33,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "Doubt cast over contact tracing system as Covid-19 death toll mounts - Irish Examiner",
+        "description": "Doubt has been cast over the Government\u2019s contact tracing system as 36 Covid-19 related deaths were recorded across Ireland yesterday.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/doubt-cast-over-contact-tracing-system-as-covid-19-death-toll-mounts-992807.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/c/CoronavirusBriefingTonyHolohanRonanGlynn13March2020_large.jpg?width=648&s=ie-992807",
+        "published_at": "2020-04-08T06:05:29Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.693Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 34,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "Legendary musician John Prine dies aged 73 due to coronavirus complications - TheJournal.ie",
+        "description": "Contemporaries of Prine said his abilities stood alongside the likes of Neil Young and John Lennon.",
+        "url": "https://www.thejournal.ie/john-prine-coronavirus-5069538-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5069538/river/?height=400&version=5069539",
+        "published_at": "2020-04-08T06:00:51Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.694Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 35,
+    "fields": {
+        "source": "Breakingnews.ie",
+        "title": "Boris Johnson spends second night in ICU as UK Covid-19 strategy questioned - BreakingNews.ie",
+        "description": "The British Prime Minister\u2019s condition remains stable.",
+        "url": "https://www.breakingnews.ie/world/boris-johnson-spends-second-night-in-icu-as-uk-covid-19-strategy-questioned-992833.html",
+        "url_to_image": "/remote/image.assets.pressassociation.io/v2/image/production/d4ba8a2b591c8e39af60d287965cc19dY29udGVudHNlYXJjaCwxNTg2Mzg3MDEx/2.53332499.jpg?crop=0,371,4928,3143&ext=.jpg&width=600&s=bn-992833",
+        "published_at": "2020-04-08T05:52:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.695Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 36,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "WhatsApp targets fake news with forwarding limits - BreakingNews.ie",
+        "description": "WhatsApp is cracking down on fake news but the funny memes that have kept the nation smiling during the Covid-19 crisis are safe.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/whatsapp-targets-fake-news-with-forwarding-limits-992810.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/w/WhatsAppGeneric_large.jpg?width=648&s=ie-992810",
+        "published_at": "2020-04-08T05:39:05Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.695Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 37,
+    "fields": {
+        "source": "Irishmirror.ie",
+        "title": "Coronavirus Ireland: Darkest day yet as 36 deaths announced - Irish Mirror",
+        "description": "Health chiefs are expected to order an extension of the lockdown measures later this week",
+        "url": "https://www.irishmirror.ie/lifestyle/health/coronavirus-deaths-ireland-tuesday-covid19-21830534",
+        "url_to_image": "https://i2-prod.mirror.co.uk/incoming/article21802333.ece/ALTERNATES/s1200/1_Coronavirus-test.jpg",
+        "published_at": "2020-04-08T05:13:11Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.696Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 38,
+    "fields": {
+        "source": "RTE",
+        "title": "Covid-19 prompts hundreds of businesses to move online - RTE.ie",
+        "description": "As businesses remain shuttered owing to Covid-19 restrictions, hundreds of producers and store owners have moved their offerings online, many for the first time. Help is available to make the switch, which can be a daunting move.",
+        "url": "https://www.rte.ie/news/business/2020/0407/1129150-covid-19-prompts-hundreds-of-businesses-to-move-online/",
+        "url_to_image": "https://img.rasset.ie/0007ad40-1600.jpg",
+        "published_at": "2020-04-08T05:00:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.696Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 39,
+    "fields": {
+        "source": "Irishnews.com",
+        "title": "Fake memories of crime can appear to be real when recounted to others \u2013 study - The Irish News",
+        "description": "The team said the findings demonstrate manipulating memories to be easier than thought.",
+        "url": "http://www.irishnews.com/magazine/science/2020/04/08/news/fake-memories-of-crime-can-appear-to-be-real-when-recounted-to-others-study-1895371/",
+        "url_to_image": "http://www.irishnews.com/picturesarchive/irishnews/irishnews/2020/04/08/061048620-c93726c9-e45c-47a0-862a-0251d0d61970.jpg",
+        "published_at": "2020-04-08T04:31:30Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.696Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 40,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Bin collectors link household waste surge to Coronavirus panic buying - The Irish Times",
+        "description": "Rise in unopened, past-sell-by-date food waste as well as greenery from gardening",
+        "url": "https://www.irishtimes.com/news/environment/bin-collectors-link-household-waste-surge-to-coronavirus-panic-buying-1.4223318",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4223317&origw=1440",
+        "published_at": "2020-04-08T01:46:36Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-08T10:15:22.697Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 41,
+    "fields": {
+        "source": "Mirror.co.uk",
+        "title": "Bruce Willis' wife Emma Heming posts cryptic comment as he isolates with ex Demi Moore - Irish Mirror",
+        "description": "The Die Hard actor, 65, has decided to spend his quarantine journey with his three daughters and ex wife Demi Moore, even giving daughter Tallulah a buzzcut",
+        "url": "https://www.mirror.co.uk/3am/celebrity-news/bruce-willis-wife-emma-heming-21837205",
+        "url_to_image": "https://i2-prod.mirror.co.uk/incoming/article21837257.ece/ALTERNATES/s1200/3_Emma-Heming-Willis-and-Bruce-Willis-arri.jpg",
+        "published_at": "2020-04-09T08:36:44Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.758Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 42,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Coronavirus: Easter 'could be Ireland's Cheltenham' as garda\u00ed mount 1000 checks across country - The Irish Times",
+        "description": "Garda\u00ed monitoring more than 1,000 locations across State over holiday weekend",
+        "url": "https://www.irishtimes.com/news/health/coronavirus-easter-could-be-ireland-s-cheltenham-as-garda%C3%AD-mount-1-000-checks-across-country-1.4224890",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4224889&origw=1440",
+        "published_at": "2020-04-09T08:16:51Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.776Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 43,
+    "fields": {
+        "source": "Thejournal.ie",
+        "title": "Covid-19 restrictions expected to be extended in UK as death toll exceeds 7,000 - TheJournal.ie",
+        "description": "Foreign Secretary Dominic Raab, who is deputising for Boris Johnson while he is in hospital, will chair an emergency meeting today.",
+        "url": "https://www.thejournal.ie/covid-19-restrictions-uk-5070569-Apr2020/",
+        "url_to_image": "https://img2.thejournal.ie/article/5070569/river/?height=400&version=5070591",
+        "published_at": "2020-04-09T08:13:44Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.779Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 44,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "'What do other students do if State exams are held in September?' asks ex-education advisor - Irish Examiner",
+        "description": "State exams may now be held in late summer or autumn because of the coronavirus.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/what-do-other-students-do-if-state-exams-are-held-in-september-asks-ex-education-advisor-993084.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/b/BallincolligCommunitySchoolStudentsSittingLeavingCert_large.jpg?width=648&s=ie-993084",
+        "published_at": "2020-04-09T07:43:51Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.782Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 45,
+    "fields": {
+        "source": "Euractiv.com",
+        "title": "No sign Europe's COVID-19 epidemic is at peak, EU disease monitoring agency says - EURACTIV",
+        "description": "The COVID-19 disease pandemic is still infecting and killing large numbers of people across Europe and there is no sign yet that the peak of the region's outbreak has been reached, the EU's disease monitoring agency said on Wednesday (8 April).",
+        "url": "http://www.euractiv.com/section/economy-jobs/news/no-sign-europes-covid-19-epidemic-is-at-peak-eu-disease-monitoring-agency-says/",
+        "url_to_image": "https://www.euractiv.com/wp-content/uploads/sites/2/2020/04/Lab-Paris-800x450.jpg",
+        "published_at": "2020-04-09T07:05:55Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.784Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 46,
+    "fields": {
+        "source": "RTE",
+        "title": "'He's like a boxing historian' - Andy Lee on Tyson Fury - RTE.ie",
+        "description": "Andy Lee speaks to RT\u00c9 2fm's Game On about his early adjustment to coaching and offers an insight into working with Tyson Fury.",
+        "url": "https://www.rte.ie/sport/boxing/2020/0408/1129422-hes-like-a-boxing-historian-andy-lee-on-tyson-fury/",
+        "url_to_image": "https://img.rasset.ie/0013ac0b-1600.jpg",
+        "published_at": "2020-04-09T06:38:06Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.787Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 47,
+    "fields": {
+        "source": "RTE",
+        "title": "Highest-ever resolution images of the sun revealed - RTE.ie",
+        "description": "Researchers have unveiled the highest-ever resolution images of the sun.",
+        "url": "https://www.rte.ie/news/world/2020/0409/1129486-highest-ever-resolution-images-of-the-sun-revealed/",
+        "url_to_image": "https://img.rasset.ie/p0014167c-1600.png",
+        "published_at": "2020-04-09T06:35:20Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.789Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 48,
+    "fields": {
+        "source": "Newstalk.com",
+        "title": "Morning top 5: Restrictions may remain for months; Laois drug seizure - Newstalk",
+        "description": "Restrictions on movement and travel could be in place for months to come.The death toll from Cov...",
+        "url": "https://www.newstalk.com/news/morning-top-5-restrictions-ireland-997358",
+        "url_to_image": "https://img.resized.co/newstalk/eyJkYXRhIjoie1widXJsXCI6XCJodHRwczpcXFwvXFxcL21lZGlhLnJhZGlvY21zLm5ldFxcXC91cGxvYWRzXFxcLzIwMjBcXFwvMDRcXFwvMDkwNjUwMDNcXFwvQlJBWS1CRUZPUkUtVEhFLUxPQ0tET1dOX1c4QzkyNDgtMTAyNHg2ODMuanBnXCIsXCJ3aWR0aFwiOjY0NyxcImhlaWdodFwiOjM0MCxcImRlZmF1bHRcIjpcImh0dHBzOlxcXC9cXFwvd3d3Lm5ld3N0YWxrLmNvbVxcXC9pbWFnZXNcXFwvZGVmYXVsdF9ub19pbWFnZS5wbmdcIn0iLCJoYXNoIjoiOTA3ZmJlYjgzMTMxMjUzNGE0NjM5MGI5M2UwMzdkN2EzODY2MzQ1MCJ9/bray-before-the-lockdown-w8c9248-1024x683.jpg",
+        "published_at": "2020-04-09T06:01:46Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.791Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 49,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "Appeal to call out Covid-19 lockdown cheats - Irish Examiner",
+        "description": "Members of the public should call out Covid-19 cheats and inform garda\u00ed about people breaching lockdown restrictions introduced to combat the virus.",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/appeal-to-call-out-covid-19-lockdown-cheats-993056.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/c/CoronavirusLeafletGeneric2020_large.jpg?width=648&s=ie-993056",
+        "published_at": "2020-04-09T05:53:19Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.794Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 50,
+    "fields": {
+        "source": "RTE",
+        "title": "Businesses expect to be closed for 3 months - RTE.ie",
+        "description": "Most businesses that have closed their doors in recent week because of the coronavirus restrictions put in place by government expect they will be closed for 12 weeks.",
+        "url": "https://www.rte.ie/news/business/2020/0409/1129469-businesses-expect-to-be-closed-for-3-months/",
+        "url_to_image": "https://img.rasset.ie/00140cd8-1600.jpg",
+        "published_at": "2020-04-09T05:32:21Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.796Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 51,
+    "fields": {
+        "source": "Irishexaminer.com",
+        "title": "\u2018I said goodbye to my brother through a window\u2019 - Irish Examiner",
+        "description": "\u201cIt was the only way I could say my last goodbye to him. I shed a tear and said \u2018goodbye Francis\u2019.\u201d",
+        "url": "https://www.irishexaminer.com/breakingnews/ireland/i-said-goodbye-to-my-brother-through-a-window-993053.html",
+        "url_to_image": "https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PadraigByrneWindowLivelineMar2020_large.jpg?width=648&s=ie-993053",
+        "published_at": "2020-04-09T05:25:46Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.799Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 52,
+    "fields": {
+        "source": "RTE",
+        "title": "Legacy of Covid-19 will long linger over labour force - RTE.ie",
+        "description": "The legacy of the coronavirus for the labour force may take a long time to pass and represent a poisoned chalice for the incoming administration, writes Industry and Employment Correspondent Ingrid Miley.",
+        "url": "https://www.rte.ie/news/analysis-and-comment/2020/0408/1129423-virus-legacy-unemployment/",
+        "url_to_image": "https://img.rasset.ie/00141625-1600.jpg",
+        "published_at": "2020-04-09T05:00:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.801Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 53,
+    "fields": {
+        "source": "Sky.com",
+        "title": "Coronavirus: Patient treated on same ward as PM 'thought he wouldn't survive' - Sky News",
+        "description": "Dave Hunt filled up with tears several times while talking to Sky News in his London apartment on the banks of the River Thames.",
+        "url": "https://news.sky.com/story/coronavirus-patient-treated-on-same-ward-as-pm-thought-he-wouldnt-survive-11970784",
+        "url_to_image": "https://e3.365dm.com/20/04/1600x900/skynews-dave-hunt_4965558.jpg?20200408230114",
+        "published_at": "2020-04-09T04:49:18Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.804Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 54,
+    "fields": {
+        "source": "The Irish Times",
+        "title": "Hey robot, do the vacuuming now - The Irish Times",
+        "description": "Tech Review: Dyson 360 Heurist cleans your home with sensors, lights and app control",
+        "url": "https://www.irishtimes.com/business/technology/hey-robot-do-the-vacuuming-now-1.4223104",
+        "url_to_image": "https://www.irishtimes.com/image-creator/?id=1.4223102&origw=622",
+        "published_at": "2020-04-09T04:00:13Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.806Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 55,
+    "fields": {
+        "source": "Sky.com",
+        "title": "Coronavirus: Ellen DeGeneres criticised after comparing mansion quarantine to 'being in jail' - Sky News",
+        "description": "The TV host's comment comes at a time when an increasing number of inmates are testing positive for coronavirus across the US.",
+        "url": "https://news.sky.com/story/coronavirus-ellen-degeneres-criticised-after-comparing-mansion-quarantine-to-being-in-jail-11970796",
+        "url_to_image": "https://e3.365dm.com/20/04/1600x900/skynews-ellen-degeneres-ellen_4965561.jpg?20200409011217",
+        "published_at": "2020-04-09T03:14:37Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.807Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 56,
+    "fields": {
+        "source": "Irishmirror.ie",
+        "title": "Coronavirus updates: Rolling lockdowns may be in place until vaccine is found - Irish Mirror",
+        "description": "It comes as another 25 people lost their lives here \u2013 bringing the death toll to 235",
+        "url": "https://www.irishmirror.ie/news/irish-news/coronavirus-rolling-lockdown-ireland-covid19-21837430",
+        "url_to_image": "https://i2-prod.irishmirror.ie/incoming/article21823623.ece/ALTERNATES/s1200/2_Coronavirus.jpg",
+        "published_at": "2020-04-09T02:27:32Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.811Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 57,
+    "fields": {
+        "source": "Independent.ie",
+        "title": "'Garda\u00ed need to put the boot on Dundons' necks or they will pour petrol over the Drogheda fire' - Steve Collins - Independent.ie",
+        "description": "Businessman Steve Collins, whose son Roy was murdered by the notorious McCarthy-Dundon gang, was left sickened when he heard their name this week.",
+        "url": "https://www.independent.ie/irish-news/gardai-need-to-put-the-boot-on-dundons-necks-or-they-will-pour-petrol-over-the-drogheda-fire-steve-collins-39115365.html",
+        "url_to_image": "https://www.independent.ie/incoming/69107/39114996.ece/AUTOCROP/w1240h700/22311441Steve-Collins1-f.jpg",
+        "published_at": "2020-04-09T00:30:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.813Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 58,
+    "fields": {
+        "source": "Independent.ie",
+        "title": "Q&A: What happens to sickest patients once they are moved for treatment in intensive care wards - Independent.ie",
+        "description": "Q. How many patients who have been hospitalised with the new coronavirus have needed admission to an intensive care unit?",
+        "url": "https://www.independent.ie/irish-news/q-and-a-what-happens-to-sickest-patients-once-they-are-moved-for-treatment-in-intensive-care-wards-39115324.html",
+        "url_to_image": "https://www.independent.ie/incoming/f2935/38872137.ece/AUTOCROP/w1240h700/HEALTH-Sepsis-.jpg",
+        "published_at": "2020-04-09T00:30:00Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.815Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 59,
+    "fields": {
+        "source": "Breakingnews.ie",
+        "title": "Donald Trump responds to calls for Joe Exotic pardon - BreakingNews.ie",
+        "description": "Exotic is at the centre of Netflix\u2019s wildly popular Tiger King series.",
+        "url": "https://www.breakingnews.ie/showbiz/donald-trump-responds-to-calls-for-joe-exotic-pardon-993065.html",
+        "url_to_image": "/remote/content.assets.pressassociation.io/2020/04/08234636/4c6c9550-d707-4f6d-b94e-8e7d252d6212.jpg?crop=0,0,2840,1597&ext=.jpg&width=600&s=bn-993065",
+        "published_at": "2020-04-08T22:57:28Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.818Z"
+    }
+},
+{
+    "model": "dashboard.newsapidata",
+    "pk": 60,
+    "fields": {
+        "source": "RTE",
+        "title": "NI residents called on to return Covid-19 payments - RTE.ie",
+        "description": "Workers living in Northern Ireland who have received the new Covid-19 Pandemic Unemployment Payment\u00a0 have been asked by the Department of Employment Affairs and Social Protection to return the money.",
+        "url": "https://www.rte.ie/news/coronavirus/2020/0408/1129437-northern-ireland-workers/",
+        "url_to_image": "https://img.rasset.ie/0012e2a9-1600.jpg",
+        "published_at": "2020-04-08T19:52:44Z",
+        "sentiment": null,
+        "sentiment_value": null,
+        "timestamp": "2020-04-09T10:29:50.819Z"
+    }
+}
+]

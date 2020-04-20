@@ -1,0 +1,3194 @@
+[
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 661,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.256Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 662,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.276Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 663,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.279Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 664,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.282Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 665,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.285Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 666,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:36:19.288Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 667,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.093Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 668,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.102Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 669,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.103Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 670,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.104Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 671,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.105Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 672,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:37:37.106Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 673,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:39:43.997Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 674,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:39:44.004Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 675,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:39:44.007Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 676,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:39:44.010Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 677,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:39:44.012Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 678,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:39:44.016Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 679,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.832Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 680,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.844Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 681,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.846Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 682,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.848Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 683,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.851Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 684,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:39:46.853Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 685,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.661Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 686,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.665Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 687,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.666Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 688,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.668Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 689,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.669Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 690,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:46:45.670Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 691,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.124Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 692,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.127Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 693,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.128Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 694,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.129Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 695,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.130Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 696,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:48:54.131Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 697,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.836Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 698,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.845Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 699,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.848Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 700,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.852Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 701,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.854Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 702,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:49:08.857Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 703,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.804Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 704,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.810Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 705,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.812Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 706,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.814Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 707,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.818Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 708,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:50:41.820Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 709,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.678Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 710,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.687Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 711,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.689Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 712,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.691Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 713,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.693Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 714,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:51:37.696Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 715,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.723Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 716,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.735Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 717,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.739Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 718,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.742Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 719,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.744Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 720,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:53:00.747Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 721,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.906Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 722,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.915Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 723,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.919Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 724,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.921Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 725,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.924Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 726,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:53:23.926Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 727,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.971Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 728,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.979Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 729,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.981Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 730,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.984Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 731,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.986Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 732,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T06:58:08.988Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 733,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.256Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 734,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.264Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 735,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.267Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 736,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.269Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 737,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.272Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 738,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T07:01:07.275Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 739,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.079Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 740,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.088Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 741,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.092Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 742,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.095Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 743,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.098Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 744,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-03-26T07:04:28.099Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 745,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "Dublin Clonskeagh Road Richview",
+        "parameter": "o3",
+        "value": "42.78400000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.941Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 746,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.948Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 747,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.948Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 748,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.949Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 749,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm25",
+        "value": "0.37706700",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.950Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 750,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm10",
+        "value": "2.23853000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.951Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 751,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "so2",
+        "value": "1.66250000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.951Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 752,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "o3",
+        "value": "18.05000000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.952Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 753,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "no2",
+        "value": "9.83650000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.952Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 754,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "o3",
+        "value": "24.06666600",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.953Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 755,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "no2",
+        "value": "17.28550000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.953Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 756,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "co",
+        "value": "0.19805922",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.954Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 757,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.954Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 758,
+    "fields": {
+        "latitude": "53.33629600",
+        "longitude": "-6.30902000",
+        "location_name": "IE001AP",
+        "parameter": "pm10",
+        "value": "12.00839000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.955Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 759,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "so2",
+        "value": "0.96351105",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.955Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 760,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "no2",
+        "value": "6.63689660",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.956Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 761,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm25",
+        "value": "5.77063400",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.957Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 762,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm10",
+        "value": "9.83541100",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.957Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 763,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "o3",
+        "value": "76.04000000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.958Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 764,
+    "fields": {
+        "latitude": "53.37204400",
+        "longitude": "-6.17532600",
+        "location_name": "IE002AP",
+        "parameter": "pm10",
+        "value": "8.50525000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.958Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 765,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "no2",
+        "value": "-0.30277032",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.959Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 766,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "pm10",
+        "value": "14.27320700",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.960Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 767,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm10",
+        "value": "12.22500000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.961Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 768,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm25",
+        "value": "7.31600000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.961Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 769,
+    "fields": {
+        "latitude": "53.35278000",
+        "longitude": "-6.36666700",
+        "location_name": "IE0095A",
+        "parameter": "pm10",
+        "value": "12.53250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.962Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 770,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "no2",
+        "value": "22.71414400",
+        "created_at": null,
+        "updated_at": "2020-04-08T11:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.962Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 771,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "so2",
+        "value": "3.07377800",
+        "created_at": null,
+        "updated_at": "2020-04-08T11:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.963Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 772,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "co",
+        "value": "0.23200000",
+        "created_at": null,
+        "updated_at": "2020-04-08T11:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.964Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 773,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.964Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 774,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.965Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 775,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.966Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 776,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "IE0127A",
+        "parameter": "o3",
+        "value": "69.37600000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.966Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 777,
+    "fields": {
+        "latitude": "53.38563500",
+        "longitude": "-6.36993400",
+        "location_name": "IE0131A",
+        "parameter": "no2",
+        "value": "11.60673600",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.967Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 778,
+    "fields": {
+        "latitude": "53.28000000",
+        "longitude": "-6.35861100",
+        "location_name": "IE0136A",
+        "parameter": "so2",
+        "value": "12.07492300",
+        "created_at": null,
+        "updated_at": "2020-02-22T11:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.968Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 779,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "no2",
+        "value": "27.66635000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.968Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 780,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "o3",
+        "value": "36.56722000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:32:03.969Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 781,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "Dublin Clonskeagh Road Richview",
+        "parameter": "o3",
+        "value": "42.78400000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.157Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 782,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 783,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 784,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 785,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "so2",
+        "value": "1.66250000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 786,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm25",
+        "value": "0.37706700",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 787,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm10",
+        "value": "2.23853000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.160Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 788,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "o3",
+        "value": "18.05000000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 789,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "no2",
+        "value": "9.83650000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 790,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "o3",
+        "value": "24.06666600",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 791,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "no2",
+        "value": "17.28550000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 792,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 793,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "co",
+        "value": "0.19805922",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 794,
+    "fields": {
+        "latitude": "53.33629600",
+        "longitude": "-6.30902000",
+        "location_name": "IE001AP",
+        "parameter": "pm10",
+        "value": "11.13628000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 795,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "o3",
+        "value": "72.86222000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 796,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "no2",
+        "value": "6.71046600",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 797,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "so2",
+        "value": "0.82558525",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.164Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 798,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm25",
+        "value": "4.27566900",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 799,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm10",
+        "value": "7.85109950",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 800,
+    "fields": {
+        "latitude": "53.37204400",
+        "longitude": "-6.17532600",
+        "location_name": "IE002AP",
+        "parameter": "pm10",
+        "value": "8.50525000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 801,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "pm10",
+        "value": "12.27459300",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 802,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "no2",
+        "value": "-0.56663340",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 803,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm25",
+        "value": "6.68325000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 804,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm10",
+        "value": "10.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 805,
+    "fields": {
+        "latitude": "53.35278000",
+        "longitude": "-6.36666700",
+        "location_name": "IE0095A",
+        "parameter": "pm10",
+        "value": "12.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 806,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "so2",
+        "value": "2.46197720",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 807,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "co",
+        "value": "0.23586662",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 808,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "no2",
+        "value": "16.72310800",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 809,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 810,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 811,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 812,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "IE0127A",
+        "parameter": "o3",
+        "value": "70.92600000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 813,
+    "fields": {
+        "latitude": "53.38563500",
+        "longitude": "-6.36993400",
+        "location_name": "IE0131A",
+        "parameter": "no2",
+        "value": "11.60673600",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 814,
+    "fields": {
+        "latitude": "53.28000000",
+        "longitude": "-6.35861100",
+        "location_name": "IE0136A",
+        "parameter": "so2",
+        "value": "12.07492300",
+        "created_at": null,
+        "updated_at": "2020-02-22T11:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 815,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "no2",
+        "value": "27.66635000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 816,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "o3",
+        "value": "36.56722000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:33:55.170Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 817,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "Dublin Clonskeagh Road Richview",
+        "parameter": "o3",
+        "value": "42.78400000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.032Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 818,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.038Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 819,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.039Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 820,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.040Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 821,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "so2",
+        "value": "1.66250000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.041Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 822,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm25",
+        "value": "0.37706700",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.041Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 823,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm10",
+        "value": "2.23853000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.042Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 824,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "o3",
+        "value": "18.05000000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.043Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 825,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "no2",
+        "value": "9.83650000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.043Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 826,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "o3",
+        "value": "24.06666600",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.044Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 827,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "no2",
+        "value": "17.28550000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.045Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 828,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.045Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 829,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "co",
+        "value": "0.19805922",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.046Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 830,
+    "fields": {
+        "latitude": "53.33629600",
+        "longitude": "-6.30902000",
+        "location_name": "IE001AP",
+        "parameter": "pm10",
+        "value": "11.13628000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.047Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 831,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "o3",
+        "value": "72.86222000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.048Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 832,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "no2",
+        "value": "6.71046600",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.049Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 833,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "so2",
+        "value": "0.82558525",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.049Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 834,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm25",
+        "value": "4.27566900",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.050Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 835,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm10",
+        "value": "7.85109950",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.050Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 836,
+    "fields": {
+        "latitude": "53.37204400",
+        "longitude": "-6.17532600",
+        "location_name": "IE002AP",
+        "parameter": "pm10",
+        "value": "8.50525000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.051Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 837,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "pm10",
+        "value": "12.27459300",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.051Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 838,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "no2",
+        "value": "-0.56663340",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.052Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 839,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm25",
+        "value": "6.68325000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.052Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 840,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm10",
+        "value": "10.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.053Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 841,
+    "fields": {
+        "latitude": "53.35278000",
+        "longitude": "-6.36666700",
+        "location_name": "IE0095A",
+        "parameter": "pm10",
+        "value": "12.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.054Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 842,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "so2",
+        "value": "2.46197720",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.054Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 843,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "co",
+        "value": "0.23586662",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.055Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 844,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "no2",
+        "value": "16.72310800",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.055Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 845,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.056Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 846,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.057Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 847,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.057Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 848,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "IE0127A",
+        "parameter": "o3",
+        "value": "70.92600000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.058Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 849,
+    "fields": {
+        "latitude": "53.38563500",
+        "longitude": "-6.36993400",
+        "location_name": "IE0131A",
+        "parameter": "no2",
+        "value": "11.60673600",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.059Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 850,
+    "fields": {
+        "latitude": "53.28000000",
+        "longitude": "-6.35861100",
+        "location_name": "IE0136A",
+        "parameter": "so2",
+        "value": "12.07492300",
+        "created_at": null,
+        "updated_at": "2020-02-22T11:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.059Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 851,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "no2",
+        "value": "27.66635000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.060Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 852,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "o3",
+        "value": "36.56722000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:37:33.060Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 853,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "Dublin Clonskeagh Road Richview",
+        "parameter": "o3",
+        "value": "42.78400000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.486Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 854,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-19T12:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.489Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 855,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "co",
+        "value": "0.34542224",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.490Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 856,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "Dublin Coleraine Street",
+        "parameter": "no2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.490Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 857,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "so2",
+        "value": "1.66250000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.491Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 858,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm25",
+        "value": "0.37706700",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.491Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 859,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "pm10",
+        "value": "2.23853000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.492Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 860,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "o3",
+        "value": "18.05000000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.493Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 861,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "Dublin Rathmines Wynnefield Road",
+        "parameter": "no2",
+        "value": "9.83650000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.494Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 862,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "o3",
+        "value": "24.06666600",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.494Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 863,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "Dublin Swords Watery Lane",
+        "parameter": "no2",
+        "value": "17.28550000",
+        "created_at": null,
+        "updated_at": "2017-07-20T21:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.495Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 864,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "so2",
+        "value": "0E-8",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.495Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 865,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "Dublin Winetavern Street",
+        "parameter": "co",
+        "value": "0.19805922",
+        "created_at": null,
+        "updated_at": "2017-07-20T22:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.496Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 866,
+    "fields": {
+        "latitude": "53.33629600",
+        "longitude": "-6.30902000",
+        "location_name": "IE001AP",
+        "parameter": "pm10",
+        "value": "11.13628000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.497Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 867,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "o3",
+        "value": "72.86222000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.498Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 868,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "no2",
+        "value": "6.71046600",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.498Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 869,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "so2",
+        "value": "0.82558525",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.499Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 870,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm25",
+        "value": "4.27566900",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.499Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 871,
+    "fields": {
+        "latitude": "53.35389000",
+        "longitude": "-6.27805600",
+        "location_name": "IE0028A",
+        "parameter": "pm10",
+        "value": "7.85109950",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.500Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 872,
+    "fields": {
+        "latitude": "53.37204400",
+        "longitude": "-6.17532600",
+        "location_name": "IE002AP",
+        "parameter": "pm10",
+        "value": "8.50525000",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.500Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 873,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "pm10",
+        "value": "12.27459300",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.501Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 874,
+    "fields": {
+        "latitude": "53.33333200",
+        "longitude": "-6.36666700",
+        "location_name": "IE0036A",
+        "parameter": "no2",
+        "value": "-0.56663340",
+        "created_at": null,
+        "updated_at": "2020-04-08T14:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.502Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 875,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm25",
+        "value": "6.68325000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.502Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 876,
+    "fields": {
+        "latitude": "53.39025000",
+        "longitude": "-6.30526600",
+        "location_name": "IE003AP",
+        "parameter": "pm10",
+        "value": "10.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.502Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 877,
+    "fields": {
+        "latitude": "53.35278000",
+        "longitude": "-6.36666700",
+        "location_name": "IE0095A",
+        "parameter": "pm10",
+        "value": "12.97250000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.503Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 878,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "so2",
+        "value": "2.46197720",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.504Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 879,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "co",
+        "value": "0.23586662",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.504Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 880,
+    "fields": {
+        "latitude": "53.34166700",
+        "longitude": "-6.28888900",
+        "location_name": "IE0098A",
+        "parameter": "no2",
+        "value": "16.72310800",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.504Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 881,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "no2",
+        "value": "61.52556000",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.505Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 882,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "co",
+        "value": "0.05735562",
+        "created_at": null,
+        "updated_at": "2018-04-30T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.505Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 883,
+    "fields": {
+        "latitude": "53.34722000",
+        "longitude": "-6.26666700",
+        "location_name": "IE0105A",
+        "parameter": "so2",
+        "value": "1.48986170",
+        "created_at": null,
+        "updated_at": "2018-04-30T17:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.506Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 884,
+    "fields": {
+        "latitude": "53.31389000",
+        "longitude": "-6.24916700",
+        "location_name": "IE0127A",
+        "parameter": "o3",
+        "value": "70.92600000",
+        "created_at": null,
+        "updated_at": "2020-04-08T13:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.506Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 885,
+    "fields": {
+        "latitude": "53.38563500",
+        "longitude": "-6.36993400",
+        "location_name": "IE0131A",
+        "parameter": "no2",
+        "value": "11.60673600",
+        "created_at": null,
+        "updated_at": "2020-04-08T12:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.507Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 886,
+    "fields": {
+        "latitude": "53.28000000",
+        "longitude": "-6.35861100",
+        "location_name": "IE0136A",
+        "parameter": "so2",
+        "value": "12.07492300",
+        "created_at": null,
+        "updated_at": "2020-02-22T11:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.508Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 887,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "no2",
+        "value": "27.66635000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.508Z"
+    }
+},
+{
+    "model": "dashboard.pollutionapidata",
+    "pk": 888,
+    "fields": {
+        "latitude": "53.27481000",
+        "longitude": "-6.22236700",
+        "location_name": "IE0140A",
+        "parameter": "o3",
+        "value": "36.56722000",
+        "created_at": null,
+        "updated_at": "2020-04-08T10:00:00Z",
+        "timestamp": "2020-04-08T15:40:41.509Z"
+    }
+}
+]

@@ -15,12 +15,19 @@ Check your django version
 ```
 python3 -m django --version
 ```
+
 ## Start server
 
 Now with our current working directory as sustainable-city-management, to start the server
 ```
 cd backend
 python3 manage.py runserver
+```
+
+To load fixtures
+
+```
+python3 manage.py loaddata
 ```
 
 Then navigate to http://127.0.0.1:8000/ and you should see that your app is running
@@ -71,6 +78,3 @@ Install [psycopg2](http://initd.org/psycopg/docs/install.html) >=2.8 using,
 ```
 pip install psycopg2-binary
 ```
-
-
-
