@@ -23,7 +23,10 @@ class Dashboard extends React.Component {
   }
 
   updateSelectedFilter(newFilter) {
-    this.setState({ selectedFilter: newFilter });
+    this.setState({
+      selectedFilter: newFilter,
+      selectedMarker: null
+    });
   }
 
   updateSelectedMarker(newMarker) {
@@ -32,7 +35,7 @@ class Dashboard extends React.Component {
 
   render() {
     let mainView;
-    if (this.state.selectedFilter != 'News') {
+    if (this.state.selectedFilter !== 'News') {
       mainView =  <div style = {{ height: "75vh"}}>
                     <Map
                       selectedFilter={this.state.selectedFilter}

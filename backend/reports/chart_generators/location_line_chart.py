@@ -1,6 +1,7 @@
 """
 Build Location line chart data
 """
+# pylint: disable=broad-except
 
 import pandas as pd
 from statsmodels.tsa.arima_model import ARIMA
@@ -115,7 +116,9 @@ class LocationLineChart():
             except ValueError as err:
                 print("Exception: {0}".format(err))
                 forecast = None
-
+            except Exception as err:#
+                print("Exception: {0}".format(err))
+                forecast = None
         else:
             forecast = None
 

@@ -55,13 +55,22 @@ export default class LocationLineChart extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-      if (this.props.selectedMarker && (!prevProps.selectedMarker || prevProps.selectedMarker.location !== this.props.selectedMarker.location)) {
-        if (this.props.dataModel === 'Pollution') {
-          this.fetchChartData(POLLUTION_PARAMS);
-        } else if (this.props.dataModel === 'Bikes') {
-          this.fetchChartData(BIKES_PARAMS);
-        }
+    // Put debugger and check condn while switching between markers (selectedmarker).
+    // If you change marker, whole condn to change.
+    // Look into forecast data as well.
+    //debugger
+    if (this.props.selectedMarker && (!prevProps.selectedMarker || prevProps.selectedMarker.location !== this.props.selectedMarker.location)) {
+      if (this.props.dataModel === 'Pollution') {
+        this.fetchChartData(POLLUTION_PARAMS);
+      } else if (this.props.dataModel === 'Bikes') {
+        this.fetchChartData(BIKES_PARAMS);
       }
+    } else if (!this.props.selectedMarker && (this.props.dataModel !== prevProps.dataModel)) {
+      this.setState({ chartData: [] });
+    }else if (this.props.dataModel === 'Pollution' && this.props.selectedMarker !== null) {
+      //debugger
+      this.fetchChartData(POLLUTION_PARAMS);
+    }
   }
 
   formatXAxis(tickItem) {
@@ -70,20 +79,23 @@ export default class LocationLineChart extends React.Component {
 
   render() {
     let chartHTML = this.state.chartData.map((chart) => {
-      return (
-        <LineChart
-          width={700}
-          height={450}
-          data={chart.data}
-          margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-        >
-          <XAxis dataKey="x" tickFormatter={this.formatXAxis}/>
-          <YAxis label={{ value: chart.yLabel, angle: -90, position: 'insideLeft' }}/>
-          <Tooltip />
-          <CartesianGrid stroke="#f5f5f5" />
-          <Line type="monotone" dataKey="y" stroke="#ff7300" yAxisId={0} />
-        </LineChart>
-      )
+      if (chart.data.length > 0) {
+        return (
+          <LineChart
+            width={700}
+            height={450}
+            data={chart.data}
+            margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+          >
+            <XAxis dataKey="x" tickFormatter={this.formatXAxis}/>
+            <YAxis label={{ value: chart.yLabel, angle: -90, position: 'insideLeft' }}/>
+            <Tooltip />
+            <CartesianGrid stroke="#f5f5f5" />
+            <Line type="monotone" dataKey="y" stroke="#ff7300" yAxisId={0} />
+          </LineChart>
+        )
+      }
+
     });
 
     return (
