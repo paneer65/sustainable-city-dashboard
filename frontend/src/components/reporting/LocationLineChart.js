@@ -26,6 +26,7 @@ export default class LocationLineChart extends React.Component {
   }
 
   fetchChartData(modelParams) {
+    let chartData = [];
     modelParams.forEach((param) => {
       let postData = {
         coordinates: {
@@ -59,7 +60,8 @@ export default class LocationLineChart extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.selectedMarker && (!prevProps.selectedMarker || prevProps.selectedMarker.location !== this.props.selectedMarker.location)) {
+    if (this.props.selectedMarker && (!prevProps.selectedMarker || prevProps.selectedMarker.location_name !== this.props.selectedMarker.location_name)) {
+      this.setState({ chartData: [] });
       if (this.props.dataModel === 'Pollution') {
         this.fetchChartData(POLLUTION_PARAMS);
       } else if (this.props.dataModel === 'Bikes') {
@@ -67,8 +69,6 @@ export default class LocationLineChart extends React.Component {
       }
     } else if (!this.props.selectedMarker && (this.props.dataModel !== prevProps.dataModel)) {
       this.setState({ chartData: [] });
-    } else if (this.props.dataModel === 'Pollution' && this.props.selectedMarker !== null) {
-      this.fetchChartData(POLLUTION_PARAMS);
     }
   }
 
@@ -103,12 +103,22 @@ export default class LocationLineChart extends React.Component {
       }
 
     });
-
-    return (
-      <div class="report-container">
-        <h1>Reports</h1>
-        { chartHTML }
-      </div>
-    )
+    if (chartHTML.length > 0) {
+      return (
+        <div>
+          <h1>Reports</h1>
+          <div class="report-container">
+            { chartHTML }
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Reports</h1>
+          <span class="text-muted">Available reports will be shown here</span>
+        </div>
+      );
+    }
   }
 }

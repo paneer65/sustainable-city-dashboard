@@ -1,6 +1,7 @@
 import React from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
+import "./style.css"
 
 const modules_list = ['Traffic', 'Pollution', 'Bikes', 'News']
 

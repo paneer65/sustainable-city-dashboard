@@ -9,6 +9,9 @@ import LocationLineChart from '../reporting/LocationLineChart';
 import NavigationBar from '../navigationbar/NavigationBar';
 import Filters from '../filters/Filters';
 import FilterActions from '../filter-actions/FilterActions';
+import InfoPanelIndex from '../info-panel';
+
+import "./style.css";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -36,7 +39,7 @@ class Dashboard extends React.Component {
   render() {
     let mainView;
     if (this.state.selectedFilter !== 'News') {
-      mainView =  <div style = {{ height: "75vh"}}>
+      mainView =  <div style = {{ height: "60vh"}}>
                     <Map
                       selectedFilter={this.state.selectedFilter}
                       updateSelectedMarker={this.updateSelectedMarker}
@@ -58,16 +61,18 @@ class Dashboard extends React.Component {
         			<div className="mainView">
     						{ mainView }
         			</div>
-              <div className="reports">
-                <LocationLineChart
-                  selectedMarker={this.state.selectedMarker}
-                  dataModel={this.state.selectedFilter}
-                />
-              </div>
             </Col>
             <Col md={ 3 }>
-              <FilterActions selectedFilter={ this.state.selectedFilter }/>
+              <InfoPanelIndex selectedFilter={this.state.selectedFilter} selectedMarker={this.state.selectedMarker}/>
             </Col>
+          </Row>
+          <Row>
+            <div className="reports">
+              <LocationLineChart
+                selectedMarker={this.state.selectedMarker}
+                dataModel={this.state.selectedFilter}
+              />
+            </div>
           </Row>
         </Container>
   		</div>
