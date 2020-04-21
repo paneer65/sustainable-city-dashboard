@@ -20,6 +20,7 @@ function App(props) {
     return localStorage.getItem('token');
   }
   const deleteJWTToken = () => {
+    localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('token');
   }
 

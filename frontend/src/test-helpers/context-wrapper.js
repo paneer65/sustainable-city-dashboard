@@ -18,4 +18,5 @@ export const getJWTToken = () => {
 
 export const deleteJWTToken = () => {
   localStorage.removeItem('token');
+  localStorage.removeItem('isAuthenticated');
 }

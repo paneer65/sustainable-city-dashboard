@@ -14,14 +14,15 @@ export default function RouteWrapper({
   * Redirect user to SignIn page if he tries to access a private route
   * without authentication.
   */
-  if (isPrivate && !isAuthenticated) {
+
+  if (isPrivate && !localStorage.getItem("isAuthenticated")) {
     return <Redirect to="/login" />;
   }
   /**
   * Redirect user to Main page if he tries to access a non private route
   * (SignIn or SignUp) after being authenticated.
   */
-  if (!isPrivate && isAuthenticated) {
+  if (!isPrivate && localStorage.getItem("isAuthenticated")) {
     return <Redirect to="/dashboard" />;
   }
 

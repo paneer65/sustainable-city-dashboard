@@ -59,7 +59,6 @@ class Dashboard extends React.Component {
     						{ mainView }
         			</div>
               <div className="reports">
-                <h1> Reports </h1>
                 <LocationLineChart
                   selectedMarker={this.state.selectedMarker}
                   dataModel={this.state.selectedFilter}

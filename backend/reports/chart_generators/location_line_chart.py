@@ -2,7 +2,7 @@
 Build Location line chart data
 """
 # pylint: disable=broad-except
-
+from datetime import timedelta
 import pandas as pd
 from statsmodels.tsa.arima_model import ARIMA
 from dashboard.tables.pollution_api_data import PollutionAPIData
@@ -110,16 +110,26 @@ class LocationLineChart():
                 #     center=True,
                 #     min_periods=0
                 # ).mean()
-                model = ARIMA(chart_data_df['y'].astype(float), order=(1, 0, 0))
+
+                model = ARIMA(chart_data_df['y'].astype(float), order=(5, 1, 0))
                 result_arima = model.fit(disp=0)
-                forecast = result_arima.forecast(steps=5)[0]
+                forecast_y = result_arima.forecast(steps=5)[0]
+
+                last_chart_date = chart_data['chart_data'][-1]['x']
+                forecast_x = [last_chart_date + timedelta(days=num_days) for num_days in range(5)]
+                forecast = []
+                for index in range(5):
+                    forecast.append({
+                        'x': forecast_x[index],
+                        'y_forecast': forecast_y[index]
+                    })
             except ValueError as err:
+                print("ValueError Exception: {0}".format(err))
+                forecast = []
+            except Exception as err:
                 print("Exception: {0}".format(err))
-                forecast = None
-            except Exception as err:#
-                print("Exception: {0}".format(err))
-                forecast = None
+                forecast = []
         else:
-            forecast = None
+            forecast = []
 
         return forecast
