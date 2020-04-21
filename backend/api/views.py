@@ -12,8 +12,13 @@ from dashboard.serializers import PollutionAPIDataSerializer
 from dashboard.serializers import BikesAPIDataSerializer
 from dashboard.serializers import NewsAPIDataSerializer
 from dashboard.the_cacher import TheCacher
+from dashboard.tables.ml_data import MlData
+from dashboard.ml_pollution.poll_predict import mypredict
+from dashboard.ml_pollution.poll_predict import random_coord
+from dashboard.serializers import MlModelDataSerializer
 from .models import APIs
 from .serializers import APISerializer
+
 
 class ListAPIsView(generics.ListAPIView):
     """
@@ -95,4 +100,21 @@ class ReturnNewsDetails(generics.ListAPIView):
             models = api_translator.response_to_model(response)
 
         json_content = self.serializer_class(models, many=True)
+        return Response(json_content.data, status=200)
+
+class ReturnMlPrediction(generics.ListAPIView):
+    """
+    Returns Predicted Data
+    """
+    permission_classes = (IsAuthenticated,)
+    queryset = APIs.objects.all()
+    serializer_class = MlModelDataSerializer
+    def list(self, request):
+        result = []
+        sample = random_coord()
+        for i in range(len(sample)):
+            lat, long, predict = mypredict(list(sample.iloc[i]))
+            model = MlData(latitude=lat, longitude=long, pollution=predict)
+            result.append(model)
+        json_content = self.serializer_class(result, many=True)
         return Response(json_content.data, status=200)
