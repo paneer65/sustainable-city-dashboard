@@ -54,20 +54,19 @@ class ResponseToModel():
         result = []
         if response_body_type == 'array':
             for res in response_body:
+                routes = []
+                operators = eval('res' + translation_body['operators_key'])
+                for operator in operators:
+                    routes += eval('operator' + translation_body['routes'])
+
                 model = BusAPIData(
-                    stopid=eval('res' + translation_body['stopid']),
                     latitude=eval('res' + translation_body['latitude']),
-                    shortname=eval('res' + translation_body['shortname']),
-                    longitude=eval('res' + translation_body['longitude'])
+                    longitude=eval('res' + translation_body['longitude']),
+                    location_name=eval('res' + translation_body['location_name']),
+                    stop_id=eval('res' + translation_body['stop_id']),
+                    updated_at=eval('res' + translation_body['updated_at']),
+                    routes=routes
                 )
                 result.append(model)
-        else:
-            model = BusAPIData(
-                stopid=eval('response_body' + translation_body['stopid']),
-                latitude=eval('response_body' + translation_body['latitude']),
-                shortname=eval('response_body' + translation_body['shortname']),
-                longitude=eval('response_body' + translation_body['longitude'])
-            )
-            result.append(model)
 
         return result

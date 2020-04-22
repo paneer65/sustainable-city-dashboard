@@ -1,6 +1,7 @@
 import React from 'react';
 import BikesInfo from './BikesInfo';
 import PollutionInfo from './PollutionInfo';
+import BusInfo from './BusInfo';
 
 export default class InfoPanelIndex extends React.Component {
 
@@ -32,6 +33,8 @@ export default class InfoPanelIndex extends React.Component {
       infoModule = <PollutionInfo selectedMarker={this.state.selectedMarker}/>
     } else if (this.state.selectedFilter === 'Bikes') {
       infoModule = <BikesInfo selectedMarker={this.state.selectedMarker}/>
+    } else if (this.state.selectedFilter === 'Bus') {
+      infoModule = <BusInfo selectedMarker={this.state.selectedMarker}/>
     }
 
     return (

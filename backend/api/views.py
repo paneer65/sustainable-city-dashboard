@@ -11,6 +11,7 @@ from dashboard.api_configs.api_translator import APITranslator
 from dashboard.serializers import PollutionAPIDataSerializer
 from dashboard.serializers import BikesAPIDataSerializer
 from dashboard.serializers import NewsAPIDataSerializer
+from dashboard.serializers import BusAPIDataSerializer
 from dashboard.the_cacher import TheCacher
 from dashboard.tables.ml_data import MlData
 from dashboard.ml_pollution.poll_predict import mypredict
@@ -74,6 +75,25 @@ class ReturnBikesDetails(generics.ListAPIView):
         List bikes API data
         """
         api_translator = APITranslator("bikes", 1)
+        response = api_translator.build_api_request()
+        models = api_translator.response_to_model(response)
+
+        json_content = self.serializer_class(models, many=True)
+        return Response(json_content.data, status=200)
+
+class ReturnBusDetails(generics.ListAPIView):
+    """
+    Returns bikes API data
+    """
+    permission_classes = (IsAuthenticated,)
+    queryset = APIs.objects.all()
+    serializer_class = BusAPIDataSerializer
+
+    def list(self, request):
+        """
+        List bikes API data
+        """
+        api_translator = APITranslator("bus", 1)
         response = api_translator.build_api_request()
         models = api_translator.response_to_model(response)
 

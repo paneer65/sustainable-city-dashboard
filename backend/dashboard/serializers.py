@@ -4,6 +4,7 @@ from django.contrib.auth.models import User, Group
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
 from dashboard.tables.news_api_data import NewsAPIData
+from dashboard.tables.bus_api_data import BusAPIData
 from dashboard.tables.ml_data import MlData
 
 class UserSerializer(serializers.ModelSerializer):
@@ -27,6 +28,16 @@ class PollutionAPIDataSerializer(serializers.ModelSerializer):
             'updated_at', 'timestamp'
         ]
 
+class BusAPIDataSerializer(serializers.ModelSerializer):
+    """ Serializer for BusAPIData class """
+    class Meta:
+        model = BusAPIData
+        fields = [
+            'latitude', 'longitude', 'location_name', 'stop_id', 'routes',
+            'updated_at', 'timestamp'
+        ]
+
+
 class BikesAPIDataSerializer(serializers.ModelSerializer):
     """ Serializer for BikesAPIData class """
     class Meta:
@@ -44,10 +55,9 @@ class NewsAPIDataSerializer(serializers.ModelSerializer):
             'source', 'title', 'description', 'url', 'url_to_image',
             'published_at', 'sentiment', 'sentiment_value', 'timestamp'
         ]
-####
+
 class MlModelDataSerializer(serializers.ModelSerializer):
     """ Serializer for MLModel Class """
     class Meta:
         model = MlData
         fields = ['latitude', 'longitude', 'pollution']
-####

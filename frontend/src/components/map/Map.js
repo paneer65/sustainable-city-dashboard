@@ -21,6 +21,7 @@ class Map extends React.Component {
     this.state = {
     	pollutionData: [],
       bikesData: [],
+      busData: [],
   		selectedFilter: '',
     }
   }
@@ -31,7 +32,9 @@ class Map extends React.Component {
 			this.fetchPollutionMapData();
 		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
 			this.fetchBikesMapData();
-		}
+		} else if (this.props.selectedFilter === 'Bus' && prevProps.selectedFilter !== 'Bus') {
+      this.fetchBusMapData();
+    }
 	}
 
 	normalizeMapValues(mapTobeNormalized, listOfValues) {
@@ -117,6 +120,17 @@ class Map extends React.Component {
     });
 	}
 
+  fetchBusMapData() {
+    axios({
+      url: '/api/bus/',
+      method: 'GET'
+    }).then((response) => {
+      if(response.status === 200) {
+        this.setState({ busData: response.data })
+      }
+    });
+	}
+
 	handleClick(marker, event) {
 		this.setState({ selectedMarker: marker });
     this.props.updateSelectedMarker(marker);
@@ -187,6 +201,29 @@ class Map extends React.Component {
 		});
 	}
 
+  generateBusMap() {
+		return compose(withScriptjs, withGoogleMap)(props => {
+		  	return (
+				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
+				{
+						props.markers.map(marker => {
+							const onClick = props.onClick.bind(this, marker)
+							return (
+								<Marker	key={marker.stop_id + marker.location_name}
+										onClick={onClick}
+										position={{ lat: parseFloat(marker.latitude), lng: parseFloat(marker.longitude) }}>
+								{
+									props.selectedMarker === marker
+								}
+								</Marker>
+							)
+					})
+				}
+				</GoogleMap>
+		  	)
+		});
+	}
+
 	generateTrafficMap(){
 		return TrafficGoogleMaps
 	}
@@ -217,7 +254,20 @@ class Map extends React.Component {
 		      containerElement={<div style= {{ height: `100%` }} />}
 		      mapElement={<div style = {{ height: `100%` }} />}
     		/>
-			)
+			  )
+      } else if (this.props.selectedFilter === 'Bus') {
+        const BusMap = this.generateBusMap();
+        return (
+  				<BusMap
+            selectedMarker={ this.props.selectedMarker }
+  		      markers={ this.state.busData }
+  		      onClick={ this.handleClick }
+  		      googleMapURL={ googleMapURL }
+  		      loadingElement={<div style= {{ height: `100%` }} />}
+  		      containerElement={<div style= {{ height: `100%` }} />}
+  		      mapElement={<div style = {{ height: `100%` }} />}
+      		/>
+			  )
     	} else if (this.props.selectedFilter === 'Traffic') {
 			const TrafficMap = this.generateTrafficMap();
 				  return (

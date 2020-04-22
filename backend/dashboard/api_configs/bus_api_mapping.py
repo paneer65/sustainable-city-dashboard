@@ -14,8 +14,12 @@ BUS_API_MAPPING = [
         "mapping": {
             "latitude": "['latitude']",
             "longitude": "['longitude']",
-            "shortname": "['shortname']",
-            "stopid": "['stopid']"
+            "location_name": "['fullname']",
+            "stop_id": "['stopid']",
+            "updated_at": "['lastupdated']",
+            "operators_key": "['operators']",
+            "operators_type": "array",
+            "routes": "['routes']"
         }
     }
 ]
