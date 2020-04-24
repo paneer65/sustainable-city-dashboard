@@ -20,27 +20,36 @@ class Map extends React.Component {
     super(props)
 
     this.state = {
-    	pollutionData: [],
-      busData: [],
-    	bikesData: [],
-  		selectedFilter: '',
-  		selectedMarker: '',
-  		eventsData: []
-    }
-  }
+		pollutionData: [],
+		predictedPollutionData: [],
+		bikesData: [],
+		busData: [],
+		selectedFilter: '',
+		pollutionSourcesMerged: false, 
+		mergedPollutionData: [],
+    selectedMarker: '',
+    eventsData: []
+	}
+}
+	// this.fetchPollutionMapData = this.fetchPollutionMapData.bind(this);
+	// this.fetchPredictedPollutionData = this.fetchPredictedPollutionData.bind(this);
+	// this.mergePollutionData = this.mergePollutionData.bind(this);
+
 
 	componentDidUpdate(prevProps) {
 		console.log(this.props.selectedFilter)
 		// Need to check state selectedFilter otherwise this will be an infinite loop
-		if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
+		if(this.props.selectedFilter === 'Pollution' && this.state.predictedPollutionData.length > 0 && this.state.pollutionData.length > 0 && !this.state.pollutionSourcesMerged){
+			this.mergePollutionData();
+		}if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
 		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
 			this.fetchBikesMapData();
 		} else if(this.props.selectedFilter === 'Events' && prevProps.selectedFilter !== 'Events'){
 			this.fetchEventsData();
 		} else if (this.props.selectedFilter === 'Bus' && prevProps.selectedFilter !== 'Bus') {
-      this.fetchBusMapData();
-    }
+      		this.fetchBusMapData();
+    	}
 	}
 
 	normalizeMapValues(mapTobeNormalized, listOfValues) {
@@ -53,62 +62,89 @@ class Map extends React.Component {
 			if(typeof value === "number"){
 				let normalizedValue = (value - minValue)/ (maxValue - minValue);
 				return normalizedValue;
-			} else {
-        return value;
-      }
+			} 
+			else {
+        		return value;
+			}
 		});
-
 		return mapValues;
 	}
 
 	airQualityCalculator(data) {
-	 	let keys = Object.keys(data);
-		let name = data[0]['location_name'];
-		let all = []
-		let arr = {}
+	let keys = Object.keys(data);
+	let name = data[0]['location_name'];
+	let all = []
+	let arr = {}
     let count = 0;
     let i =1;
 
     for(var key in keys)
+	{
+		if(data[key]['location_name'] === name)
 		{
-			if(data[key]['location_name'] === name)
-			{
-				arr[data[key]['parameter']] = data[key]['value'];
-				count++;
-			}
-			else
-			{
-				arr['location_name'] = name;
-				arr['id'] = i;
-        arr['latitude'] = parseFloat(data[key-1]['latitude']);
-        arr['longitude'] = parseFloat(data[key-1]['longitude'])
-				//all[name] = arr;
-				all.push(arr);
-				name = data[key]['location_name'];
-				count = 0;
-				arr = {}
-				i++;
-			}
+			arr[data[key]['parameter']] = data[key]['value'];
+			count++;
 		}
-		arr['location_name'] = name;
-		arr['id'] = i;
-    arr['latitude'] = parseFloat(data[key-1]['latitude']);
-    arr['longitude'] = parseFloat(data[key-1]['longitude'])
+		else
+		{
+			arr['location_name'] = name;
+			arr['id'] = i;
+			arr['latitude'] = parseFloat(data[key-1]['latitude']);
+			arr['longitude'] = parseFloat(data[key-1]['longitude'])
+			//all[name] = arr;
+			all.push(arr);
+			name = data[key]['location_name'];
+			count = 0;
+			arr = {}
+			i++;
+		}
+	}
+	arr['location_name'] = name;
+	arr['id'] = i;
+	arr['latitude'] = parseFloat(data[key-1]['latitude']);
+	arr['longitude'] = parseFloat(data[key-1]['longitude'])
 
-		all.push(arr)
+	all.push(arr)
 
     return all;
 	}
 
+	mergePollutionData(){
+		debugger;
+		let pollutionData = this.state.pollutionData
+		let predictedPollutionData = this.state.predictedPollutionData
+
+		let mergedData = []
+		for (let key in pollutionData) {
+			if (pollutionData.hasOwnProperty(key)) {
+				let pollution = pollutionData[key]
+				pollution['icon'] = 'red-dot.png'
+				pollution['id'] = mergedData.length
+				mergedData.push(pollution)
+			}
+		}
+		for (let key in predictedPollutionData) {
+			if (predictedPollutionData.hasOwnProperty(key)) {
+				let pollution = predictedPollutionData[key]
+				pollution['icon'] = 'yellow-dot.png'
+				pollution['id'] = mergedData.length
+				mergedData.push(pollution)
+			}
+		}
+		this.setState({ mergedPollutionData: mergedData })
+		this.setState({ pollutionSourcesMerged: true})
+		//this.forceUpdate()
+	}
+
 	fetchPollutionMapData() {
+		let updatedData = []
 		axios({
 			url: '/api/pollution/',
 			method: 'GET'
 		}).then((response) => {
 			if(response.status === 200) {
 				//debugger
-				const updatedData = this.airQualityCalculator(response.data)
-				//const newdata = _.uniq(response.data,function(p){return p.location_name});
+				updatedData = this.airQualityCalculator(response.data)
 				this.setState({ pollutionData: updatedData})
 			}
 		});
@@ -160,17 +196,32 @@ class Map extends React.Component {
 				console.log(events);
 			}
 		});
+		this.fetchPredictedPollutionData()
 	}
 
-  fetchBikesMapData() {
-    axios({
-      url: '/api/bikes/',
-      method: 'GET'
-    }).then((response) => {
-      if(response.status === 200) {
-        this.setState({ bikesData: response.data })
-      }
-    });
+	fetchPredictedPollutionData() {
+		debugger;
+		axios({
+		  url: '/api/mlmodel/',
+		  method: 'GET'
+		}).then((response) => {
+		  if(response.status === 200) {
+				let predictedPollution = response.data
+				this.setState({ predictedPollutionData : predictedPollution })
+				//this.forceUpdate();
+		  }
+		});
+	}
+
+  	fetchBikesMapData() {
+		axios({
+			url: '/api/bikes/',
+			method: 'GET'
+		}).then((response) => {
+			if(response.status === 200) {
+				this.setState({ bikesData: response.data })
+			}
+		});
 	}
 
   fetchBusMapData() {
@@ -200,24 +251,23 @@ class Map extends React.Component {
 		  	return (
 				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
 				{
-						props.markers.map(marker => {
-							const onClick = props.onClick.bind(this, marker)
-							return (
-								<Marker	key={marker.id}
-										onClick={onClick}
-										position={{ lat: marker.latitude, lng: marker.longitude }}>
-								{
-									this.props.selectedMarker === marker &&
-									<InfoWindow>
-										<div>
-											<h4>{marker.location_name}</h4>
-											{marker.so2} <br/>
-											{marker.co}
-										</div>
-									</InfoWindow>
-								}
-								</Marker>
-							)
+					props.markers.map(marker => {
+						const onClick = props.onClick.bind(this, marker)
+						return (
+							<Marker key = {marker.id}
+									onClick={onClick}
+									position={{ lat: parseFloat(marker.latitude), lng: parseFloat(marker.longitude) }}
+									icon={{url:"http://maps.google.com/mapfiles/ms/icons/" + marker.icon}}>
+							{
+								props.selectedMarker === marker &&
+								<InfoWindow>
+									<div>
+										<h4>Test</h4>
+									</div>
+								</InfoWindow>
+							}
+							</Marker>
+						)
 					})
 				}
 				</GoogleMap>
@@ -313,12 +363,16 @@ class Map extends React.Component {
 	}
 
 	render() {
+		debugger;
+		console.log(this.state.pollutionData)
+		console.log(this.state.predictedPollutionData)
 		if (this.props.selectedFilter === 'Pollution') {
 			const PollutionMap = this.generatePollutionMap();
+			//this.mergePollutionData(this.state.pollutionData, this.state.predictedPollutionData)
 			return (
 				<PollutionMap
 				selectedMarker={ this.props.selectedMarker }
-				markers={ this.state.pollutionData }
+				markers={ this.state.mergedPollutionData }
 				onClick={ this.handleClick }
 				googleMapURL={ googleMapURL }
 				loadingElement={<div style= {{ height: `100%` }} />}
@@ -326,12 +380,13 @@ class Map extends React.Component {
 				mapElement={<div style = {{ height: `100%` }} />}
     		/>
 			)
-		}
+		} 
+
 		else if (this.props.selectedFilter === 'Bikes') {
       		const BikesMap = this.generateBikesMap();
 			return (
 				<BikesMap
-          selectedMarker={ this.props.selectedMarker }
+          		selectedMarker={ this.props.selectedMarker }
 		      markers={ this.state.bikesData }
 		      onClick={ this.handleClick }
 		      googleMapURL={ googleMapURL }

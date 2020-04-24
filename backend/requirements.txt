@@ -8,5 +8,5 @@ coverage==5.0.3
 django-cors-headers==3.2.1
 python-memcached==1.59
 statsmodels==0.11.1
-sklearn
+scikit-learn
 pandas

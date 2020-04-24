@@ -126,7 +126,7 @@ class EventActions extends React.Component {
               </div>
             }
           </div>
-        } 
+        }
       </div>
     )
   }

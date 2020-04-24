@@ -17,7 +17,7 @@ def mypredict(coord=["53.28636194", "-6.165993889"]):
     return lat, long, predict
 
 
-def random_coord(l=20):
+def random_coord(l=50):
     """
     selects random coordinates
     """
