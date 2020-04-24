@@ -148,6 +148,7 @@ class Map extends React.Component {
 				this.setState({ pollutionData: updatedData})
 			}
 		});
+		this.fetchPredictedPollutionData()
 	}
 
 
@@ -196,11 +197,9 @@ class Map extends React.Component {
 				console.log(events);
 			}
 		});
-		this.fetchPredictedPollutionData()
 	}
 
 	fetchPredictedPollutionData() {
-		debugger;
 		axios({
 		  url: '/api/mlmodel/',
 		  method: 'GET'
@@ -262,7 +261,7 @@ class Map extends React.Component {
 								props.selectedMarker === marker &&
 								<InfoWindow>
 									<div>
-										<h4>Test</h4>
+										<h4>{marker.pollution}</h4>
 									</div>
 								</InfoWindow>
 							}
@@ -363,9 +362,6 @@ class Map extends React.Component {
 	}
 
 	render() {
-		debugger;
-		console.log(this.state.pollutionData)
-		console.log(this.state.predictedPollutionData)
 		if (this.props.selectedFilter === 'Pollution') {
 			const PollutionMap = this.generatePollutionMap();
 			//this.mergePollutionData(this.state.pollutionData, this.state.predictedPollutionData)

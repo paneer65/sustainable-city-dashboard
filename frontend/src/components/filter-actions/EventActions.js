@@ -23,7 +23,7 @@ class EventActions extends React.Component {
     //this.createEventCategories(this.props.allMarkers)
   }
 
-  componentDidUpdate(){
+  componentDidMount(){
     if (!this.state.events_Categorised)
       this.createEventCategories(this.props.allMarkers)
   }
