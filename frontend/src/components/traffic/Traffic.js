@@ -13,10 +13,11 @@ const TrafficGoogleMaps = compose(
   withGoogleMap
 )((props) =>
   <GoogleMap
-    defaultZoom={14}
+    defaultZoom={12}
     defaultCenter={{lat: 53.343786, lng: -6.255828 }}
   >
     {props.isMarkerShown && <Marker position={{ lat: 12.9885142, lng: 77.5477298 }} onClick={props.onMarkerClick} />}
+
     <TrafficLayer autoUpdate />
   </GoogleMap>
 );

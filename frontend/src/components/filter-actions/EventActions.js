@@ -95,7 +95,7 @@ class EventActions extends React.Component {
         <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png"></img> Events Not Started {this.state.eventsNotStarted.length}<br/>
         <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"></img> Events Going to Start Shortly {this.state.eventsGoingToStart.length}<br/>
         <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"></img> Ongoing Events {this.state.ongoingEvents.length}<br/>
-        <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"></img> Events Going to End Shortly{this.state.eventsGoingToEnd.length}<br/>
+        <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"></img> Events Going to End Shortly {this.state.eventsGoingToEnd.length}<br/>
         <img width="20" height="20" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"></img> Ended Events {this.state.endedEvents.length}<br/>
         {
           this.props.selectedMarker !== null &&
