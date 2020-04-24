@@ -9,6 +9,7 @@ import {
 } from "react-google-maps"
 import axios from "axios"
 import TrafficGoogleMaps from "../traffic/Traffic"
+import { Dot } from "recharts"
 
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
@@ -20,18 +21,23 @@ class Map extends React.Component {
 
     this.state = {
     	pollutionData: [],
-      bikesData: [],
       busData: [],
+    	bikesData: [],
   		selectedFilter: '',
+  		selectedMarker: '',
+  		eventsData: []
     }
   }
 
 	componentDidUpdate(prevProps) {
+		console.log(this.props.selectedFilter)
 		// Need to check state selectedFilter otherwise this will be an infinite loop
 		if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
 		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
 			this.fetchBikesMapData();
+		} else if(this.props.selectedFilter === 'Events' && prevProps.selectedFilter !== 'Events'){
+			this.fetchEventsData();
 		} else if (this.props.selectedFilter === 'Bus' && prevProps.selectedFilter !== 'Bus') {
       this.fetchBusMapData();
     }
@@ -104,7 +110,54 @@ class Map extends React.Component {
 				const updatedData = this.airQualityCalculator(response.data)
 				//const newdata = _.uniq(response.data,function(p){return p.location_name});
 				this.setState({ pollutionData: updatedData})
-				console.log(updatedData);
+			}
+		});
+	}
+
+
+	eventsTimeKeeper(events) {
+		const today = new Date();
+		let timeString = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+		for (let key in events) {
+			if (events.hasOwnProperty(key)) {
+				let currentEvent = events[key]
+
+				//Events going on now
+				if(timeString>currentEvent.starts_at && timeString<currentEvent.ends_at){
+					let eventEndingHour = parseInt(currentEvent.ends_at.split(":")[0])
+					let currentHour = parseInt(today.getHours())
+					if(eventEndingHour-currentHour === 1)
+						currentEvent['icon'] = 'green-dot.png'
+					else
+						currentEvent['icon'] = 'yellow-dot.png'
+				}
+
+				//Events going to start in an hour
+				else if(timeString<currentEvent.starts_at){
+					if(parseInt(currentEvent.starts_at.split(":")[0])-parseInt(today.getHours()) === 1)
+						currentEvent['icon'] = 'red-dot.png'
+					else
+						currentEvent['icon'] = 'ltblue-dot.png'
+				}
+				else
+					currentEvent['icon'] = 'blue-dot.png'
+				events[key] = currentEvent
+			}
+		}
+		this.props.updateAllMarkers(events);
+		return events
+	}
+
+
+	fetchEventsData() {
+		axios({
+			url: '/events/',
+			method: 'GET'
+		}).then((response) => {
+			if(response.status === 200) {
+				const events = this.eventsTimeKeeper(response.data.events)
+				this.setState({ eventsData: events})
+				console.log(events);
 			}
 		});
 	}
@@ -133,7 +186,7 @@ class Map extends React.Component {
 
 	handleClick(marker, event) {
 		this.setState({ selectedMarker: marker });
-    this.props.updateSelectedMarker(marker);
+    	this.props.updateSelectedMarker(marker);
 	}
 
 	googleMapInit() {
@@ -154,7 +207,7 @@ class Map extends React.Component {
 										onClick={onClick}
 										position={{ lat: marker.latitude, lng: marker.longitude }}>
 								{
-									props.selectedMarker === marker &&
+									this.props.selectedMarker === marker &&
 									<InfoWindow>
 										<div>
 											<h4>{marker.location_name}</h4>
@@ -188,7 +241,38 @@ class Map extends React.Component {
 									<InfoWindow>
 										<div>
 											<h4>{marker.location_name}</h4>
-                      <span> Number of bikes : {marker.number_of_bikes} </span>
+                      						<span> Number of bikes : {marker.number_of_bikes} </span>
+										</div>
+									</InfoWindow>
+								}
+								</Marker>
+							)
+					})
+				}
+				</GoogleMap>
+		  	)
+		});
+	}
+
+	generateEventsMap() {
+		return compose(withScriptjs, withGoogleMap)(props => {
+		  	return (
+				<GoogleMap defaultZoom={ defaultZoomLevel } defaultCenter={ defaultLocation }>
+				{
+						props.markers.map(marker => {
+							const onClick = props.onClick.bind(this, marker)
+							return (
+								<Marker	key={marker.event_name}
+										onClick={onClick}
+										position={{ lat: parseFloat(marker.latitude), lng: parseFloat(marker.longitude) }}
+										icon={{url:"http://maps.google.com/mapfiles/ms/icons/" + marker.icon}}>
+								{
+									this.props.selectedMarker === marker &&
+									<InfoWindow>
+										<div>
+											<h4>{marker.event_type}</h4>
+                      						<span> Name: {marker.event_name} </span><br/>
+											<span> Speed Limit: {marker.speed_limit} </span>
 										</div>
 									</InfoWindow>
 								}
@@ -242,8 +326,9 @@ class Map extends React.Component {
 				mapElement={<div style = {{ height: `100%` }} />}
     		/>
 			)
-		} else if (this.props.selectedFilter === 'Bikes') {
-      const BikesMap = this.generateBikesMap();
+		}
+		else if (this.props.selectedFilter === 'Bikes') {
+      		const BikesMap = this.generateBikesMap();
 			return (
 				<BikesMap
           selectedMarker={ this.props.selectedMarker }
@@ -282,7 +367,20 @@ class Map extends React.Component {
 				  />
 				  )
 		}
-
+		else if (this.props.selectedFilter === 'Events') {
+			const EventsMap = this.generateEventsMap();
+				return (
+					<EventsMap
+						selectedMarker={ this.props.selectedMarker }
+						markers={ this.state.eventsData }
+						onClick={ this.handleClick }
+						googleMapURL={ googleMapURL }
+						loadingElement={<div style= {{ height: `100%` }} />}
+						containerElement={<div style= {{ height: `100%` }} />}
+						mapElement={<div style = {{ height: `100%` }} />}
+				  	/>
+				)
+		}
 		else {
 			const WrappedMap = withScriptjs(withGoogleMap(this.googleMapInit))
 			return (

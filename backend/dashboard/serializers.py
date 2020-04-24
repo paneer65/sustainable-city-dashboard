@@ -4,6 +4,7 @@ from django.contrib.auth.models import User, Group
 from dashboard.tables.pollution_api_data import PollutionAPIData
 from dashboard.tables.bikes_api_data import BikesAPIData
 from dashboard.tables.news_api_data import NewsAPIData
+from dashboard.tables.events_data import EventsData
 from dashboard.tables.bus_api_data import BusAPIData
 from dashboard.tables.ml_data import MlData
 
@@ -55,6 +56,12 @@ class NewsAPIDataSerializer(serializers.ModelSerializer):
             'source', 'title', 'description', 'url', 'url_to_image',
             'published_at', 'sentiment', 'sentiment_value', 'timestamp'
         ]
+
+class EventsDataSerializer(serializers.ModelSerializer):
+    """ Serializer for the EventsData model class """
+    class Meta:
+        model = EventsData
+        fields = "__all__"
 
 class MlModelDataSerializer(serializers.ModelSerializer):
     """ Serializer for MLModel Class """

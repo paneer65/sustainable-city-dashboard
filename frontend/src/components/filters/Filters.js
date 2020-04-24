@@ -3,7 +3,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 import "./style.css"
 
-const modules_list = ['Traffic', 'Pollution', 'Bikes', 'Bus', 'News']
+const modules_list = ['Traffic', 'Pollution', 'Bikes', 'News', 'Events', 'Bus']
 
 class Filters extends React.Component {
   render() {

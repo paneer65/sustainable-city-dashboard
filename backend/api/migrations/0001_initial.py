@@ -18,5 +18,5 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=200)),
                 ('url', models.CharField(max_length=200)),
             ],
-        ),
+        )
     ]

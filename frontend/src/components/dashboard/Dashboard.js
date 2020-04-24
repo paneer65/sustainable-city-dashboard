@@ -18,11 +18,12 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       selectedFilter: 'Traffic',
-      selectedMarker: null
+      selectedMarker: null,
+      allMarkers : []
     };
-
     this.updateSelectedFilter = this.updateSelectedFilter.bind(this);
     this.updateSelectedMarker = this.updateSelectedMarker.bind(this);
+    this.updateAllMarkers = this.updateAllMarkers.bind(this);
   }
 
   updateSelectedFilter(newFilter) {
@@ -33,7 +34,13 @@ class Dashboard extends React.Component {
   }
 
   updateSelectedMarker(newMarker) {
+    console.log(newMarker)
     this.setState({ selectedMarker: newMarker });
+  }
+
+  updateAllMarkers(updatedMarkers) {
+    console.log(updatedMarkers)
+    this.setState({ allMarkers: updatedMarkers });
   }
 
   render() {
@@ -42,11 +49,21 @@ class Dashboard extends React.Component {
       mainView =  <div style = {{ height: "60vh"}}>
                     <Map
                       selectedFilter={this.state.selectedFilter}
+                      selectedMarker={this.state.selectedMarker}
+                      updateAllMarkers = {this.updateAllMarkers}
                       updateSelectedMarker={this.updateSelectedMarker}
                     />
                   </div>
     } else {
       mainView = <NewsIndex />
+    }
+
+    let infoModule;
+    if (this.state.selectedFilter === 'Events') {
+      infoModule = <FilterActions selectedFilter={ this.state.selectedFilter } selectedMarker = {this.state.selectedMarker} updateSelectedMarker = { this.updateSelectedMarker } allMarkers = { this.state.allMarkers }/>
+    } else {
+      infoModule = <InfoPanelIndex selectedFilter={this.state.selectedFilter} selectedMarker={this.state.selectedMarker}/>
+
     }
 
     return (
@@ -63,7 +80,7 @@ class Dashboard extends React.Component {
         			</div>
             </Col>
             <Col md={ 3 }>
-              <InfoPanelIndex selectedFilter={this.state.selectedFilter} selectedMarker={this.state.selectedMarker}/>
+              { infoModule }
             </Col>
           </Row>
           <Row>

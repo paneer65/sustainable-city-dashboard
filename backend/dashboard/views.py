@@ -11,6 +11,10 @@ from rest_framework.authentication import TokenAuthentication
 from dashboard.serializers import UserSerializer
 from dashboard.the_cacher import TheCacher
 
+from dashboard.tables.events_data import EventsData
+from dashboard.serializers import EventsDataSerializer
+
+
 @api_view(['POST'])
 def user_login(request):
     """ User Login """
@@ -85,6 +89,22 @@ def logout_user(request):
     """ Deleting Token before Logout """
 
     response = Response(
+        status=200
+    )
+    return response
+
+
+@api_view(['GET'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def fetch_events(request):
+    """ Fetch events from the database """
+    events = EventsData.objects.all()
+    serializer = EventsDataSerializer(events, many=True)
+    response = Response(
+        {
+            'events': serializer.data
+        },
         status=200
     )
     return response

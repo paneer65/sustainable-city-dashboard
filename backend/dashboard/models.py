@@ -12,9 +12,8 @@ from dashboard.tables.bikes_api_data import BikesAPIData
 from dashboard.tables.bus_api_data import BusAPIData
 from dashboard.tables.news_api_data import NewsAPIData
 from dashboard.tables.user_profile import Profile
-####
+from dashboard.tables.events_data import EventsData
 from dashboard.tables.ml_data import MlData
-####
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
