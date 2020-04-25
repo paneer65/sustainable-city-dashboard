@@ -14,6 +14,12 @@ import { Dot } from "recharts"
 const defaultLocation = { lat: 53.343786, lng: -6.255828 };
 const defaultZoomLevel = 11;
 const googleMapURL = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDOjyfAl22KFpq0czq_I0sbRtJHKEkwdIc";
+const ozoneWeight = 0.3;
+const sulphurDioxideWeight = 0.15;
+const nitrogenDioxideWeight = 0.10;
+const particleMatter25Weight = 0.20;
+const particleMatter10Weight = 0.20;
+const carbonMonoxideWeight = 0.5;
 
 class Map extends React.Component {
 	constructor(props) {
@@ -27,20 +33,15 @@ class Map extends React.Component {
 		selectedFilter: '',
 		pollutionSourcesMerged: false,
 		mergedPollutionData: [],
-    selectedMarker: '',
-    eventsData: []
+		selectedMarker: '',
+		eventsData: []
 	}
 }
-	// this.fetchPollutionMapData = this.fetchPollutionMapData.bind(this);
-	// this.fetchPredictedPollutionData = this.fetchPredictedPollutionData.bind(this);
-	// this.mergePollutionData = this.mergePollutionData.bind(this);
-
 
 	componentDidUpdate(prevProps) {
-		console.log(this.props.selectedFilter)
 		// Need to check state selectedFilter otherwise this will be an infinite loop
 		if(this.props.selectedFilter === 'Pollution' && this.state.predictedPollutionData.length > 0 && this.state.pollutionData.length > 0 && !this.state.pollutionSourcesMerged){
-			this.mergePollutionData();
+			this.mergeAndCategorizePollutionData();
 		}if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
 		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
@@ -52,68 +53,67 @@ class Map extends React.Component {
     	}
 	}
 
-	normalizeMapValues(mapTobeNormalized, listOfValues) {
-		let pollutantMap = new Map(mapTobeNormalized);
-		let mapValues = Object.values(pollutantMap.props);
-		let maxValue = Math.max.apply(null, listOfValues);
-		let minValue = Math.min.apply(null, listOfValues);
+	updatePollutionAPIData(data) {
+		let keys = Object.keys(data);
+		let name = data[0]['location_name'];
+		let all = []
+		let arr = {}
+		let count = 0;
+		let i =1;
 
-    mapValues.map((value, key) => {
-			if(typeof value === "number"){
-				let normalizedValue = (value - minValue)/ (maxValue - minValue);
-				return normalizedValue;
+		for(var key in keys)
+		{
+			if(data[key]['location_name'] === name)
+			{
+				arr[data[key]['parameter']] = data[key]['value'];
+				count++;
 			}
-			else {
-        		return value;
+			else
+			{
+				arr['location_name'] = name;
+				arr['id'] = i;
+				arr['latitude'] = parseFloat(data[key-1]['latitude']);
+				arr['longitude'] = parseFloat(data[key-1]['longitude'])
+				all.push(arr);
+				name = data[key]['location_name'];
+				count = 0;
+				arr = {}
+				i++;
 			}
-		});
-		return mapValues;
+		}
+		arr['location_name'] = name;
+		arr['id'] = i;
+		arr['latitude'] = parseFloat(data[key-1]['latitude']);
+		arr['longitude'] = parseFloat(data[key-1]['longitude'])
+		all.push(arr)
+		return this.airQualityCalculator(all)
 	}
 
 	airQualityCalculator(data) {
-	let keys = Object.keys(data);
-	let name = data[0]['location_name'];
-	let all = []
-	let arr = {}
-    let count = 0;
-    let i =1;
-
-    for(var key in keys)
-	{
-		if(data[key]['location_name'] === name)
-		{
-			arr[data[key]['parameter']] = data[key]['value'];
-			count++;
+		let keys = Object.keys(data);
+		for ( var key in keys ) {
+			var pollutionLevel = 0;
+			let dataElement = data[key]
+			if (dataElement.hasOwnProperty("o3"))
+				pollutionLevel = pollutionLevel + ozoneWeight * dataElement["o3"];
+			if (dataElement.hasOwnProperty("so2"))
+				pollutionLevel = pollutionLevel + sulphurDioxideWeight * dataElement["so2"];
+			if (dataElement.hasOwnProperty("no2"))
+				pollutionLevel = pollutionLevel + nitrogenDioxideWeight * dataElement["no2"];
+			if (dataElement.hasOwnProperty("pm25"))
+				pollutionLevel = pollutionLevel + particleMatter25Weight * dataElement["pm25"];
+			if (dataElement.hasOwnProperty("pm10"))
+				pollutionLevel = pollutionLevel + particleMatter10Weight * dataElement["pm10"];
+			if (dataElement.hasOwnProperty("co"))
+				pollutionLevel = pollutionLevel + carbonMonoxideWeight * dataElement["co"];
+			data[key]["pollution"] = pollutionLevel
 		}
-		else
-		{
-			arr['location_name'] = name;
-			arr['id'] = i;
-			arr['latitude'] = parseFloat(data[key-1]['latitude']);
-			arr['longitude'] = parseFloat(data[key-1]['longitude'])
-			//all[name] = arr;
-			all.push(arr);
-			name = data[key]['location_name'];
-			count = 0;
-			arr = {}
-			i++;
-		}
-	}
-	arr['location_name'] = name;
-	arr['id'] = i;
-	arr['latitude'] = parseFloat(data[key-1]['latitude']);
-	arr['longitude'] = parseFloat(data[key-1]['longitude'])
-
-	all.push(arr)
-
-    return all;
+		return data
 	}
 
-	mergePollutionData(){
-		debugger;
+	mergeAndCategorizePollutionData(){
 		let pollutionData = this.state.pollutionData
 		let predictedPollutionData = this.state.predictedPollutionData
-
 		let mergedData = []
 		for (let key in pollutionData) {
 			if (pollutionData.hasOwnProperty(key)) {
@@ -131,9 +131,18 @@ class Map extends React.Component {
 				mergedData.push(pollution)
 			}
 		}
+		for (let key in mergedData) {
+			if (mergedData.hasOwnProperty(key)) {
+				if(mergedData[key]["pollution"] < 1)
+					mergedData[key]["pollutionLevel"] = 'Low'
+				else if(mergedData[key]["pollution"] < 2.5)
+					mergedData[key]["pollutionLevel"] = 'Average'
+				else
+					mergedData[key]["pollutionLevel"] = 'High'
+			}
+		}
 		this.setState({ mergedPollutionData: mergedData })
 		this.setState({ pollutionSourcesMerged: true})
-		//this.forceUpdate()
 	}
 
 	fetchPollutionMapData() {
@@ -143,8 +152,7 @@ class Map extends React.Component {
 			method: 'GET'
 		}).then((response) => {
 			if(response.status === 200) {
-				//debugger
-				updatedData = this.airQualityCalculator(response.data)
+				updatedData = this.updatePollutionAPIData(response.data)
 				this.setState({ pollutionData: updatedData})
 			}
 		});
@@ -194,7 +202,6 @@ class Map extends React.Component {
 			if(response.status === 200) {
 				const events = this.eventsTimeKeeper(response.data.events)
 				this.setState({ eventsData: events})
-				console.log(events);
 			}
 		});
 	}
@@ -261,7 +268,8 @@ class Map extends React.Component {
 								props.selectedMarker === marker &&
 								<InfoWindow>
 									<div>
-										<h4>{marker.pollution}</h4>
+										<h4>{ marker.pollutionLevel }</h4>
+										<span>{ marker.pollution }</span>
 									</div>
 								</InfoWindow>
 							}

@@ -28,8 +28,9 @@ export default class PollutionInfo extends React.Component {
         <div>
           <Card>
             <Card.Body>
-              <Card.Title>{this.state.selectedMarker.location_name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">({this.state.selectedMarker.latitude}, {this.state.selectedMarker.longitude})</Card.Subtitle>
+              <Card.Title>Name: { this.state.selectedMarker.location_name === undefined && "No Info" }{ this.state.selectedMarker.location_name !== undefined && this.state.selectedMarker.location_name }</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">{ this.state.selectedMarker.icon == 'red-dot.png' && "Actual Data"}{ this.state.selectedMarker.icon == 'yellow-dot.png' && "Predicted Data"}</Card.Subtitle>
+              <p>Cordinates: ({this.state.selectedMarker.latitude}, {this.state.selectedMarker.longitude})</p>
               <p><b>Latest Information</b></p>
               <ul>
                 <li><b>o3 Levels</b>: {this.state.selectedMarker.o3 || "No data"}</li>
