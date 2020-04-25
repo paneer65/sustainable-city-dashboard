@@ -15,6 +15,10 @@ export default class BikesInfo extends React.Component {
       this.setState({
         selectedMarker: this.props.selectedMarker
       });
+    } else if (!this.props.selectedMarker && prevProps.selectedMarker) {
+      this.setState({
+        selectedMarker: null
+      });
     }
   }
 

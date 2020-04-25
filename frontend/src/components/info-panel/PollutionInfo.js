@@ -15,6 +15,10 @@ export default class PollutionInfo extends React.Component {
       this.setState({
         selectedMarker: this.props.selectedMarker
       });
+    } else if (!this.props.selectedMarker && prevProps.selectedMarker) {
+      this.setState({
+        selectedMarker: null
+      });
     }
   }
 
@@ -27,6 +31,13 @@ export default class PollutionInfo extends React.Component {
               <Card.Title>{this.state.selectedMarker.location_name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">({this.state.selectedMarker.latitude}, {this.state.selectedMarker.longitude})</Card.Subtitle>
               <p><b>Latest Information</b></p>
+              <ul>
+                <li><b>o3 Levels</b>: {this.state.selectedMarker.o3 || "No data"}</li>
+                <li><b>so2 Levels</b>: {this.state.selectedMarker.so2 || "No data"}</li>
+                <li><b>no2 Levels</b>: {this.state.selectedMarker.no2 || "No data"}</li>
+                <li><b>pm25 Levels</b>: {this.state.selectedMarker.pm10 || "No data"}</li>
+                <li><b>co Levels</b>: {this.state.selectedMarker.co || "No data"}</li>
+              </ul>
             </Card.Body>
           </Card>
         </div>

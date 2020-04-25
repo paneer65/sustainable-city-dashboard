@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
+import axios from "axios"
 
 export default class BusInfo extends React.Component {
 
@@ -7,6 +8,7 @@ export default class BusInfo extends React.Component {
     super(props);
     this.state = {
       selectedMarker: null,
+      predictedPollution: null
     }
   }
 
@@ -15,11 +17,26 @@ export default class BusInfo extends React.Component {
       this.setState({
         selectedMarker: this.props.selectedMarker
       });
-    } else if (!this.props.selectedMarker && prevProps.selectedMarker){
+      this.fetchPredictedPollution(this.props.selectedMarker);
+    } else if (!this.props.selectedMarker && prevProps.selectedMarker) {
       this.setState({
         selectedMarker: null
       });
     }
+  }
+
+  fetchPredictedPollution(selectedMarker) {
+    axios({
+			url: '/pollution/predict',
+      method: 'POST',
+      data: JSON.stringify({ latitude: selectedMarker.latitude, longitude: selectedMarker.longitude }),
+		}).then((response) => {
+			if(response.status === 200) {
+        this.setState({
+          predictedPollution: response.data.pollution_level
+        });
+			}
+		});
   }
 
   render() {
@@ -40,6 +57,8 @@ export default class BusInfo extends React.Component {
                   ))
                 }
               </ul>
+
+              <p><b>Predicted Pollution: </b>{ this.state.predictedPollution }</p>
             </Card.Body>
           </Card>
         </div>

@@ -9,6 +9,7 @@ from rest_framework.decorators import api_view, permission_classes, authenticati
 from rest_framework.authentication import TokenAuthentication
 
 from dashboard.serializers import UserSerializer
+from dashboard.ml_pollution.poll_predict import mypredict
 from dashboard.the_cacher import TheCacher
 
 from dashboard.tables.events_data import EventsData
@@ -93,6 +94,22 @@ def logout_user(request):
     )
     return response
 
+@api_view(['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def predict_location_pollution(request):
+    """ Return pollution level estimate for a location """
+
+    latitude = request.data["latitude"]
+    longitude = request.data["longitude"]
+    _, _, prediction = mypredict(coord=[latitude, longitude])
+
+    return Response(
+        {
+            'pollution_level': prediction
+        },
+        status=200
+    )
 
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])

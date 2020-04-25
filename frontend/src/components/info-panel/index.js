@@ -19,22 +19,17 @@ export default class InfoPanelIndex extends React.Component {
         selectedMarker: null,
         selectedFilter: this.props.selectedFilter
       });
-    } else if (this.props.selectedMarker && (!prevProps.selectedMarker || this.props.selectedMarker.location !== prevProps.selectedMarker.location)) {
-      this.setState({
-        selectedMarker: this.props.selectedMarker,
-        selectedFilter: this.props.selectedFilter
-      });
     }
   }
 
   render() {
     let infoModule;
     if (this.state.selectedFilter === 'Pollution') {
-      infoModule = <PollutionInfo selectedMarker={this.state.selectedMarker}/>
+      infoModule = <PollutionInfo selectedMarker={this.props.selectedMarker}/>
     } else if (this.state.selectedFilter === 'Bikes') {
-      infoModule = <BikesInfo selectedMarker={this.state.selectedMarker}/>
+      infoModule = <BikesInfo selectedMarker={this.props.selectedMarker}/>
     } else if (this.state.selectedFilter === 'Bus') {
-      infoModule = <BusInfo selectedMarker={this.state.selectedMarker}/>
+      infoModule = <BusInfo selectedMarker={this.props.selectedMarker}/>
     }
 
     return (

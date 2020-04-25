@@ -25,7 +25,7 @@ class Map extends React.Component {
 		bikesData: [],
 		busData: [],
 		selectedFilter: '',
-		pollutionSourcesMerged: false, 
+		pollutionSourcesMerged: false,
 		mergedPollutionData: [],
     selectedMarker: '',
     eventsData: []
@@ -62,7 +62,7 @@ class Map extends React.Component {
 			if(typeof value === "number"){
 				let normalizedValue = (value - minValue)/ (maxValue - minValue);
 				return normalizedValue;
-			} 
+			}
 			else {
         		return value;
 			}
@@ -376,7 +376,7 @@ class Map extends React.Component {
 				mapElement={<div style = {{ height: `100%` }} />}
     		/>
 			)
-		} 
+		}
 
 		else if (this.props.selectedFilter === 'Bikes') {
       		const BikesMap = this.generateBikesMap();
