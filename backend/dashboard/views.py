@@ -15,6 +15,7 @@ from dashboard.the_cacher import TheCacher
 from dashboard.tables.events_data import EventsData
 from dashboard.serializers import EventsDataSerializer
 
+from api.tasks.precache import Precache
 
 @api_view(['POST'])
 def user_login(request):
@@ -28,6 +29,7 @@ def user_login(request):
         login(request, user)
         token, created = Token.objects.get_or_create(user=user)
         response = Response({'Token': str(token), 'created': created}, status=200)
+        Precache.start_task.delay()
     else:
         # Authentication failed
         response = Response(

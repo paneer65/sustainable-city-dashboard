@@ -1,4 +1,7 @@
-# Created by https://www.gitignore.io
+# Ignore celery
+
+celerybeat-schedule
+dump.rdb
 
 ### OSX ###
 .DS_Store

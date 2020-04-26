@@ -12,7 +12,13 @@ from dashboard.api_configs.api_translator import APITranslator
 CACHE_KEYS = {
     'all_users': 'all_users',
     'news_updated_at': 'news_updated_at',
-    'latest_news': 'latest_news'
+    'latest_news': 'latest_news',
+    'pollution': 'pollution',
+    'pollution_updated_at': 'pollution_updated_at',
+    'bikes': 'bikes',
+    'bikes_updated_at': 'bikes_updated_at',
+    'bus': 'bus',
+    'bus_updated_at': 'bus_updated_at'
 }
 
 class TheCacher():
@@ -66,11 +72,23 @@ class TheCacher():
             response = api_translator.build_api_request()
             models = api_translator.response_to_model(response)
 
-            for model in models:
-                model.save()
-
             news = models
             cache.set(CACHE_KEYS['latest_news'], news)
             cache.set(CACHE_KEYS['news_updated_at'], datetime.now())
 
         return news
+
+    @staticmethod
+    def get_cached_pollution_data():
+        """ Get cached pollution data """
+        cache.get(CACHE_KEYS['pollution'])
+
+    @staticmethod
+    def get_cached_bus_data():
+        """ Get cached bus data """
+        cache.get(CACHE_KEYS['bus'])
+
+    @staticmethod
+    def get_cached_bikes_data():
+        """ Get cached bikes data """
+        cache.get(CACHE_KEYS['bikes'])

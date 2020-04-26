@@ -54,9 +54,11 @@ class ReturnPollutionDetails(generics.ListAPIView):
         """
         Method to provide API details
         """
-        api_translator = APITranslator("pollution", 1)
-        response = api_translator.build_api_request()
-        models = api_translator.response_to_model(response)
+        models = TheCacher.get_cached_pollution_data()
+        if not models:
+            api_translator = APITranslator("pollution", 1)
+            response = api_translator.build_api_request()
+            models = api_translator.response_to_model(response)
 
         json_content = self.serializer_class(models, many=True)
 
@@ -74,9 +76,11 @@ class ReturnBikesDetails(generics.ListAPIView):
         """
         List bikes API data
         """
-        api_translator = APITranslator("bikes", 1)
-        response = api_translator.build_api_request()
-        models = api_translator.response_to_model(response)
+        models = TheCacher.get_cached_bikes_data()
+        if not models:
+            api_translator = APITranslator("bikes", 1)
+            response = api_translator.build_api_request()
+            models = api_translator.response_to_model(response)
 
         json_content = self.serializer_class(models, many=True)
         return Response(json_content.data, status=200)
@@ -93,9 +97,11 @@ class ReturnBusDetails(generics.ListAPIView):
         """
         List bikes API data
         """
-        api_translator = APITranslator("bus", 1)
-        response = api_translator.build_api_request()
-        models = api_translator.response_to_model(response)
+        models = TheCacher.get_cached_bus_data()
+        if not models:
+            api_translator = APITranslator("bus", 1)
+            response = api_translator.build_api_request()
+            models = api_translator.response_to_model(response)
 
         json_content = self.serializer_class(models, many=True)
         return Response(json_content.data, status=200)

@@ -4,6 +4,8 @@ TCD Group 10 for Advanced Software Engineering
 ## Setup backend development environment
 ** Minimum python 3.5 required to install django version 2.2.6 **
 
+### Installing Django
+
 We are using django for our backend
 
 First setup a python3 virtualenv and activate it. After that install the required packages using pip,
@@ -16,21 +18,83 @@ Check your django version
 python3 -m django --version
 ```
 
+### Installing Postgresql
+
+Check the Postgresql website for instructions.
+
+https://www.postgresql.org/
+
+Create a new database with name Test and username and password as admin
+
+### Installing Memcache
+
+Memcache can be easily installed in linux and MacOS but not so on Windows. Using WSL on windows is the best option
+
+```
+sudo apt-get install memcached
+```
+
+### Installing Redis
+
+We use redis for our asynchronous tasks in Celery
+
+```
+sudo apt-get install redis-server
+```
+
+### Install Flower for Celery (Optional)
+
+To monitor celery jobs we use flower
+```
+pip install flower
+cd backend
+celery flower -A backend --port=5555
+```
+
 ## Start server
 
+First start all the services required
+
+```
+# Run both on separate terminals or add '&' to make them run in the background
+memcached
+redis-server
+```
+
 Now with our current working directory as sustainable-city-management, to start the server
+
+First start celery
+
+```
+cd backend
+celery worker -A backend --loglevel=info
+```
+
+Also run celery beat
+
+```
+cd backend
+celery -A backend beat --loglevel=info
+```
+
+Then start the django development server
+
 ```
 cd backend
 python3 manage.py runserver
 ```
 
-To load fixtures
+You may want to load data to show in reports. To load fixtures
 
 ```
-python3 manage.py loaddata
+python3 manage.py loaddata backend/fixtures/bikes_fixtures.json
+python3 manage.py loaddata backend/fixtures/event_fixtures.json
+python3 manage.py loaddata backend/fixtures/news_fixtures.json
+python3 manage.py loaddata backend/fixtures/pollution_fixtures.json
 ```
 
-Then navigate to http://127.0.0.1:8000/ and you should see that your app is running
+Then navigate to http://127.0.0.1:8000/ and you should see that your app is running.
+Note this is the interface for the django admin. The actual user interface is given below
 
 ## Setting up the frontend development environment
 

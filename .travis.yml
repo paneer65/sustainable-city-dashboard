@@ -5,6 +5,7 @@ matrix:
     - services:
         - postgresql
         - memcached
+        - redis-server
       language: python
       python:
         - "3.6"
@@ -13,6 +14,8 @@ matrix:
         - pip install -r requirements.txt
       before_script:
         - psql -c "CREATE DATABASE sustainable_city_ci;"
+        - celery worker -A backend --loglevel=info &
+        - celery -A backend beat --loglevel=info &
       script:
         - pylint --load-plugins pylint_django ./dashboard ./api ./reports
         - python manage.py migrate
