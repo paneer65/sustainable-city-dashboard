@@ -19,7 +19,7 @@ class UserActions extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="text-center">
         <Button onClick={ () => this.toggleUserCreationModal() }>Create User</Button>
         <UserCreationModal showModal={this.state.showUserCreationModal} toggleUserCreationModal={this.toggleUserCreationModal}/>
       </div>

@@ -13,7 +13,7 @@ export default class BusInfo extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.selectedMarker && (!prevProps.selectedMarker || this.props.selectedMarker.stop_id !== prevProps.selectedMarker.stop_id)) {
+    if (this.props.selectedMarker && (!prevProps.selectedMarker || this.props.selectedMarker.location_name !== prevProps.selectedMarker.location_name)) {
       this.setState({
         selectedMarker: this.props.selectedMarker
       });

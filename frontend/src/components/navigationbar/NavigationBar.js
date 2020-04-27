@@ -21,7 +21,7 @@ function NavigationBar() {
   const { deleteJWTToken } = useAuth();
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="#home">Sustainable City Dashboard</Navbar.Brand>
+      <Navbar.Brand href="/dashboard">Sustainable City Dashboard</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

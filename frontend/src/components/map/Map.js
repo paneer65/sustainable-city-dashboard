@@ -38,19 +38,36 @@ class Map extends React.Component {
 	}
 }
 
+  componentDidMount() {
+    if(this.props.selectedFilter === 'Pollution' && this.state.predictedPollutionData.length > 0 && this.state.pollutionData.length > 0 && !this.state.pollutionSourcesMerged){
+			this.mergeAndCategorizePollutionData();
+		}
+
+    if (this.props.selectedFilter === 'Pollution') {
+			this.fetchPollutionMapData();
+		} else if (this.props.selectedFilter === 'Bikes') {
+			this.fetchBikesMapData();
+		} else if (this.props.selectedFilter === 'Events'){
+			this.fetchEventsData();
+		} else if (this.props.selectedFilter === 'Bus') {
+  		this.fetchBusMapData();
+  	}
+  }
+
 	componentDidUpdate(prevProps) {
 		// Need to check state selectedFilter otherwise this will be an infinite loop
 		if(this.props.selectedFilter === 'Pollution' && this.state.predictedPollutionData.length > 0 && this.state.pollutionData.length > 0 && !this.state.pollutionSourcesMerged){
 			this.mergeAndCategorizePollutionData();
-		}if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
+		}
+    if (this.props.selectedFilter === 'Pollution' && prevProps.selectedFilter !== 'Pollution') {
 			this.fetchPollutionMapData();
 		} else if (this.props.selectedFilter === 'Bikes' && prevProps.selectedFilter !== 'Bikes') {
 			this.fetchBikesMapData();
-		} else if(this.props.selectedFilter === 'Events' && prevProps.selectedFilter !== 'Events'){
+		} else if (this.props.selectedFilter === 'Events' && prevProps.selectedFilter !== 'Events'){
 			this.fetchEventsData();
 		} else if (this.props.selectedFilter === 'Bus' && prevProps.selectedFilter !== 'Bus') {
-      		this.fetchBusMapData();
-    	}
+  		this.fetchBusMapData();
+  	}
 	}
 
 	updatePollutionAPIData(data) {

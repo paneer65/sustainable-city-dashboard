@@ -81,14 +81,14 @@ class TheCacher():
     @staticmethod
     def get_cached_pollution_data():
         """ Get cached pollution data """
-        cache.get(CACHE_KEYS['pollution'])
+        return cache.get(CACHE_KEYS['pollution'])
 
     @staticmethod
     def get_cached_bus_data():
         """ Get cached bus data """
-        cache.get(CACHE_KEYS['bus'])
+        return cache.get(CACHE_KEYS['bus'])
 
     @staticmethod
     def get_cached_bikes_data():
         """ Get cached bikes data """
-        cache.get(CACHE_KEYS['bikes'])
+        return cache.get(CACHE_KEYS['bikes'])

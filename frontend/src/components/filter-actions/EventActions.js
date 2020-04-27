@@ -1,10 +1,8 @@
 import Form from 'react-bootstrap/Form'
 import React, { useState } from "react";
 
-
-
 class EventActions extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +21,7 @@ class EventActions extends React.Component {
     //this.createEventCategories(this.props.allMarkers)
   }
 
-  componentDidMount(){
+  componentDidUpdate() {
     if (!this.state.events_Categorised)
       this.createEventCategories(this.props.allMarkers)
   }
@@ -40,7 +38,6 @@ class EventActions extends React.Component {
   }
 
   createEventCategories(events){
-    console.log('esmond')
     let currentOngoingEvents = []
     let currentEventsGoingToStart = []
     let currentEventsGoingToEnd = []
@@ -48,11 +45,10 @@ class EventActions extends React.Component {
     let currentNotStartedEvents = []
     const today = new Date();
 		let timeString = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
-    debugger;
     for (let key in events) {
 			if (events.hasOwnProperty(key)) {
 				let currentEvent = events[key]
-				
+
 				//Events going on now
         if(currentEvent.icon == 'yellow-dot.png')
           currentOngoingEvents.push(currentEvent)
@@ -65,13 +61,13 @@ class EventActions extends React.Component {
 				else if(currentEvent.icon == 'green-dot.png')
           currentEventsGoingToEnd.push(currentEvent)
 
-        //Events ended  
+        //Events ended
 				else if(currentEvent.icon == 'blue-dot.png')
-          currentEventsEnded.push(currentEvent) 
-          
+          currentEventsEnded.push(currentEvent)
+
         //Events not started
         else if(currentEvent.icon == 'ltblue-dot.png')
-          currentNotStartedEvents.push(currentEvent) 
+          currentNotStartedEvents.push(currentEvent)
 			}
     }
     this.setState({ongoingEvents: currentOngoingEvents});
@@ -88,7 +84,7 @@ class EventActions extends React.Component {
     this.props.updateSelectedMarker(currentMarker)
     this.setState({ speedLimit : ''})
   }
-  
+
   render() {
     return (
       <div className="EventActions">
@@ -108,8 +104,8 @@ class EventActions extends React.Component {
             Current Speed Limit: {this.props.selectedMarker.speed_limit} <br/>
             <br/>
             <div>
-              {this.props.selectedMarker.speed_limit === null && "Set the speed limit" } 
-              {this.props.selectedMarker.speed_limit !== null && "Update the speed limit" } 
+              {this.props.selectedMarker.speed_limit === null && "Set the speed limit" }
+              {this.props.selectedMarker.speed_limit !== null && "Update the speed limit" }
               <form onSubmit={this.handleSubmit}>
                 <input type="number" value={this.state.speedLimit} onChange={this.handleChange} /> &nbsp;
                 <input type="submit" value="Submit" />
@@ -118,7 +114,7 @@ class EventActions extends React.Component {
             <br/>
             <br/>
             {
-              this.props.selectedMarker.speed_limit !== null && 
+              this.props.selectedMarker.speed_limit !== null &&
               <div>
                 <form onSubmit={this.removeSpeedLimit}>
                   <input type="submit" value="Remove Speed Limit" />
