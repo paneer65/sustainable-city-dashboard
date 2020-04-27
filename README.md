@@ -8,7 +8,22 @@ TCD Group 10 for Advanced Software Engineering
 
 We are using django for our backend
 
-First setup a python3 virtualenv and activate it. After that install the required packages using pip,
+First setup a python3 virtualenv and activate it. 
+
+If you use ```venv```, follow as below to create a virtual environment.
+
+```
+python -m venv <Virtual Env Name>
+source <Virtual Env Name>/bin/activate
+```
+If you use ```conda```, follow as below to create the virtual environment.
+```
+conda create -n <Virtual Env Name> python=3.5
+conda activate <Virtual Env Name>
+```
+
+
+After that install the required packages using pip,
 ```
 pip install -r requirements.txt
 ```
@@ -28,7 +43,7 @@ Create a new database with name Test and username and password as admin
 
 ### Installing Memcache
 
-Memcache can be easily installed in linux and MacOS but not so on Windows. Using WSL on windows is the best option
+Memcache can be easily installed in linux and macOS but not so on Windows. Using WSL on windows is the best option
 
 ```
 sudo apt-get install memcached
