@@ -23,7 +23,7 @@ pandas==1.0.3
 patsy==0.5.1
 psycopg2-binary==2.8.4
 pydotplus==2.0.2
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.4.4
 pylint-django==2.0.13
 pylint-plugin-utils==0.6
